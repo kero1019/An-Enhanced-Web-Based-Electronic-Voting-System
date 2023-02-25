@@ -1,0 +1,82 @@
+/* Start Variables */
+:root {
+  --bluegreen: #00adb5;
+  --orange: #ff5722;
+  --dark: #303841;
+  --light: #f6f3f2;
+  --black: #000000;
+  --white: #ffffff;
+  --light-AT: #f6f3f2de; /*It is the same as "light" but at 87% transperancy(alpha)*/
+}
+/* End Variables */
+/* Start General */
+.font-src {
+  font-family: "Source Serif Pro", serif;
+}
+body {
+  font-family: "DM Serif Display", serif;
+}
+body > div:first-of-type {
+  min-height: calc(100vh - 86px);
+}
+/* End General */
+/* Start NavBar */
+nav {
+  background-color: var(--light);
+}
+nav .nav-item:nth-last-child(1) .nav-link {
+  color: var(--bluegreen) !important;
+  font-weight: bold;
+}
+nav .nav-item:not(:nth-last-child(1)) .nav-link {
+  color: var(--black);
+}
+nav .nav-item:not(:nth-last-child(1)) .nav-link.active,
+nav .nav-item:not(:nth-last-child(1)) .nav-link:hover,
+nav .nav-item:not(:nth-last-child(1)) .nav-link:focus {
+  background-color: var(--bluegreen);
+}
+nav .nav-item .nav-link {
+  border-radius: 5px;
+}
+nav .navbar-toggler {
+  border-color: transparent;
+}
+nav .navbar-toggler:focus {
+  box-shadow: none;
+}
+/* End NavBar */
+/* Start landing */
+.landing {
+  background-color: var(--light);
+}
+/* End landing */
+
+/* Start welcome_email */
+.welcome_email {
+}
+/* End welcome_email */
+/* Start register_enter_code */
+.register_enter_code {
+}
+/* End register_enter_code */
+/* Start login */
+.login {
+}
+/* End login */
+/* Start forgot_password */
+.forgot_password {
+}
+/* End forgot_password */
+/* Start verification */
+.verification {
+}
+/* End verification */
+/* Start forgot_enter_code */
+.forgot_enter_code {
+}
+/* End forgot_enter_code */
+/* Start re-enter_password */
+.re-enter_password {
+}
+/* End re-enter_password */

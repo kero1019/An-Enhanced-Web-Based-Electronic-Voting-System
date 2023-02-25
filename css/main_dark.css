@@ -1,0 +1,79 @@
+/* Start Variables */
+:root {
+  --bluegreen: #00adb5;
+  --orange: #ff5722;
+  --dark: #303841;
+  --light: #f6f3f2;
+  --black: #000000;
+  --white: #ffffff;
+  --light-AT: #f6f3f2de; /*It is the same as "light" but at 87% transperancy(alpha)*/
+}
+/* End Variables */
+/* Start General */
+.font-src {
+  font-family: "Source Serif Pro", serif;
+}
+body {
+  font-family: "DM Serif Display", serif;
+}
+body > div:first-of-type {
+  min-height: calc(100vh - 86px);
+}
+body > div {
+  background-color: var(--dark);
+}
+/* End General */
+/* Start NavBar */
+nav {
+  background-color: var(--dark);
+}
+nav .nav-item:nth-last-child(1) .nav-link {
+  color: var(--orange) !important;
+  font-weight: bold;
+}
+nav .nav-item:not(:nth-last-child(1)) .nav-link {
+  color: var(--white);
+}
+nav .nav-item:not(:nth-last-child(1)) .nav-link.active,
+nav .nav-item:not(:nth-last-child(1)) .nav-link:hover,
+nav .nav-item:not(:nth-last-child(1)) .nav-link:focus {
+  background-color: var(--orange);
+}
+nav .nav-item .nav-link {
+  border-radius: 5px;
+}
+nav .navbar-toggler {
+  border-color: transparent;
+}
+nav .navbar-toggler:focus {
+  box-shadow: none;
+}
+/* End NavBar */
+/* Start registration */
+.registration {
+}
+/* End registration */
+/* Start personal_info */
+.personal_info {
+}
+/* End personal_info */
+/* Start personal_info_edit */
+.personal_info_edit {
+}
+/* End personal_info_edit */
+/* Start voting_history */
+.voting_history {
+}
+/* End voting_history */
+/* Start elections */
+.elections {
+}
+/* End elections */
+/* Start voting_panel */
+.voting_panel {
+}
+/* End voting_panel */
+/* Start voting_results */
+.voting_results {
+}
+/* End voting_results */
