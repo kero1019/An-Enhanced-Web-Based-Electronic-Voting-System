@@ -1,3 +1,18 @@
+/* Start Screen Sizes */
+/* 
+[Google Chrome Inspect]
+  320px
+  375px
+  425px
+[Bootstrap Sizes]
+  <576px   xs
+  >=576px  sm
+  >=768px  md
+  >=992px  lg
+  >=1200px xl
+  >=1400px xxl 
+*/
+/* End Screen Sizes */
 /* Start Variables */
 :root {
   --bluegreen: #00adb5;
@@ -17,12 +32,27 @@ body {
   font-family: "DM Serif Display", serif;
 }
 body > div:first-of-type {
-  min-height: calc(100vh - 86px);
+  min-height: calc(100vh - 72px);
+}
+button {
+  font-family: "Source Serif Pro", serif;
+  font-weight: bold;
+  border-radius: 4px;
+}
+a {
+  text-decoration: none;
 }
 /* End General */
 /* Start NavBar */
 nav {
   background-color: var(--light);
+  height: 72px;
+}
+nav .navbar-nav {
+  background-color: var(--light);
+}
+.navbar-brand img {
+  width: 40px;
 }
 nav .nav-item:nth-last-child(1) .nav-link {
   color: var(--bluegreen) !important;
@@ -49,7 +79,68 @@ nav .navbar-toggler:focus {
 /* Start landing */
 .landing {
   background-color: var(--light);
+  position: relative;
+  background-image: url(../imgs/your_vote_counts.png);
+  overflow: hidden;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: -66px 0;
 }
+/* start media query */
+@media (min-width: 321px) {
+  .landing {
+    background-position: -33px 0;
+  }
+}
+@media (min-width: 376px) {
+  .landing {
+    background-position: -10px 0;
+  }
+}
+@media (min-width: 576px) {
+  .landing {
+    background-position: 25px 0;
+  }
+}
+/* end media query */
+.landing .buttons-group {
+  position: absolute;
+  display: grid;
+  row-gap: 24px;
+}
+.landing button {
+  background-color: var(--bluegreen);
+  border: transparent;
+  width: 150px;
+}
+/* start media query */
+@media (max-width: 767px) {
+  .landing .buttons-group {
+    top: 80%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+}
+@media (min-width: 768px) {
+  .landing {
+    background-size: contain;
+  }
+  .landing .buttons-group {
+    top: 65%;
+    right: 10%;
+  }
+}
+@media (min-width: 992px) {
+  .landing {
+    background-size: 70% 110%;
+    background-position: 30px -30px;
+  }
+  .landing .buttons-group {
+    top: 36%;
+    right: 12%;
+  }
+}
+/* end media query */
 /* End landing */
 
 /* Start welcome_email */
