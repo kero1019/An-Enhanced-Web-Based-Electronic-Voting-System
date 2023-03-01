@@ -10,3 +10,15 @@ Graduation Project 2023 - Faculty of Information Systems &amp; Computer Science 
 ![Rectangle 4-4](https://user-images.githubusercontent.com/125684387/221248535-903a9ff2-e787-4804-9bc2-7c17012cc1a3.png) #00ADB5
 ![Rectangle 4-5](https://user-images.githubusercontent.com/125684387/221249694-dbfe88aa-b63e-4776-a719-2a57f0cd457b.png) #303841
 
+## Screen Sizes for Responsive testing
+[Google Chrome Inspect]
+  320px
+  375px
+  425px
+[Bootstrap Sizes]
+  <576px   xs
+  >=576px  sm
+  >=768px  md
+  >=992px  lg
+  >=1200px xl
+  >=1400px xxl 
