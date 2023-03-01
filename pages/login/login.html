@@ -23,7 +23,44 @@
   </head>
   <body>
     <!-- Start login -->
-    <div class="login"></div>
+    <div class="login">
+      <div class="container">
+        <img src="../../imgs/laptop_lock.png" alt="" />
+        <form>
+          <h1 class="login-title">Login</h1>
+          <div class="email">
+            <label>E-mail</label>
+            <input
+              type="text"
+              placeholder="Enter E-mail"
+              name="E-mail"
+              class="w-100"
+            />
+          </div>
+          <div class="password">
+            <label>Password</label>
+            <input
+              type="password"
+              placeholder="Enter Password"
+              name="password"
+              class="w-100"
+            />
+            <a
+              class="forgotPassword-link d-block pb-2 pt-1"
+              href="../login/forgot_password.html"
+              >Forgot password?</a
+            >
+          </div>
+          <button class="login-btn py-2" type="submit">Login</button>
+          <p class="pt-2">
+            Not a user?
+            <a class="register-link" href="../registration/registration.html"
+              >Register now</a
+            >
+          </p>
+        </form>
+      </div>
+    </div>
     <!-- End login -->
     <!-- js files -->
     <script src="../../js/bootstrap.bundle.min.js"></script>
