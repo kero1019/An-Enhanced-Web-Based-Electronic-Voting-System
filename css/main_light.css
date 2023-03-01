@@ -51,7 +51,134 @@ nav .navbar-toggler:focus {
   background-color: var(--light);
 }
 /* End landing */
+/* Start Footer */
+footer {
+  background-color: var(--dark);
+  color: white;
+  font-size: 18px;
+  min-height: fit-content;
+  height: 500px;
+  display: flex;
+  align-items: center;
+}
 
+footer .container {
+  display: grid;
+  grid-template-columns: auto 1fr auto;
+  column-gap: 100px;
+}
+
+footer .box1 {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+footer .container .box1::after {
+  content: "";
+  position: absolute;
+  height: 100%;
+  width: 1px;
+  background-color: var(--orange);
+  right: -20px;
+  top: 0;
+
+}
+
+footer .box2 {
+  display: grid;
+  grid-template-columns: auto (2, 1fr);
+  grid-template-rows: auto auto;
+  grid-template-areas: "one two three" "four four four";
+}
+
+footer .box2 .getin {
+  grid-area: one;
+  position: relative;
+}
+
+footer .box2 .know-more {
+  grid-area: two;
+  position: relative;
+}
+
+footer .box2 .follow {
+  grid-area: three;
+  position: relative;
+}
+
+footer .box2 .social {
+  grid-area: four;
+  font-size: 40px;
+  color: var(--bluegreen);
+  text-align: center;
+}
+
+footer .box2 {
+  position: relative;
+}
+
+footer .box2::after {
+  content: "";
+  position: absolute;
+  height: 100%;
+  width: 1px;
+  background-color: var(--orange);
+  right: -20px;
+  top: 0;
+}
+
+footer .box3 form {
+  width: 283px;
+  height: 157px;
+  position: relative;
+}
+
+footer .box3 input {
+  width: 283px;
+  height: 157px;
+  position: relative;
+}
+
+footer button {
+  display: block;
+  width: 103px;
+  height: 35px;
+  background-color: var(--orange);
+  color: white;
+  position: absolute;
+  right: 0;
+  bottom: -50px;
+  border: transparent;
+  border-radius: 9px;
+}
+
+footer .container p:first-child {
+  font-size: 18px;
+  color: var(--bluegreen);
+  position: relative;
+  width: fit-content;
+}
+
+footer a {
+  display: block;
+  text-decoration: none;
+  color: white
+}
+
+footer .box3 p:first-child{
+  color: white;
+}
+footer .container .box2 p:first-child::before{
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 0.5px;
+  background-color: var(--bluegreen);
+  bottom: 3px;
+}
+/* End Footer */
 /* Start welcome_email */
 .welcome_email {
 }
