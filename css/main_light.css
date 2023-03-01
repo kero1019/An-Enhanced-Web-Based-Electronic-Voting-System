@@ -35,9 +35,9 @@ body > div:first-of-type {
   min-height: calc(100vh - 72px);
 }
 button {
-  font-family: "Source Serif Pro", serif;
-  font-weight: bold;
-  border-radius: 4px;
+  font-family: "Source Serif Pro", serif !important;
+  font-weight: bold !important;
+  border-radius: 4px !important;
 }
 a {
   text-decoration: none;
