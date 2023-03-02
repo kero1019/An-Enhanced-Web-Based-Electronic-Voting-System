@@ -66,6 +66,7 @@ nav .navbar-toggler:focus {
 /* End landing */
 /* Start Footer */
 footer {
+  padding: 50px 0;
   background-color: var(--dark);
   color: white;
   font-size: 18px;
@@ -104,7 +105,7 @@ footer .container .box2 p:first-child::before {
 /* Very Small devices */
 @media (max-width: 575px) {
   footer {
-    padding-bottom: 20px;
+    padding: 20px !important;
   }
 
   footer .box2 .social {
