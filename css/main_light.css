@@ -71,6 +71,7 @@ nav .navbar-toggler:focus {
   display: flex;
   flex-direction: column;
   align-items: center;
+  justify-content: center;
   row-gap: 15px;
 }
 .login img {
