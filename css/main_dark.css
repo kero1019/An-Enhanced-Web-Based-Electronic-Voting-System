@@ -1,3 +1,18 @@
+/* Start Screen Sizes */
+/* 
+[Google Chrome Inspect]
+  320px
+  375px
+  425px
+[Bootstrap Sizes]
+  <576px   xs
+  >=576px  sm
+  >=768px  md
+  >=992px  lg
+  >=1200px xl
+  >=1400px xxl 
+*/
+/* End Screen Sizes */
 /* Start Variables */
 :root {
   --bluegreen: #00adb5;
@@ -17,7 +32,7 @@ body {
   font-family: "DM Serif Display", serif;
 }
 body > div:first-of-type {
-  min-height: calc(100vh - 86px);
+  min-height: calc(100vh - 72px);
 }
 body > div {
   background-color: var(--dark);
@@ -26,6 +41,13 @@ body > div {
 /* Start NavBar */
 nav {
   background-color: var(--dark);
+  height: 72px;
+}
+nav .navbar-nav {
+  background-color: var(--dark);
+}
+.navbar-brand img {
+  width: 40px;
 }
 nav .nav-item:nth-last-child(1) .nav-link {
   color: var(--orange) !important;
