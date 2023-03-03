@@ -341,6 +341,71 @@ footer .container .box2 p:first-child::before {
 /* End register_enter_code */
 /* Start login */
 .login {
+  background-color: var(--light);
+  color: var(--bluegreen);
+  height: 100vh;
+}
+.login .container {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  row-gap: 15px;
+}
+.login img {
+  width: 250px;
+  padding: 20px 0 0px;
+}
+.login form {
+  width: 80%;
+}
+.login form > * {
+  padding: 5px 0;
+}
+.login form label {
+  display: block;
+}
+.login form input {
+  background-color: var(--dark);
+  color: var(--white);
+}
+.login a {
+  text-decoration: none;
+  color: var(--bluegreen);
+}
+.login .login-btn {
+  border: transparent;
+  background-color: var(--orange);
+  padding: 10px;
+  border-radius: 4px;
+  color: var(--white);
+  width: 100%;
+}
+.login p {
+  color: black;
+  text-align: end;
+}
+@media (min-width: 768px) {
+  .login .container {
+    flex-direction: row;
+    row-gap: 0;
+    column-gap: 5%;
+  }
+  .login img {
+    width: 60%;
+    padding: 0;
+    transform: translate(-55px, -11px);
+  }
+  .login form {
+    width: 30%;
+  }
+  .login .login-btn {
+    width: 50%;
+  }
+  .login p {
+    text-align: start;
+  }
 }
 /* End login */
 /* Start forgot_password */
