@@ -24,13 +24,11 @@
   --light-AT: #f6f3f2de;
   /*It is the same as "light" but at 87% transperancy(alpha)*/
 }
-
 /* End Variables */
 /* Start General */
 .font-src {
   font-family: "Source Serif Pro", serif;
 }
-
 body {
   font-family: "DM Serif Display", serif;
 }
@@ -45,7 +43,6 @@ button {
 a {
   text-decoration: none;
 }
-
 /* End General */
 /* Start NavBar */
 nav {
@@ -59,30 +56,24 @@ nav .navbar-nav {
 .navbar-brand img {
   width: 40px;
 }
-
 nav .nav-item:nth-last-child(1) .nav-link {
   color: var(--bluegreen) !important;
   font-weight: bold;
 }
-
 nav .nav-item:not(:nth-last-child(1)) .nav-link {
   color: var(--black);
 }
-
 nav .nav-item:not(:nth-last-child(1)) .nav-link.active,
 nav .nav-item:not(:nth-last-child(1)) .nav-link:hover,
 nav .nav-item:not(:nth-last-child(1)) .nav-link:focus {
   background-color: var(--bluegreen);
 }
-
 nav .nav-item .nav-link {
   border-radius: 5px;
 }
-
 nav .navbar-toggler {
   border-color: transparent;
 }
-
 nav .navbar-toggler:focus {
   box-shadow: none;
 }
@@ -101,7 +92,6 @@ nav .navbar-toggler:focus {
   background-repeat: no-repeat;
   background-size: 150%;
   background-position: -65px;
-  
 }
 .landing .buttons-group {
   position: absolute;
@@ -175,24 +165,20 @@ footer {
   align-items: center;
   position: relative;
 }
-
 footer .container p:first-child {
   font-size: 18px;
   color: var(--bluegreen);
   position: relative;
   width: fit-content;
 }
-
 footer a {
   display: block;
   text-decoration: none;
-  color: white
+  color: white;
 }
-
 footer .box3 p:first-child {
   color: white;
 }
-
 footer .container .box2 p:first-child::before {
   content: "";
   position: absolute;
@@ -201,18 +187,15 @@ footer .container .box2 p:first-child::before {
   background-color: var(--bluegreen);
   bottom: 3px;
 }
-
 /* Very Small devices */
 @media (max-width: 575px) {
   footer {
     padding: 20px !important;
   }
-
   footer .box2 .social {
     font-size: 30px;
     color: var(--bluegreen);
   }
-
   footer button {
     display: block;
     width: 103px;
@@ -226,20 +209,17 @@ footer .container .box2 p:first-child::before {
     margin-top: 20px;
     border-radius: 9px;
   }
-
   footer .box3 textarea {
     width: 283px;
     height: 157px;
   }
 }
-
 /* X-Small devices (portrait phones, less than 576px) // Small devices (landscape phones, 576px and up) */
 @media (min-width: 576px) {
   footer .box2 .social {
     font-size: 30px;
     color: var(--bluegreen);
   }
-
   footer button {
     display: block;
     width: 103px;
@@ -254,7 +234,6 @@ footer .container .box2 p:first-child::before {
     border-radius: 9px;
   }
 }
-
 /* // Medium devices (tablets, 768px and up) */
 @media (min-width: 768px) {
   footer .container {
@@ -262,41 +241,34 @@ footer .container .box2 p:first-child::before {
     grid-template-columns: auto 1fr;
     column-gap: 100px;
   }
-
   footer .box2 {
     display: grid;
     grid-template-columns: auto (2, 1fr);
     grid-template-rows: auto auto;
     grid-template-areas: "one two three" "four four four";
   }
-
   footer .box2 .getin {
     grid-area: one;
     position: relative;
   }
-
   footer .box2 .know-more {
     grid-area: two;
     position: relative;
   }
-
   footer .box2 .follow {
     grid-area: three;
     position: relative;
   }
-
   footer .box2 .social {
     grid-area: four;
     font-size: 40px;
     color: var(--bluegreen);
     text-align: center;
   }
-
   footer .container .box1 {
     margin-bottom: 100px;
   }
 }
-
 /* // Large devices (desktops, 992px and up) */
 @media (min-width: 992px) {
   footer .container {
@@ -304,7 +276,6 @@ footer .container .box2 p:first-child::before {
     grid-template-columns: auto 300px auto;
     column-gap: 100px;
   }
-
   footer .box1 {
     position: relative;
     display: flex;
@@ -312,7 +283,6 @@ footer .container .box2 p:first-child::before {
     justify-content: space-between;
     margin-bottom: 0 !important;
   }
-
   footer .container .box1::after {
     content: "";
     position: absolute;
@@ -322,11 +292,9 @@ footer .container .box2 p:first-child::before {
     right: -20px;
     top: 0;
   }
-
   footer .box2 {
     position: relative;
   }
-
   footer .box2::after {
     content: "";
     position: absolute;
@@ -336,14 +304,11 @@ footer .container .box2 p:first-child::before {
     right: -20px;
     top: 0;
   }
-
   footer .box3 form {
     width: 230px;
     height: 157px;
     position: relative;
   }
-
-
   footer button {
     display: block;
     width: 103px;
@@ -357,7 +322,6 @@ footer .container .box2 p:first-child::before {
     border-radius: 9px;
   }
 }
-
 /* // X-Large devices (large desktops, 1200px and up) */
 @media (min-width: 1200px) {
   footer .container {
@@ -366,33 +330,32 @@ footer .container .box2 p:first-child::before {
     column-gap: 100px;
   }
 }
-
 /* End Footer */
 /* Start welcome_email */
-.welcome_email {}
-
+.welcome_email {
+}
 /* End welcome_email */
 /* Start register_enter_code */
-.register_enter_code {}
-
+.register_enter_code {
+}
 /* End register_enter_code */
 /* Start login */
-.login {}
-
+.login {
+}
 /* End login */
 /* Start forgot_password */
-.forgot_password {}
-
+.forgot_password {
+}
 /* End forgot_password */
 /* Start verification */
-.verification {}
-
+.verification {
+}
 /* End verification */
 /* Start forgot_enter_code */
-.forgot_enter_code {}
-
+.forgot_enter_code {
+}
 /* End forgot_enter_code */
 /* Start re-enter_password */
-.re-enter_password {}
-
+.re-enter_password {
+}
 /* End re-enter_password */
