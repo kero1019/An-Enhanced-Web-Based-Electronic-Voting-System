@@ -16,9 +16,4 @@ Graduation Project 2023 - Faculty of Information Systems &amp; Computer Science 
   375px
   425px
 [Bootstrap Sizes]
-  <576px   xs
-  >=576px  sm
-  >=768px  md
-  >=992px  lg
-  >=1200px xl
-  >=1400px xxl 
+  <576px   xs || >=576px  sm || >=768px  md || >=992px  lg || >=1200px xl || >=1400px xxl 
