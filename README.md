@@ -15,8 +15,11 @@ https://votingproject2023.github.io/An-Enhanced-Web-Based-Electronic-Voting-Syst
 
 ## Screen Sizes for Responsive testing
 [Google Chrome Inspect]
+  
   320px
   375px
   425px
+
 [Bootstrap Sizes]
+  
   <576px   xs || >=576px  sm || >=768px  md || >=992px  lg || >=1200px xl || >=1400px xxl 
