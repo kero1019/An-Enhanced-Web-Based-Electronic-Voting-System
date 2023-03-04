@@ -39,6 +39,7 @@ button {
   font-family: "Source Serif Pro", serif !important;
   font-weight: bold !important;
   border-radius: 4px !important;
+  border: none !important;
 }
 a {
   text-decoration: none;
@@ -101,7 +102,6 @@ nav .navbar-toggler:focus {
 }
 .landing button {
   background-color: var(--bluegreen);
-  border: transparent;
   width: 100%;
   padding: 10px 0;
 }

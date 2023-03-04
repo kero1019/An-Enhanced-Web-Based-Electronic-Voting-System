@@ -35,14 +35,38 @@ body {
   font-family: "DM Serif Display", serif;
 }
 
-body>div:first-of-type {
+body > div:first-of-type {
   min-height: calc(100vh - 72px);
 }
 
-body>div {
+body > div {
   background-color: var(--dark);
 }
-
+button {
+  font-family: "Source Serif Pro", serif !important;
+  font-weight: bold !important;
+  border-radius: 4px !important;
+  border: none !important;
+  background-color: var(--orange);
+}
+/* Start Submit Cancel Buttons */
+.buttons {
+  display: flex;
+  margin-top: 10px !important;
+  align-self: flex-end !important;
+}
+.buttons button {
+  color: var(--light) !important;
+  padding: 10px 20px !important;
+  text-transform: capitalize !important;
+}
+.buttons button:first-child {
+  background-color: transparent !important;
+}
+/* End Submit Cancel Buttons */
+a {
+  text-decoration: none;
+}
 /* End General */
 /* Start NavBar */
 nav {
@@ -52,6 +76,7 @@ nav {
 
 nav .navbar-nav {
   background-color: var(--dark);
+  border-radius: 0 0 10px 10px;
 }
 
 .navbar-brand img {
@@ -91,102 +116,68 @@ nav .navbar-toggler:focus {
 .registration {
   color: white;
   text-transform: capitalize;
-  font-size: large;
-  padding-top: 20px;
-  padding-bottom: 20px;
+  padding: 40px 0;
+}
+
+.registration .container img {
+  display: none;
 }
 
 .registration .container form {
   display: flex;
   flex-direction: column;
+  row-gap: 10px;
+  justify-content: center;
 }
 
-.registration .container img {
-  width: 300px;
-  margin-bottom: 100px;
+.registration .container form label {
+  display: block;
 }
 
-.registration .container p {
-  font-size: 30px;
-}
-
-.registration .container .buttons input,
-.buttons button {
-  color: var(--lightlight);
-  margin-top: 20px;
-  margin-bottom: 20px;
-  border: transparent;
-}
-
-.registration .buttons input {
-  background-color: var(--orange);
-  border-radius: 5px;
-}
-
-.registration .buttons button {
-  background-color: transparent;
+.registration .container form input,
+.registration .container form select {
+  width: 100%;
 }
 
 /* // Large devices (desktops, 992px and up) */
 @media (min-width: 992px) {
-  .registration .container img {
-    width: 300px;
-    margin-bottom: 0;
-  }
-
   .registration .container {
     display: flex;
     justify-content: space-around;
-
   }
-
-  .registration .container p {
-    font-size: 40px;
-  }
-
-  .registration .container form input[value="submit"] {
-    background-color: var(--orange);
-    color: var(--light);
-    padding: 9px 14px;
-    border-radius: 9px;
-    border: transparent;
-  }
-
-  .registration .container form .buttons button {
-    color: var(--light);
-    background-color: transparent;
-    padding: 9px 14px;
-    border: transparent;
-  }
-
-  .registration .container form .buttons {
-    position: absolute;
-    bottom: 30px;
-    right: 50px;
+  .registration .container img {
+    display: block;
+    width: 30%;
   }
 }
 
 /* Start personal_info */
-.personal_info {}
+.personal_info {
+}
 
 /* End personal_info */
 /* Start personal_info_edit */
-.personal_info_edit {}
+.personal_info_edit {
+}
 
 /* End personal_info_edit */
 /* Start voting_history */
-.voting_history {}
+.voting_history {
+}
 
 /* End voting_history */
 /* Start elections */
-.elections {}
+.elections {
+}
 
 /* End elections */
 /* Start voting_panel */
-.voting_panel {}
+.voting_panel {
+}
 
 /* End voting_panel */
 /* Start voting_results */
-.voting_results {}
+.voting_results {
+}
 
 /* End voting_results */
