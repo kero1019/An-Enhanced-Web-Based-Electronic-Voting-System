@@ -68,7 +68,37 @@
     </nav>
     <!-- End Nav Bar -->
     <!-- Start registration -->
-    <div class="registration"></div>
+    <div class="registration">
+      <div class="container">
+        <img src="/imgs/Registration.png" alt="">
+        <form action="">
+          <p>registration form</p>
+          <label>full name</label>
+          <input type="text" placeholder="كيرلس فايز فوزي حنا" required autofocus >
+          <label>date of birth</label>
+          <input type="date">
+          <label>gender</label>
+          <select name="gender" id="gender" required>
+            <option value="male">male</option>
+            <option value="female">female</option>
+          </select>
+          <label>email</label>
+          <input type="email" required placeholder="voting@example.com">
+          <label>moblile number</label>
+          <input type="text" placeholder="01129436059">
+          <label>password</label>
+          <input type="password" required placeholder="Write Strong Password">
+          <label>re-enter password</label>
+          <input type="password" required placeholder="Write The Same Password">
+          <label>id number</label>
+          <input type="text" required maxlength="14" placeholder="203 09 15 20 8664">
+          <div class="buttons">
+            <button>cancle</button>
+            <input type="submit" value="submit">
+          </div>  
+        </form>
+      </div>
+    </div>
     <!-- End registration -->
     <!-- js files -->
     <script src="../../js/bootstrap.bundle.min.js"></script>

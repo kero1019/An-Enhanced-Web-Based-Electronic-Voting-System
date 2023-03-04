@@ -21,81 +21,172 @@
   --light: #f6f3f2;
   --black: #000000;
   --white: #ffffff;
-  --light-AT: #f6f3f2de; /*It is the same as "light" but at 87% transperancy(alpha)*/
+  --light-AT: #f6f3f2de;
+  /*It is the same as "light" but at 87% transperancy(alpha)*/
 }
+
 /* End Variables */
 /* Start General */
 .font-src {
   font-family: "Source Serif Pro", serif;
 }
+
 body {
   font-family: "DM Serif Display", serif;
 }
-body > div:first-of-type {
+
+body>div:first-of-type {
   min-height: calc(100vh - 72px);
 }
-body > div {
+
+body>div {
   background-color: var(--dark);
 }
+
 /* End General */
 /* Start NavBar */
 nav {
   background-color: var(--dark);
   height: 72px;
 }
+
 nav .navbar-nav {
   background-color: var(--dark);
 }
+
 .navbar-brand img {
   width: 40px;
 }
+
 nav .nav-item:nth-last-child(1) .nav-link {
   color: var(--orange) !important;
   font-weight: bold;
 }
+
 nav .nav-item:not(:nth-last-child(1)) .nav-link {
   color: var(--white);
 }
+
 nav .nav-item:not(:nth-last-child(1)) .nav-link.active,
 nav .nav-item:not(:nth-last-child(1)) .nav-link:hover,
 nav .nav-item:not(:nth-last-child(1)) .nav-link:focus {
   background-color: var(--orange);
 }
+
 nav .nav-item .nav-link {
   border-radius: 5px;
 }
+
 nav .navbar-toggler {
   border-color: transparent;
 }
+
 nav .navbar-toggler:focus {
   box-shadow: none;
 }
+
 /* End NavBar */
 /* Start registration */
+/* Very Small devices */
 .registration {
+  color: white;
+  text-transform: capitalize;
+  font-size: large;
+  padding-top: 20px;
+  padding-bottom: 20px;
 }
-/* End registration */
+
+.registration .container form {
+  display: flex;
+  flex-direction: column;
+}
+
+.registration .container img {
+  width: 300px;
+  margin-bottom: 100px;
+}
+
+.registration .container p {
+  font-size: 30px;
+}
+
+.registration .container .buttons input,
+.buttons button {
+  color: var(--lightlight);
+  margin-top: 20px;
+  margin-bottom: 20px;
+  border: transparent;
+}
+
+.registration .buttons input {
+  background-color: var(--orange);
+  border-radius: 5px;
+}
+
+.registration .buttons button {
+  background-color: transparent;
+}
+
+/* // Large devices (desktops, 992px and up) */
+@media (min-width: 992px) {
+  .registration .container img {
+    width: 300px;
+    margin-bottom: 0;
+  }
+
+  .registration .container {
+    display: flex;
+    justify-content: space-around;
+
+  }
+
+  .registration .container p {
+    font-size: 40px;
+  }
+
+  .registration .container form input[value="submit"] {
+    background-color: var(--orange);
+    color: var(--light);
+    padding: 9px 14px;
+    border-radius: 9px;
+    border: transparent;
+  }
+
+  .registration .container form .buttons button {
+    color: var(--light);
+    background-color: transparent;
+    padding: 9px 14px;
+    border: transparent;
+  }
+
+  .registration .container form .buttons {
+    position: absolute;
+    bottom: 30px;
+    right: 50px;
+  }
+}
+
 /* Start personal_info */
-.personal_info {
-}
+.personal_info {}
+
 /* End personal_info */
 /* Start personal_info_edit */
-.personal_info_edit {
-}
+.personal_info_edit {}
+
 /* End personal_info_edit */
 /* Start voting_history */
-.voting_history {
-}
+.voting_history {}
+
 /* End voting_history */
 /* Start elections */
-.elections {
-}
+.elections {}
+
 /* End elections */
 /* Start voting_panel */
-.voting_panel {
-}
+.voting_panel {}
+
 /* End voting_panel */
 /* Start voting_results */
-.voting_results {
-}
+.voting_results {}
+
 /* End voting_results */
