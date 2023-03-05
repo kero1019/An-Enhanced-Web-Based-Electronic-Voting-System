@@ -480,3 +480,38 @@ footer .container .box2 p:first-child::before {
 .re-enter_password {
 }
 /* End re-enter_password */
+
+
+/* Start welcome_email */
+body{
+  background-color: #eeeeee;
+}
+.welcome_email {
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
+.welcome_email .navbar-brand{
+  padding: 20px;
+}
+.welcome_email .container{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+.welcome_email .container img{
+width: 400px;
+margin-bottom: 30px;
+}
+.welcome_email .container p{
+font-size: 30px;
+line-height: 25px;
+text-align: center;
+}
+@media (max-width: 915px) {
+  .welcome_email .container p{
+    line-height: 50px;
+    }
+}
+
+/* End welcome_email */
