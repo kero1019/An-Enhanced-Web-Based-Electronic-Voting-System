@@ -359,3 +359,65 @@ footer .container .box2 p:first-child::before {
 .re-enter_password {
 }
 /* End re-enter_password */
+
+/* start stepSection */
+.stepsection {
+  background: var(--light);
+  padding-top: 70px;
+  padding-bottom: 70px;
+}
+
+.stepsection .container {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.stepsection .headline h1 {
+  font-size: 80px;
+  line-height: 137px;
+  color: #303841;
+  position: relative;
+}
+.stepsection .headline h1::before {
+  content: " ";
+  position: absolute;
+  width: 50%;
+  height: 5px;
+  background: var(--bluegreen);
+  bottom: 33px;
+}
+
+.stepsection .container .foursteps {
+  padding-top: 30px;
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+  align-items: flex-start;
+  position: relative;
+}
+
+.stepsection .foursteps p {
+  color: var(--orange);
+  font-size: 60px;
+  display: inline-block;
+  margin-right: 40px;
+  position: relative;
+  top: 15px;
+}
+
+.stepsection .foursteps h4 {
+  font-family: "DM Serif Display";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 25px;
+  line-height: 34px;
+  display: inline-block;
+}
+@media (max-width: 915px) {
+  .stepsection .foursteps p,
+  h4 {
+    display: block;
+  }
+}
+/* end stepSection */
