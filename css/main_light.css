@@ -359,3 +359,50 @@ footer .container .box2 p:first-child::before {
 .re-enter_password {
 }
 /* End re-enter_password */
+
+/* Start register_enter_code */
+body{
+  background-color: #eeeeee;
+}
+.register_enter_code {
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
+.register_enter_code .navbar-brand{
+  padding: 20px;
+}
+.register_enter_code .container{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 5px;
+}
+.register_enter_code .container img{
+width: 400px;
+margin-bottom: 30px;
+}
+.register_enter_code .container p{
+  font-size: 30px;
+  text-align: center;
+  color: var(--bluegreen);
+}
+.register_enter_code .container input{
+background-color: #303841;
+border: none;
+color: white;
+width: 250px;
+height: 40px;
+margin-bottom: 5px;
+}
+
+
+.register_enter_code .container button{
+  background-color: #FF5722;
+  border: none;
+  width: 250px;
+  height: 35bpx;
+  color: white;
+}
+
+/* End register_enter_code */
