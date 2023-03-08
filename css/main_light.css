@@ -473,7 +473,36 @@ footer .container .box2 p:first-child::before {
 }
 /* End verification */
 /* Start forgot_enter_code */
-.forgot_enter_code {
+.Verification .container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  min-height: 600px;
+  position: relative;
+  gap: 10px;
+}
+.Verification .container img {
+  position: absolute;
+  top: 25px;
+  left: 25px;
+  width: 40px;
+}
+.Verification .container div {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 20px;
+  color:#00adb5;
+}
+.Verification .container textarea {
+  border-style: none;
+  background-color: #303841;
+  resize: none;
+}
+.Verification .container button {
+  border-style: none;
+  background-color: #ff5722;
 }
 /* End forgot_enter_code */
 /* Start re-enter_password */
