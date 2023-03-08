@@ -154,6 +154,38 @@ nav .navbar-toggler:focus {
 }
 /* end media query */
 /* End landing */
+/* Start About */
+.About .container {
+  min-height: 600px;
+  display: grid;
+  grid-template-columns: 15% 5% auto;
+  align-items: center;
+  justify-content: center;
+}
+.About .container h3 {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  grid-column: 1/2;
+  transform: rotate(-90deg);
+  font-size: 70px;
+}
+.About .container div {
+  grid-column: 2 / 3;
+  max-width: 5px;
+  min-height: 400px;
+  background-color: var(--orange);
+}
+.About .container p {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  grid-column: 3/5;
+  font-size: 25px;
+  max-width: 580px;
+  /* width: fit-content; */
+}
+/* End About */
 /* Start Footer */
 footer {
   padding: 50px 0;
