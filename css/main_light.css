@@ -229,7 +229,7 @@ nav .navbar-toggler:focus {
 }
 @media (min-width: 1440px) {
   .About .container h1 {
-    font-size: 200px;
+    font-size: 150px;
     height: 700px;
   }
   .About .container p {
