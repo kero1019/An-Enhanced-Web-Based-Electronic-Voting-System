@@ -377,11 +377,12 @@ footer .container .box2 p:first-child::before {
   font-size: 80px;
   color: var(--dark);
   position: relative;
+  width: fit-content;
 }
 .stepsection .headline h1::before {
   content: " ";
   position: absolute;
-  width: 50%;
+  width: 70%;
   height: 2px;
   background: var(--bluegreen);
   bottom: 0px;
@@ -461,6 +462,7 @@ footer .container .box2 p:first-child::before {
   }
   .stepsection .headline h1 {
     font-size: 45px;
+    
   }
   .stepsection .foursteps p {
     font-size: 35px;
