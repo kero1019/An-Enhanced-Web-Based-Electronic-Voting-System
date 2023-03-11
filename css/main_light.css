@@ -375,17 +375,16 @@ footer .container .box2 p:first-child::before {
 
 .stepsection .headline h1 {
   font-size: 80px;
-  line-height: 137px;
-  color: #303841;
+  color: var(--dark);
   position: relative;
 }
 .stepsection .headline h1::before {
   content: " ";
   position: absolute;
   width: 50%;
-  height: 5px;
+  height: 2px;
   background: var(--bluegreen);
-  bottom: 33px;
+  bottom: 0px;
 }
 
 .stepsection .container .foursteps {
@@ -393,31 +392,80 @@ footer .container .box2 p:first-child::before {
   display: flex;
   flex-direction: column;
   gap: 40px;
-  align-items: flex-start;
   position: relative;
 }
 
 .stepsection .foursteps p {
   color: var(--orange);
   font-size: 60px;
-  display: inline-block;
-  margin-right: 40px;
   position: relative;
-  top: 15px;
+  top: 10px;
 }
 
 .stepsection .foursteps h4 {
-  font-family: "DM Serif Display";
-  font-style: normal;
   font-weight: 400;
-  font-size: 25px;
-  line-height: 34px;
-  display: inline-block;
+  font-size: 30px;
 }
-@media (max-width: 915px) {
-  .stepsection .foursteps p,
-  h4 {
-    display: block;
+
+@media (min-width: 320px) {
+  .stepsection .container .foursteps div {
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    gap: 5px;
+    flex-direction: column;
+  }
+  .stepsection .foursteps h4 {
+    font-size: 20px;
+  }
+  .stepsection .headline h1 {
+    font-size: 28px;
+  }
+  .stepsection .foursteps p {
+    font-size: 30px;
   }
 }
+
+@media (min-width: 425px) {
+  .stepsection .container .foursteps div {
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    gap: 5px;
+    flex-direction: column;
+  }
+  .stepsection .foursteps h4 {
+    font-size: 22px;
+  }
+  .stepsection .headline h1 {
+    font-size: 35px;
+  }
+  .stepsection .foursteps p {
+    font-size: 30px;
+  }
+}
+
+@media (min-width: 768px) {
+  .stepsection .container .foursteps div {
+    flex-direction: row;
+    gap: 15px;
+  }
+  .stepsection .container .foursteps {
+    align-items: flex-start;
+  }
+
+  .stepsection .foursteps h4 {
+    font-size: 25px;
+  }
+  .stepsection .headline h1 {
+    font-size: 45px;
+  }
+  .stepsection .foursteps p {
+    font-size: 35px;
+    width: 40px;
+  }
+}
+
 /* end stepSection */
