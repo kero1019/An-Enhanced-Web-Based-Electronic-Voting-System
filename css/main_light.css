@@ -359,3 +359,131 @@ footer .container .box2 p:first-child::before {
 .re-enter_password {
 }
 /* End re-enter_password */
+/* start features */
+
+.features .container{
+  display: grid;
+  grid-template-columns: 150px 100px 1fr;
+  column-gap: 50px;
+  /* display: flex;
+  flex-wrap: wrap;
+  position: relative; */
+}
+
+.features .container .right{
+  position: absolute;
+  top: 235px;
+  left: 50px;
+  transform: rotate(270deg);
+}
+
+.features .container .line{
+  border-left: 6px solid #00ADB5;
+  height: 475px;
+  position: absolute;
+  left: 200px;
+  top: 58px;
+}
+.features .container .right h2{
+  color: #303841;
+  font-size: 40px;
+} 
+
+.features .container .left{
+position: absolute;
+left: 255px;
+top: 75px
+}
+
+
+.features .container .left .icons{
+  display: grid; 
+  grid-template-columns: 100px 1fr;
+  grid-template-rows: repeat(5,20px)
+}
+.features .container .left .icons i{
+  color: #FF5722;
+  font-size: 34px;
+}
+
+
+
+.features .container .left .icons p{
+  color: #303841;
+  font-size: 17px;
+  font-style: normal;
+  top: 10px;
+  position: relative;
+}
+
+@media (max-width: 625px) {
+  .features .container .left{
+      width: 100%;
+  }
+}
+
+/* ---------------------------- */
+
+.re-enter .container{
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  column-gap: 50px;
+}
+.re-enter .container .img{
+  position: relative;
+  top: 60%;
+  left: 35px;
+}
+.re-enter .container .pass{
+  position: relative;
+  /* left: 1px; */
+  top: 65%;
+}
+
+.re-enter .container .pass h2{
+  color: #00ADB5;
+  font-size: 35px;
+  padding-left: 14px;
+}
+.re-enter .container .pass .new{
+padding: 15px;
+}
+.re-enter .container .pass .new p{
+  color: #00ADB5;
+  font-size: 15px;
+  font-weight: 400;
+
+}
+
+.re-enter .container .pass .new textarea{
+background-color: #303841
+;
+}
+button{
+  background-color: #FF5722;
+  padding: 9px 56px;
+  margin-left: 16px;
+  color: #FFFFFF;
+  font-weight: 700;
+  font-size: 20px;
+  border-color: antiquewhite;
+}
+
+@media (max-width:767px) {
+  .re-enter .container{
+      display: grid;
+      grid-template-columns: 1fr;
+      grid-template-rows: repeat(2, 1fr);
+  }
+  .re-enter .container .img{
+      position: relative;
+      top: 55px;
+  }
+  .re-enter .container .pass
+   {
+      position: relative;
+      top: 100px;
+      left: 24px;
+  }
+}
+/* end features */
