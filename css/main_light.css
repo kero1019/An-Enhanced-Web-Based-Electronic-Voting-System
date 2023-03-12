@@ -186,6 +186,7 @@ nav .navbar-toggler:focus {
 .About .container p {
   text-align: justify;
   font-size: 20px;
+  margin: 0;
 }
 @media (min-width: 576px) {
   .About .container {
@@ -198,20 +199,27 @@ nav .navbar-toggler:focus {
     text-orientation: mixed;
     margin: 0;
     transform: rotate(180deg);
-    border-left: 3px solid var(--orange);
-    height: 250px;
   }
   .About .container h1::before {
     display: none;
   }
   .About .container p {
     max-width: 425px;
+    position: relative;
+  }
+  .About .container p::before {
+    content: "";
+    position: absolute;
+    width: 2px;
+    height: calc(100% + 20px);
+    background-color: var(--orange);
+    left: -20px;
+    top: -10px;
   }
 }
 @media (min-width: 768px) {
   .About .container h1 {
     font-size: 80px;
-    height: 350px;
   }
   .About .container p {
     font-size: 20px;
@@ -220,7 +228,6 @@ nav .navbar-toggler:focus {
 @media (min-width: 992px) {
   .About .container h1 {
     font-size: 120px;
-    height: 500px;
   }
   .About .container p {
     font-size: 30px;
@@ -230,7 +237,6 @@ nav .navbar-toggler:focus {
 @media (min-width: 1440px) {
   .About .container h1 {
     font-size: 150px;
-    height: 700px;
   }
   .About .container p {
     font-size: 40px;
