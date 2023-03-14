@@ -359,9 +359,10 @@ footer .container .box2 p:first-child::before {
 .re-enter_password {
 }
 /* End re-enter_password */
+
 /* start features */
 
-.features .container{
+.features .container {
   display: grid;
   grid-template-columns: 150px 100px 1fr;
   column-gap: 50px;
@@ -370,46 +371,41 @@ footer .container .box2 p:first-child::before {
   position: relative; */
 }
 
-.features .container .right{
+.features .container .right {
   position: absolute;
   top: 235px;
   left: 50px;
   transform: rotate(270deg);
 }
 
-.features .container .line{
-  border-left: 6px solid #00ADB5;
+.features .container .line {
+  border-left: 6px solid var(--bluegreen);
   height: 475px;
   position: absolute;
   left: 200px;
   top: 58px;
 }
-.features .container .right h2{
-  color: #303841;
+.features .container .right h2 {
+  color: var(--dark);
   font-size: 40px;
-} 
-
-.features .container .left{
-position: absolute;
-left: 255px;
-top: 75px
 }
 
+.features .container .left {
+  position: absolute;
+  left: 255px;
+  top: 75px;
+}
 
-.features .container .left .icons{
-  display: grid; 
+.features .container .left .icons svg{
+  color: var(--orange);
+  display: grid;
   grid-template-columns: 100px 1fr;
-  grid-template-rows: repeat(5,20px)
-}
-.features .container .left .icons i{
-  color: #FF5722;
+  grid-template-rows: repeat(5, 20px);
   font-size: 34px;
 }
 
-
-
-.features .container .left .icons p{
-  color: #303841;
+.features .container .left .icons p {
+  color: var(--dark);
   font-size: 17px;
   font-style: normal;
   top: 10px;
@@ -417,73 +413,70 @@ top: 75px
 }
 
 @media (max-width: 625px) {
-  .features .container .left{
-      width: 100%;
+  .features .container .left {
+    width: 100%;
   }
 }
 
 /* ---------------------------- */
 
-.re-enter .container{
+.re-enter .container {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   column-gap: 50px;
 }
-.re-enter .container .img{
+.re-enter .container .img {
   position: relative;
   top: 60%;
   left: 35px;
 }
-.re-enter .container .pass{
+.re-enter .container .pass {
   position: relative;
   /* left: 1px; */
   top: 65%;
 }
 
-.re-enter .container .pass h2{
-  color: #00ADB5;
+.re-enter .container .pass h2 {
+  color: var(--bluegreen);
   font-size: 35px;
   padding-left: 14px;
 }
-.re-enter .container .pass .new{
-padding: 15px;
+.re-enter .container .pass .new {
+  padding: 15px;
 }
-.re-enter .container .pass .new p{
-  color: #00ADB5;
+.re-enter .container .pass .new p {
+  color: var(--bluegreen);
   font-size: 15px;
   font-weight: 400;
-
 }
 
-.re-enter .container .pass .new textarea{
-background-color: #303841
-;
+.re-enter .container .pass .new textarea {
+  background-color: var(--dark);
 }
-button{
-  background-color: #FF5722;
+button {
+  background-color: var(--orange);
   padding: 9px 56px;
   margin-left: 16px;
-  color: #FFFFFF;
+  color: var(--white);
   font-weight: 700;
   font-size: 20px;
-  border-color: antiquewhite;
+  border-color: var(--white);
 }
 
-@media (max-width:767px) {
-  .re-enter .container{
-      display: grid;
-      grid-template-columns: 1fr;
-      grid-template-rows: repeat(2, 1fr);
+@media (max-width: 767px) {
+  .re-enter .container {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(2, 1fr);
   }
-  .re-enter .container .img{
-      position: relative;
-      top: 55px;
+  .re-enter .container .img {
+    position: relative;
+    top: 55px;
   }
-  .re-enter .container .pass
-   {
-      position: relative;
-      top: 100px;
-      left: 24px;
+  .re-enter .container .pass {
+    position: relative;
+    top: 100px;
+    left: 24px;
   }
 }
 /* end features */
