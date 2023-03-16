@@ -191,22 +191,34 @@ nav .navbar-toggler:focus {
 /* // Medium devices (tablets, 768px and up) */
 @media (min-width: 768px) {
   .features .container {
+    font-size: 30px;
     padding: 20px;
+    height: 100vh;
     background-color: var(--light);
     display: grid;
     grid-template-columns: repeat(2, 40px) 1fr;
     gap: 20px;
   }
   .features .container .right h2 {
+    writing-mode: vertical-lr;
+    text-orientation: mixed;
     color: var(--dark);
-    transform: rotate(270deg);
-    font-size: 40px;
+    transform: translate(-50%,-50%) rotate(180deg);
+    font-size: 80px;
     position: relative;
     top: 50%;
+    margin: 0;
   }
   .features .container .line {
     border-left: 4px solid var(--bluegreen);
     border-bottom: transparent;
+    height: calc(100% - 40px);
+  }
+  .features .container .left{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    font-size: 30px;
   }
 }
 
