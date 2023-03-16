@@ -154,6 +154,86 @@ nav .navbar-toggler:focus {
 }
 /* end media query */
 /* End landing */
+
+/* start features */
+.features {
+  padding: 20px;
+  background-color: var(--light);
+}
+.features .container .right h2 {
+  font-size: 30px;
+  text-align: center;
+}
+.features .container .line {
+  border-bottom: 4px solid var(--bluegreen);
+}
+.features .container .left .icons svg {
+  color: var(--orange);
+}
+.features .container .left .icons {
+  display: grid;
+  grid-template-columns: 50px 1fr;
+  grid-template-rows: repeat(5, 15px);
+}
+.features .container .left .icons svg {
+  font-size: 30px;
+}
+.features .container .left {
+  padding: 20px;
+}
+/* media query of features */
+@media (max-width: 575px) {
+}
+/* Small devices (landscape phones, 576px and up) */
+@media (min-width: 576px) {
+}
+
+/* // Medium devices (tablets, 768px and up) */
+@media (min-width: 768px) {
+  .features .container {
+    font-size: 30px;
+    padding: 20px;
+    height: 100vh;
+    background-color: var(--light);
+    display: grid;
+    grid-template-columns: repeat(2, 40px) 1fr;
+    gap: 20px;
+  }
+  .features .container .right h2 {
+    writing-mode: vertical-lr;
+    text-orientation: mixed;
+    color: var(--dark);
+    transform: translate(-50%,-50%) rotate(180deg);
+    font-size: 80px;
+    position: relative;
+    top: 50%;
+    margin: 0;
+  }
+  .features .container .line {
+    border-left: 4px solid var(--bluegreen);
+    border-bottom: transparent;
+    height: calc(100% - 40px);
+  }
+  .features .container .left{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    font-size: 30px;
+  }
+}
+
+/* // Large devices (desktops, 992px and up) */
+@media (min-width: 992px) {
+}
+
+/* // X-Large devices (large desktops, 1200px and up) */
+@media (min-width: 1200px) {
+}
+
+/* // XX-Large devices (larger desktops, 1400px and up) */
+@media (min-width: 1400px) {
+}
+
 /* Start About */
 .About {
   background-color: var(--light);
@@ -244,6 +324,7 @@ nav .navbar-toggler:focus {
   }
 }
 /* End About */
+
 /* Start Footer */
 footer {
   padding: 50px 0;
@@ -571,114 +652,5 @@ footer .container .box2 p:first-child::before {
 }
 /* End re-enter_password */
 
-/* start stepSection */
-.stepsection {
-  background: var(--light);
-  padding-top: 70px;
-  padding-bottom: 70px;
-}
-
-.stepsection .container {
-  display: flex;
-  justify-content: center;
-  flex-direction: column;
-}
-
-.stepsection .headline h1 {
-  font-size: 80px;
-  color: var(--dark);
-  position: relative;
-  width: fit-content;
-}
-.stepsection .headline h1::before {
-  content: " ";
-  position: absolute;
-  width: 70%;
-  height: 2px;
-  background: var(--bluegreen);
-  bottom: 0px;
-}
-
-.stepsection .container .foursteps {
-  padding-top: 30px;
-  display: flex;
-  flex-direction: column;
-  gap: 40px;
-  position: relative;
-}
-
-.stepsection .foursteps p {
-  color: var(--orange);
-  font-size: 60px;
-  position: relative;
-  top: 10px;
-}
-
-.stepsection .foursteps h4 {
-  font-weight: 400;
-  font-size: 30px;
-}
-
-@media (min-width: 320px) {
-  .stepsection .container .foursteps div {
-    display: flex;
-    text-align: center;
-    justify-content: center;
-    align-items: center;
-    gap: 5px;
-    flex-direction: column;
-  }
-  .stepsection .foursteps h4 {
-    font-size: 20px;
-  }
-  .stepsection .headline h1 {
-    font-size: 28px;
-  }
-  .stepsection .foursteps p {
-    font-size: 30px;
-  }
-}
-
-@media (min-width: 425px) {
-  .stepsection .container .foursteps div {
-    display: flex;
-    text-align: center;
-    justify-content: center;
-    align-items: center;
-    gap: 5px;
-    flex-direction: column;
-  }
-  .stepsection .foursteps h4 {
-    font-size: 22px;
-  }
-  .stepsection .headline h1 {
-    font-size: 35px;
-  }
-  .stepsection .foursteps p {
-    font-size: 30px;
-  }
-}
-
-@media (min-width: 768px) {
-  .stepsection .container .foursteps div {
-    flex-direction: row;
-    gap: 15px;
-  }
-  .stepsection .container .foursteps {
-    align-items: flex-start;
-  }
-
-  .stepsection .foursteps h4 {
-    font-size: 25px;
-  }
-  .stepsection .headline h1 {
-    font-size: 45px;
-    
-  }
-  .stepsection .foursteps p {
-    font-size: 35px;
-    width: 40px;
-  }
-}
-
-/* end stepSection */
+/* ----------------------------- */
+/* ---------------------------- */
