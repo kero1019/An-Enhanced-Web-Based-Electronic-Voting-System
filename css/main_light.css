@@ -414,9 +414,7 @@ footer .container .box2 p:first-child::before {
   color: var(--bluegreen);
   height: 100vh;
   display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
+  
   row-gap: 15px;
   font-size: 18px;
 }
@@ -476,7 +474,87 @@ footer .container .box2 p:first-child::before {
 .forgot_enter_code {
 }
 /* End forgot_enter_code */
+/* ---------------------------- */
 /* Start re-enter_password */
-.re-enter_password {
+.re-enter_password{
+  background-color: var(--light);
+}
+.re-enter_password .container{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+.re-enter_password img{
+  width: 250px;
+  padding: 20px 0 0px;
+}
+.re-enter_password .container .pass {
+  color: var(--bluegreen);
+  display: grid;
+  padding-top: 40px;
+
+}
+.re-enter_password .container .pass h2{
+  padding-bottom: 20px;
+  font-weight: bold;
+
+
+}
+.re-enter_password .container .pass .new{
+  padding-top: 10px;
+
+}
+.re-enter_password .container .pass .new p{
+      /* padding-top: 20px; */
+
+}
+.re-enter_password .container .pass .new textarea{
+  background-color: var(--dark);
+
+}
+.re-enter_password .container button{
+  background-color: var(--orange);
+  height: 30px;
+  width: 150px;
+  font-size: 20px;
+  border-radius: 50%;
+  color: var(--white);
+}
+@media (max-width: 575px) {
+}
+
+/* // Small devices (landscape phones, 576px and up) */
+@media (min-width: 576px) {
+}
+
+/* // Medium devices (tablets, 768px and up) */
+@media (min-width: 768px) {
+  .re-enter_password .container{
+   display: grid;
+   grid-template-columns: 400px 1fr;
+    position: relative;
+  }
+  .re-enter_password img{
+    position: absolute;
+    top: 30%;
+    width: 400px;
+    left: -50px;
+  }
+  .re-enter_password .container .pass {
+    position: relative;
+    top: 50%;
+  }
+}
+
+/* // Large devices (desktops, 992px and up) */
+@media (min-width: 992px) {
+}
+
+/* // X-Large devices (large desktops, 1200px and up) */
+@media (min-width: 1200px) {
+}
+
+/* // XX-Large devices (larger desktops, 1400px and up) */
+@media (min-width: 1400px) {
 }
 /* End re-enter_password */
