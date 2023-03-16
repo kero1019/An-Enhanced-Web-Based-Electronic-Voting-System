@@ -154,6 +154,96 @@ nav .navbar-toggler:focus {
 }
 /* end media query */
 /* End landing */
+/* Start About */
+.About {
+  background-color: var(--light);
+  min-height: 100vh;
+  display: flex;
+  padding: 20px 0;
+}
+.About .container {
+  padding: 0px 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.About .container h1 {
+  text-align: center;
+  font-size: 70px;
+  position: relative;
+  height: fit-content;
+}
+.About .container h1::before {
+  content: "";
+  position: absolute;
+  height: 2px;
+  width: 80%;
+  background-color: var(--orange);
+  left: 50%;
+  bottom: 0;
+  transform: translateX(-50%);
+}
+.About .container p {
+  text-align: justify;
+  font-size: 20px;
+  margin: 0;
+}
+@media (min-width: 576px) {
+  .About .container {
+    flex-direction: row;
+    align-items: center;
+    gap: 20px;
+  }
+  .About .container h1 {
+    writing-mode: vertical-rl;
+    text-orientation: mixed;
+    margin: 0;
+    transform: rotate(180deg);
+  }
+  .About .container h1::before {
+    display: none;
+  }
+  .About .container p {
+    max-width: 425px;
+    position: relative;
+  }
+  .About .container p::before {
+    content: "";
+    position: absolute;
+    width: 2px;
+    height: calc(100% + 20px);
+    background-color: var(--orange);
+    left: -20px;
+    top: -10px;
+  }
+}
+@media (min-width: 768px) {
+  .About .container h1 {
+    font-size: 80px;
+  }
+  .About .container p {
+    font-size: 20px;
+  }
+}
+@media (min-width: 992px) {
+  .About .container h1 {
+    font-size: 120px;
+  }
+  .About .container p {
+    font-size: 30px;
+    max-width: 60%;
+  }
+}
+@media (min-width: 1440px) {
+  .About .container h1 {
+    font-size: 150px;
+  }
+  .About .container p {
+    font-size: 40px;
+    max-width: 60%;
+  }
+}
+/* End About */
 /* Start Footer */
 footer {
   padding: 50px 0;
