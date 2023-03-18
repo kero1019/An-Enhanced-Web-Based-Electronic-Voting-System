@@ -487,9 +487,6 @@ footer .container .box2 p:first-child::before {
   height: 100vh;
   background-color: var(--light);
 }
-.welcome_email .navbar-brand {
-  padding: 20px;
-}
 .welcome_email .container {
   display: flex;
   justify-content: center;
@@ -497,33 +494,18 @@ footer .container .box2 p:first-child::before {
   flex-direction: column;
 }
 .welcome_email .container img {
-  width: 400px;
+  width: 300px;
 }
 .welcome_email .container p {
-  font-size: 25px;
-  line-height: 25px;
   text-align: center;
+  font-size: calc(1rem + 1vw);
 }
-/* xl screen  */
-@media (min-width: 1400px) {
+@media (min-width: 992px) {
   .welcome_email .container p {
-    font-size: 30px;
-    text-align: center;
+    width: 60%;
   }
-
   .welcome_email .container img {
-    width: fit-content;
-  }
-}
-/* small screen  */
-@media (max-width: 575px) {
-  .welcome_email .container img {
-    width: inherit;
-  }
-
-  .welcome_email .container p {
-    text-align: center;
-    font-size: 20px;
+    width: 450px;
   }
 }
 
