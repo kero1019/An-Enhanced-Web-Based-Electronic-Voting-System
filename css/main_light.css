@@ -117,7 +117,7 @@ nav .navbar-toggler:focus {
     transform: translate(-50%, -50%);
   }
   .landing button {
-    font-size: 5vw;
+    font-size: 4vw;
   }
 }
 @media (min-width: 768px) {
@@ -154,22 +154,120 @@ nav .navbar-toggler:focus {
 }
 /* end media query */
 /* End landing */
+/* start features */
+.features {
+  background-color: var(--light-AT);
+}
+.features .container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  gap: 20px;
+}
+.features .container h1 {
+  position: relative;
+  font-size: 40px;
+}
+.features .container h1::before {
+  content: "";
+  position: absolute;
+  height: 2px;
+  width: calc(100% + 30px);
+  background-color: var(--bluegreen);
+  bottom: 0;
+  left: -15px;
+}
+.features .container .right {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+.features .container .icons {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 5px;
+}
+.features .container .icons svg {
+  font-size: 30px;
+  color: var(--orange);
+}
+.features .container .icons p {
+  margin: 0;
+}
+/* Small devices (landscape phones, 576px and up) */
+@media (min-width: 576px) {
+  .features {
+    display: flex;
+  }
+  .features .container {
+    flex-direction: row;
+    gap: 10px;
+    justify-content: flex-start;
+  }
+  .features .container h1 {
+    writing-mode: vertical-lr;
+    text-orientation: mixed;
+    color: var(--dark);
+    transform: rotate(180deg);
+    font-size: 50px;
+    margin: 0;
+    border-left: 2px solid var(--bluegreen);
+    height: 80%;
+    text-align: center;
+  }
+  .features .container h1::before {
+    display: none;
+  }
+  .features .container .right {
+    display: flex;
+    flex-direction: column;
+    gap: 50px;
+    position: relative;
+  }
+  .features .container .icons {
+    flex-direction: row;
+  }
+  .features .container .icons svg {
+    width: 60px;
+  }
+  .features .container .icons p {
+    font-size: 20px;
+  }
+}
+/* // Medium devices (tablets, 768px and up) */
+@media (min-width: 768px) {
+  .features .container h1 {
+    font-size: 80px;
+  }
+}
+/* // Large devices (desktops, 992px and up) */
+@media (min-width: 992px) {
+  .features .container h1 {
+    font-size: 100px;
+  }
+  .features .container .icons p {
+    font-size: 30px;
+  }
+}
+/* End Features */
 /* Start About */
 .About {
-  background-color: var(--light);
+  background-color: var(--lightAT);
   min-height: 100vh;
   display: flex;
   padding: 20px 0;
 }
 .About .container {
-  padding: 0px 20px;
   display: flex;
   flex-direction: column;
   justify-content: center;
 }
 .About .container h1 {
   text-align: center;
-  font-size: 70px;
+  font-size: 40px;
   position: relative;
   height: fit-content;
 }
@@ -192,6 +290,7 @@ nav .navbar-toggler:focus {
   .About .container {
     flex-direction: row;
     align-items: center;
+    justify-content: flex-start;
     gap: 20px;
   }
   .About .container h1 {
@@ -199,6 +298,10 @@ nav .navbar-toggler:focus {
     text-orientation: mixed;
     margin: 0;
     transform: rotate(180deg);
+    font-size: 50px;
+    border-left: 2px solid var(--orange);
+    height: 80%;
+    text-align: center;
   }
   .About .container h1::before {
     display: none;
@@ -207,27 +310,18 @@ nav .navbar-toggler:focus {
     max-width: 425px;
     position: relative;
   }
-  .About .container p::before {
-    content: "";
-    position: absolute;
-    width: 2px;
-    height: calc(100% + 20px);
-    background-color: var(--orange);
-    left: -20px;
-    top: -10px;
-  }
 }
 @media (min-width: 768px) {
   .About .container h1 {
     font-size: 80px;
   }
   .About .container p {
-    font-size: 20px;
+    font-size: 25px;
   }
 }
 @media (min-width: 992px) {
   .About .container h1 {
-    font-size: 120px;
+    font-size: 100px;
   }
   .About .container p {
     font-size: 30px;
@@ -244,6 +338,115 @@ nav .navbar-toggler:focus {
   }
 }
 /* End About */
+/* start stepSection */
+.stepsection {
+  background: var(--light);
+  padding-top: 70px;
+  padding-bottom: 70px;
+}
+
+.stepsection .container {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.stepsection .headline h1 {
+  font-size: 80px;
+  color: var(--dark);
+  position: relative;
+  width: fit-content;
+}
+.stepsection .headline h1::before {
+  content: " ";
+  position: absolute;
+  width: 70%;
+  height: 2px;
+  background: var(--bluegreen);
+  bottom: 0px;
+}
+
+.stepsection .container .foursteps {
+  padding-top: 30px;
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+  position: relative;
+}
+
+.stepsection .foursteps p {
+  color: var(--orange);
+  font-size: 60px;
+  position: relative;
+  top: 10px;
+}
+
+.stepsection .foursteps h4 {
+  font-weight: 400;
+  font-size: 30px;
+}
+
+@media (min-width: 320px) {
+  .stepsection .container .foursteps div {
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    gap: 5px;
+    flex-direction: column;
+  }
+  .stepsection .foursteps h4 {
+    font-size: 20px;
+  }
+  .stepsection .headline h1 {
+    font-size: 28px;
+  }
+  .stepsection .foursteps p {
+    font-size: 30px;
+  }
+}
+
+@media (min-width: 425px) {
+  .stepsection .container .foursteps div {
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    gap: 5px;
+    flex-direction: column;
+  }
+  .stepsection .foursteps h4 {
+    font-size: 22px;
+  }
+  .stepsection .headline h1 {
+    font-size: 35px;
+  }
+  .stepsection .foursteps p {
+    font-size: 30px;
+  }
+}
+
+@media (min-width: 768px) {
+  .stepsection .container .foursteps div {
+    flex-direction: row;
+    gap: 15px;
+  }
+  .stepsection .container .foursteps {
+    align-items: flex-start;
+  }
+
+  .stepsection .foursteps h4 {
+    font-size: 25px;
+  }
+  .stepsection .headline h1 {
+    font-size: 45px;
+  }
+  .stepsection .foursteps p {
+    font-size: 35px;
+    width: 40px;
+  }
+}
+/* end stepSection */
 /* Start Footer */
 footer {
   padding: 50px 0;
@@ -570,115 +773,3 @@ footer .container .box2 p:first-child::before {
 .re-enter_password {
 }
 /* End re-enter_password */
-
-/* start stepSection */
-.stepsection {
-  background: var(--light);
-  padding-top: 70px;
-  padding-bottom: 70px;
-}
-
-.stepsection .container {
-  display: flex;
-  justify-content: center;
-  flex-direction: column;
-}
-
-.stepsection .headline h1 {
-  font-size: 80px;
-  color: var(--dark);
-  position: relative;
-  width: fit-content;
-}
-.stepsection .headline h1::before {
-  content: " ";
-  position: absolute;
-  width: 70%;
-  height: 2px;
-  background: var(--bluegreen);
-  bottom: 0px;
-}
-
-.stepsection .container .foursteps {
-  padding-top: 30px;
-  display: flex;
-  flex-direction: column;
-  gap: 40px;
-  position: relative;
-}
-
-.stepsection .foursteps p {
-  color: var(--orange);
-  font-size: 60px;
-  position: relative;
-  top: 10px;
-}
-
-.stepsection .foursteps h4 {
-  font-weight: 400;
-  font-size: 30px;
-}
-
-@media (min-width: 320px) {
-  .stepsection .container .foursteps div {
-    display: flex;
-    text-align: center;
-    justify-content: center;
-    align-items: center;
-    gap: 5px;
-    flex-direction: column;
-  }
-  .stepsection .foursteps h4 {
-    font-size: 20px;
-  }
-  .stepsection .headline h1 {
-    font-size: 28px;
-  }
-  .stepsection .foursteps p {
-    font-size: 30px;
-  }
-}
-
-@media (min-width: 425px) {
-  .stepsection .container .foursteps div {
-    display: flex;
-    text-align: center;
-    justify-content: center;
-    align-items: center;
-    gap: 5px;
-    flex-direction: column;
-  }
-  .stepsection .foursteps h4 {
-    font-size: 22px;
-  }
-  .stepsection .headline h1 {
-    font-size: 35px;
-  }
-  .stepsection .foursteps p {
-    font-size: 30px;
-  }
-}
-
-@media (min-width: 768px) {
-  .stepsection .container .foursteps div {
-    flex-direction: row;
-    gap: 15px;
-  }
-  .stepsection .container .foursteps {
-    align-items: flex-start;
-  }
-
-  .stepsection .foursteps h4 {
-    font-size: 25px;
-  }
-  .stepsection .headline h1 {
-    font-size: 45px;
-    
-  }
-  .stepsection .foursteps p {
-    font-size: 35px;
-    width: 40px;
-  }
-}
-
-/* end stepSection */
