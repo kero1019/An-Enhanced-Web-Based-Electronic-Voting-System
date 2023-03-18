@@ -292,7 +292,7 @@ nav .navbar-toggler:focus {
     writing-mode: vertical-lr;
     text-orientation: mixed;
     color: var(--dark);
-    transform: translate(-50%,-50%) rotate(180deg);
+    transform: rotate(180deg) translateY(50%);
     font-size: 80px;
     position: relative;
     top: 50%;
@@ -302,6 +302,7 @@ nav .navbar-toggler:focus {
     border-left: 4px solid var(--bluegreen);
     border-bottom: transparent;
     height: calc(100% - 40px);
+    margin-left:35px;
   }
   .features .container .left{
     display: flex;
@@ -317,6 +318,10 @@ nav .navbar-toggler:focus {
 
 /* // X-Large devices (large desktops, 1200px and up) */
 @media (min-width: 1200px) {
+  .features .container .line {
+    height: calc(100% - 100px);
+    margin-top: 35px;
+  }
 }
 
 /* // XX-Large devices (larger desktops, 1400px and up) */
