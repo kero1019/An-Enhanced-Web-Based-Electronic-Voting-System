@@ -117,7 +117,7 @@ nav .navbar-toggler:focus {
     transform: translate(-50%, -50%);
   }
   .landing button {
-    font-size: 5vw;
+    font-size: 4vw;
   }
 }
 @media (min-width: 768px) {
@@ -162,7 +162,6 @@ nav .navbar-toggler:focus {
   padding: 20px 0;
 }
 .About .container {
-  padding: 0px 20px;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -192,6 +191,7 @@ nav .navbar-toggler:focus {
   .About .container {
     flex-direction: row;
     align-items: center;
+    justify-content: flex-start;
     gap: 20px;
   }
   .About .container h1 {
@@ -200,6 +200,9 @@ nav .navbar-toggler:focus {
     margin: 0;
     transform: rotate(180deg);
     font-size: 50px;
+    border-left: 2px solid var(--orange);
+    height: 80%;
+    text-align: center;
   }
   .About .container h1::before {
     display: none;
@@ -207,15 +210,6 @@ nav .navbar-toggler:focus {
   .About .container p {
     max-width: 425px;
     position: relative;
-  }
-  .About .container p::before {
-    content: "";
-    position: absolute;
-    width: 2px;
-    height: calc(100% + 20px);
-    background-color: var(--orange);
-    left: -20px;
-    top: -10px;
   }
 }
 @media (min-width: 768px) {
@@ -228,7 +222,7 @@ nav .navbar-toggler:focus {
 }
 @media (min-width: 992px) {
   .About .container h1 {
-    font-size: 120px;
+    font-size: 100px;
   }
   .About .container p {
     font-size: 30px;
@@ -248,13 +242,13 @@ nav .navbar-toggler:focus {
 /* start features */
 .features {
   background-color: var(--light-AT);
-  padding: 70px 0;
-  height: 100vh;
 }
 .features .container {
   display: flex;
   flex-direction: column;
+  justify-content: center;
   align-items: center;
+  height: 100vh;
   gap: 20px;
 }
 .features .container h1 {
@@ -296,6 +290,7 @@ nav .navbar-toggler:focus {
   .features .container {
     flex-direction: row;
     gap: 10px;
+    justify-content: flex-start;
   }
   .features .container h1 {
     writing-mode: vertical-lr;
@@ -304,6 +299,9 @@ nav .navbar-toggler:focus {
     transform: rotate(180deg);
     font-size: 50px;
     margin: 0;
+    border-left: 2px solid var(--bluegreen);
+    height: 80%;
+    text-align: center;
   }
   .features .container h1::before {
     display: none;
@@ -313,15 +311,6 @@ nav .navbar-toggler:focus {
     flex-direction: column;
     gap: 50px;
     position: relative;
-  }
-  .features .container .right::before {
-    content: "";
-    position: absolute;
-    width: 2px;
-    height: calc(100% + 30px);
-    background-color: var(--bluegreen);
-    bottom: 0;
-    top: -15px;
   }
   .features .container .icons {
     flex-direction: row;
@@ -333,20 +322,23 @@ nav .navbar-toggler:focus {
     font-size: 20px;
   }
 }
-
+/* // Medium devices (tablets, 768px and up) */
+@media (min-width: 768px) {
+  .features .container h1 {
+    font-size: 80px;
+  }
+}
 /* // Large devices (desktops, 992px and up) */
 @media (min-width: 992px) {
+  .features .container h1 {
+    font-size: 100px;
+  }
+  .features .container .icons svg {
+  }
+  .features .container .icons p {
+    font-size: 30px;
+  }
 }
-
-/* // X-Large devices (large desktops, 1200px and up) */
-@media (min-width: 1200px) {
-}
-
-/* // XX-Large devices (larger desktops, 1400px and up) */
-@media (min-width: 1400px) {
-}
-
-
 /* Start Footer */
 footer {
   padding: 50px 0;
@@ -776,7 +768,6 @@ footer .container .box2 p:first-child::before {
   }
   .stepsection .headline h1 {
     font-size: 45px;
-    
   }
   .stepsection .foursteps p {
     font-size: 35px;
