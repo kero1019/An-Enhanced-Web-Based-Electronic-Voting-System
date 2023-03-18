@@ -156,7 +156,7 @@ nav .navbar-toggler:focus {
 /* End landing */
 /* Start About */
 .About {
-  background-color: var(--light);
+  background-color: var(--lightAT);
   min-height: 100vh;
   display: flex;
   padding: 20px 0;
@@ -222,7 +222,7 @@ nav .navbar-toggler:focus {
     font-size: 80px;
   }
   .About .container p {
-    font-size: 20px;
+    font-size: 25px;
   }
 }
 @media (min-width: 992px) {
@@ -244,6 +244,86 @@ nav .navbar-toggler:focus {
   }
 }
 /* End About */
+/* start features */
+.features {
+  padding: 20px;
+  background-color: var(--light);
+}
+.features .container .right h2 {
+  font-size: 30px;
+  text-align: center;
+}
+.features .container .line {
+  border-bottom: 4px solid var(--bluegreen);
+}
+.features .container .left .icons svg {
+  color: var(--orange);
+}
+.features .container .left .icons {
+  display: grid;
+  grid-template-columns: 50px 1fr;
+  grid-template-rows: repeat(5, 15px);
+}
+.features .container .left .icons svg {
+  font-size: 30px;
+}
+.features .container .left {
+  padding: 20px;
+}
+/* media query of features */
+@media (max-width: 575px) {
+}
+/* Small devices (landscape phones, 576px and up) */
+@media (min-width: 576px) {
+}
+
+/* // Medium devices (tablets, 768px and up) */
+@media (min-width: 768px) {
+  .features .container {
+    font-size: 30px;
+    padding: 20px;
+    height: 100vh;
+    background-color: var(--light);
+    display: grid;
+    grid-template-columns: repeat(2, 40px) 1fr;
+    gap: 20px;
+  }
+  .features .container .right h2 {
+    writing-mode: vertical-lr;
+    text-orientation: mixed;
+    color: var(--dark);
+    transform: translate(-50%,-50%) rotate(180deg);
+    font-size: 80px;
+    position: relative;
+    top: 50%;
+    margin: 0;
+  }
+  .features .container .line {
+    border-left: 4px solid var(--bluegreen);
+    border-bottom: transparent;
+    height: calc(100% - 40px);
+  }
+  .features .container .left{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    font-size: 30px;
+  }
+}
+
+/* // Large devices (desktops, 992px and up) */
+@media (min-width: 992px) {
+}
+
+/* // X-Large devices (large desktops, 1200px and up) */
+@media (min-width: 1200px) {
+}
+
+/* // XX-Large devices (larger desktops, 1400px and up) */
+@media (min-width: 1400px) {
+}
+
+
 /* Start Footer */
 footer {
   padding: 50px 0;
