@@ -755,6 +755,9 @@ footer .container .box2 p:first-child::before {
 }
 /* End forgot_password */
 /* Start verification */
+.verification {
+  background-color: var(--light);
+}
 .verification .container {
   display: flex;
   flex-direction: column;
