@@ -624,14 +624,7 @@ footer .container .box2 p:first-child::before {
   }
 }
 /* End Footer */
-/* Start welcome_email */
-.welcome_email {
-}
-/* End welcome_email */
-/* Start register_enter_code */
-.register_enter_code {
-}
-/* End register_enter_code */
+
 /* Start login */
 .login {
   background-color: var(--light);
@@ -823,10 +816,10 @@ footer .container .box2 p:first-child::before {
 }
 .forgot_enter_code .container button {
   background-color: var(--orange);
+  color: var(--white);
 }
 .forgot_enter_code .container input,
 .forgot_enter_code .container button {
-  /* padding: 5px; */
   width: 200px;
 }
 /* End forgot_enter_code */
@@ -836,7 +829,6 @@ footer .container .box2 p:first-child::before {
 /* End re-enter_password */
 
 /* Start welcome_email */
-
 .welcome_email {
   height: 100vh;
   background-color: var(--light);
