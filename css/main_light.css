@@ -773,3 +773,33 @@ footer .container .box2 p:first-child::before {
 .re-enter_password {
 }
 /* End re-enter_password */
+
+/* Start welcome_email */
+
+.welcome_email {
+  height: 100vh;
+  background-color: var(--light);
+}
+.welcome_email .container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+.welcome_email .container img {
+  width: 300px;
+}
+.welcome_email .container p {
+  text-align: center;
+  font-size: calc(1rem + 1vw);
+}
+@media (min-width: 992px) {
+  .welcome_email .container p {
+    width: 60%;
+  }
+  .welcome_email .container img {
+    width: 450px;
+  }
+}
+
+/* End welcome_email */
