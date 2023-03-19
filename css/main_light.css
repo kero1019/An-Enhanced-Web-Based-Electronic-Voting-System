@@ -811,9 +811,12 @@ footer .container .box2 p:first-child::before {
   padding: 20px;
 }
 .register_enter_code .container {
-gap: 5px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 5px;
 }
-
 .register_enter_code .container input {
   background-color: var(--dark);
   border: none;
@@ -864,5 +867,4 @@ gap: 5px;
   text-align: center;
   color: var(--bluegreen);
 }
-
 /* End register_enter_code */
