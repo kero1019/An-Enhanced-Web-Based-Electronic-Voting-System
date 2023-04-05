@@ -320,6 +320,9 @@ nav .navbar-toggler:focus {
   }
 }
 @media (min-width: 992px) {
+  .About .container {
+    gap: 55px;
+  }
   .About .container h1 {
     font-size: 100px;
   }
@@ -329,9 +332,6 @@ nav .navbar-toggler:focus {
   }
 }
 @media (min-width: 1440px) {
-  .About .container h1 {
-    font-size: 150px;
-  }
   .About .container p {
     font-size: 40px;
     max-width: 60%;
