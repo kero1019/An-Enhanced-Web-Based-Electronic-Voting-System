@@ -87,10 +87,124 @@ nav .navbar-toggler:focus {
 .voting_history {
 }
 /* End voting_history */
+/* ----------------------------- */
 /* Start elections */
-.elections {
+.elections .elec{
+  color: var(--white);
+  font-size: xx-large;
+  display: flex;
+align-items: center;
+text-align: center;
+padding-left: 15px;
 }
+.elections .curr,
+.elections .upcome,
+.elections .past{
+  margin-bottom: 20px; 
+}
+.curr h1, 
+.upcome h1,
+.past h1{
+font-size: 10px;
+font-weight: normal;
+color: var(--white);
+margin-left: 15px;
+
+}
+.curr,
+.upcome,
+.past{
+  width: 90%;
+  display: flex;
+  flex-wrap: wrap;
+  margin-left:5%;
+}
+.curr .curr1,
+.upcome .upcome1,
+.upcome .upcome2,
+.past .past1,
+.past .past2,
+.past .past3{
+  background-color: var(--light);
+  /* width: 98%; */
+  height: 30px;
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 10px;
+  margin-left: 1%;
+
+}
+  .curr .curr1 p,
+  .upcome .upcome1 p,
+  .upcome .upcome2 p,
+  .past .past1 p,
+.past .past2 p,
+.past .past3 p{
+  font-weight: 400;
+  font-Size: 10px;
+  Line-height:34.28px;
+  margin-right: 10px;
+  margin-left: 10px;
+}
+/* // Small devices (landscape phones, 576px and up) */
+@media (max-width: 575px){
+  .curr .curr1,
+  .upcome .upcome1,
+  .upcome .upcome2,
+  .past .past1,
+  .past .past2,
+  .past .past3{
+    width: 95%;
+    border-radius: 5px;
+    margin-left: 7px;
+  }
+}
+/* // Large devices (desktops, 992px and up) */
+@media (min-width: 768px) {
+  .curr .curr1,
+  .upcome .upcome1,
+  .upcome .upcome2,
+  .past .past1,
+  .past .past2,
+  .past .past3{
+    width: 95%;
+    border-radius: 5px;
+    margin-left: 20px;
+  }
+  .curr h1, 
+  .upcome h1,
+  .past h1{
+  margin-left: 20px;
+}
+}
+
+
+/* // Small devices (landscape phones, 576px and up) */
+@media (max-width: 575px){}
+
+/* // Medium devices (tablets, 768px and up) */
+@media (min-width: 576px) { }
+
+/* // Large devices (desktops, 992px and up)  */
+@media (min-width: 768px) {}
+
+/* // X-Large devices (large desktops, 1200px and up)  */
+@media (min-width: 992px) {
+  .curr .curr1,
+.upcome .upcome1,
+.upcome .upcome2,
+.past .past1,
+.past .past2,
+.past .past3{
+  height: 25%;
+}
+}
+
+/* // XX-Large devices (larger desktops, 1400px and up) */ 
+@media (min-width: 1200px) {}
+
 /* End elections */
+/* ----------------------------- */
 /* Start voting_panel */
 .voting_panel {
 }
