@@ -270,12 +270,14 @@ nav .navbar-toggler:focus {
   font-size: 40px;
   position: relative;
   height: fit-content;
+  margin: 0 auto 30px;
+  width: fit-content;
 }
 .About .container h1::before {
   content: "";
   position: absolute;
   height: 2px;
-  width: 80%;
+  width: calc(100% + 30px);
   background-color: var(--orange);
   left: 50%;
   bottom: 0;
