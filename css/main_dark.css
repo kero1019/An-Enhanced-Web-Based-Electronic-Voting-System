@@ -162,7 +162,79 @@ nav .navbar-toggler:focus {
 
 /* End personal_info_edit */
 /* Start voting_history */
-.voting_history {
+.voting_history p {
+  margin: 0;
+}
+.voting_history .container > p {
+  color: var(--white);
+  font-size: 30px;
+}
+.voting_history .container .each_vote {
+  background-color: var(--white);
+  margin-top: 50px;
+  padding:20px 0 ;
+}
+.voting_history .container .each_vote p:first-child {
+  background-color: var(--bluegreen);
+  color: var(--white);
+  font-size: 20px;
+}
+.voting_history .container .each_vote p:nth-child(3),
+.voting_history .container .each_vote p:nth-child(4){
+  color:var(--orange);
+  font-size: 20px;
+}
+.voting_history .container .each_vote div:nth-child(2){
+  border-radius: 50%;
+  background-image: url(../imgs/WhatsApp\ Image\ 2023-05-02\ at\ 20.05.18.jpg);
+  background-size: cover;
+  background-position:top;
+}
+.voting_history .container .each_vote div:last-child p{
+  color: var(--bluegreen);
+  font-size: 25px;
+}
+/*  Very Small devices */
+@media (max-width: 575px) {
+  .voting_history .container .each_vote {
+    display: flex;
+    flex-direction: column;
+    align-items:center;
+    justify-content: space-around;
+    height: 400px;
+  }
+  .voting_history .container .each_vote div:nth-child(2){
+    width: 100px;
+    height:100px;
+  }
+  .voting_history .container .each_vote p:first-child {
+    width:calc(100% - 50px);
+    border-radius: 3px;
+  }
+}
+@media (min-width:768px){
+  .voting_history .container .each_vote{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+  }
+  .voting_history .container .each_vote div:nth-child(2){
+    width: 40px;
+    height:40px;
+  }
+  .voting_history .container .each_vote p:first-child {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    font-size: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .voting_history .container .each_vote div:last-child{
+    display: flex;
+    gap: 20px;
+  }
 }
 
 /* End voting_history */
