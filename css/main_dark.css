@@ -179,8 +179,8 @@ nav .navbar-toggler:focus {
   color: var(--white);
   font-size: 20px;
 }
-.voting_history .container .each_vote p:nth-child(3),
-.voting_history .container .each_vote p:nth-child(4) {
+.voting_history .container .each_vote p:nth-child(2),
+.voting_history .container .each_vote p:nth-child(3) {
   color: var(--orange);
   font-size: 20px;
 }
@@ -196,13 +196,20 @@ nav .navbar-toggler:focus {
   font-family: "Inter", sans-serif;
   font-weight: 600;
 }
-/*  Very Small devices */
 .voting_history .container .each_vote {
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: space-around;
   height: 400px;
+}
+.voting_history .container .each_vote > div:first-child {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  gap: 20px;
 }
 .voting_history .container .each_vote div:nth-child(2) {
   width: 100px;
@@ -221,15 +228,20 @@ nav .navbar-toggler:focus {
     justify-content: space-around;
     height: auto;
   }
+  .voting_history .container .each_vote > div:first-child {
+    flex-direction: row;
+    width: auto;
+    gap: 70px;
+  }
   .voting_history .container .each_vote div:nth-child(2) {
-    width: 40px;
-    height: 40px;
+    width: 60px;
+    height: 60px;
   }
   .voting_history .container .each_vote p:first-child {
-    width: 40px;
-    height: 40px;
+    width: 50px;
+    height: 50px;
     border-radius: 50%;
-    font-size: 20px;
+    font-size: 25px;
     display: flex;
     align-items: center;
     justify-content: center;
