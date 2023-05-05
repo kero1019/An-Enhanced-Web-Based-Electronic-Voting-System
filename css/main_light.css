@@ -26,6 +26,9 @@
 }
 /* End Variables */
 /* Start General */
+html {
+  scroll-behavior: smooth;
+}
 .font-src {
   font-family: "Source Serif Pro", serif;
 }
