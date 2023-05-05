@@ -339,13 +339,13 @@ footer .container .box2 p:first-child::before {
 .register_enter_code {
 }
 /* End register_enter_code */
-/* Start login */
-.login {
+/* Start re-enter_password */
+.re-enter_password {
   background-color: var(--light);
   color: var(--bluegreen);
   height: 100vh;
 }
-.login .container {
+.re-enter_password .container {
   height: 100%;
   display: flex;
   flex-direction: column;
@@ -353,28 +353,28 @@ footer .container .box2 p:first-child::before {
   justify-content: center;
   row-gap: 15px;
 }
-.login img {
+.re-enter_password img {
   width: 250px;
   padding: 20px 0 0px;
 }
-.login form {
+.re-enter_password form {
   width: 80%;
 }
-.login form > * {
+.re-enter_password form > * {
   padding: 5px 0;
 }
-.login form label {
+.re-enter_password form label {
   display: block;
 }
-.login form input {
+.re-enter_password form input {
   background-color: var(--dark);
   color: var(--white);
 }
-.login a {
+.re-enter_password a {
   text-decoration: none;
   color: var(--bluegreen);
 }
-.login .login-btn {
+.re-enter_password .re-enter_password-btn {
   border: transparent;
   background-color: var(--orange);
   padding: 10px;
@@ -382,39 +382,39 @@ footer .container .box2 p:first-child::before {
   color: var(--white);
   width: 100%;
 }
-.login p {
+.re-enter_password p {
   color: black;
   text-align: end;
 }
 @media (min-width: 768px) {
-  .login .container {
+  .re-enter_password .container {
     flex-direction: row;
     row-gap: 0;
     column-gap: 5%;
   }
-  .login img {
+  .re-enter_password img {
     width: 60%;
     padding: 0;
     transform: translate(-55px, -11px);
   }
-  .login form {
+  .re-enter_password form {
     width: 30%;
   }
-  .login .login-btn {
+  .re-enter_password .re-enter_password-btn {
     width: 50%;
   }
-  .login p {
+  .re-enter_password p {
     text-align: start;
   }
 }
-/* End login */
+/* End re-enter_password */
 /* Start forgot_password */
 .forgot_password {
   background-color: var(--light);
   color: var(--bluegreen);
   height: 100vh;
   display: flex;
-  
+
   row-gap: 15px;
   font-size: 18px;
 }
@@ -476,85 +476,80 @@ footer .container .box2 p:first-child::before {
 /* End forgot_enter_code */
 /* ---------------------------- */
 /* Start re-enter_password */
-.re-enter_password{
+.re-enter_password {
   background-color: var(--light);
+  color: var(--bluegreen);
+  height: 100vh;
 }
-.re-enter_password .container{
+.re-enter_password .container {
+  height: 100%;
   display: flex;
-  flex-wrap: wrap;
+  flex-direction: column;
+  align-items: center;
   justify-content: center;
+  row-gap: 15px;
 }
-.re-enter_password img{
+.re-enter_password img {
   width: 250px;
   padding: 20px 0 0px;
 }
-.re-enter_password .container .pass {
-  color: var(--bluegreen);
-  display: grid;
-  padding-top: 40px;
-
+.re-enter_password form {
+  width: 80%;
 }
-.re-enter_password .container .pass h2{
-  padding-bottom: 20px;
-  font-weight: bold;
-
-
+.re-enter_password form > * {
+  padding: 5px 0;
 }
-.re-enter_password .container .pass .new{
-  padding-top: 10px;
-
-}
-.re-enter_password .container .pass .new p{
-      /* padding-top: 20px; */
-
-}
-.re-enter_password .container .pass .new textarea{
-  background-color: var(--dark);
-
-}
-.re-enter_password .container button{
-  background-color: var(--orange);
-  height: 30px;
-  width: 150px;
+.re-enter_password form label {
+  display: block;
   font-size: 20px;
-  border-radius: 50%;
+}
+.re-enter_password form input {
+  background-color: var(--dark);
   color: var(--white);
 }
-@media (max-width: 575px) {
+.re-enter_password a {
+  text-decoration: none;
+  color: var(--bluegreen);
 }
-
-/* // Small devices (landscape phones, 576px and up) */
-@media (min-width: 576px) {
+.re-enter_password .enter-btn {
+  border: transparent;
+  background-color: var(--orange);
+  padding: 10px;
+  border-radius: 4px;
+  color: var(--white);
+  width: 100%;
+  margin-top: 20px;
 }
-
-/* // Medium devices (tablets, 768px and up) */
+.re-enter_password p {
+  color: black;
+  text-align: end;
+}
 @media (min-width: 768px) {
-  .re-enter_password .container{
-   display: grid;
-   grid-template-columns: 400px 1fr;
-    position: relative;
+  .re-enter_password .container {
+    flex-direction: row;
+    row-gap: 0;
+    column-gap: 5%;
   }
-  .re-enter_password img{
-    position: absolute;
-    top: 30%;
-    width: 400px;
-    left: -50px;
+  .re-enter_password img {
+    width: 60%;
+    padding: 0;
+    transform: translate(-55px, -11px);
   }
-  .re-enter_password .container .pass {
-    position: relative;
-    top: 50%;
+  .re-enter_password form {
+    width: 30%;
+  }
+  .re-enter_password .enter-btn {
+    width: 50%;
+    margin-top: 20px;
+    font-size: 20px;
+  }
+  .re-enter_password p {
+    text-align: start;
   }
 }
-
-/* // Large devices (desktops, 992px and up) */
-@media (min-width: 992px) {
-}
-
-/* // X-Large devices (large desktops, 1200px and up) */
-@media (min-width: 1200px) {
-}
-
-/* // XX-Large devices (larger desktops, 1400px and up) */
-@media (min-width: 1400px) {
+@media (min-width: 1024px) {
+  .re-enter_password form input {
+    height: 40px;
+  }
 }
 /* End re-enter_password */
