@@ -30,7 +30,12 @@
 .font-src {
   font-family: "Source Serif Pro", serif;
 }
-
+.font-inter {
+  font-family: "Inter", sans-serif;
+  font-weight: 600;
+  color: var(--bluegreen);
+  font-size: 25px;
+}
 body {
   font-family: "DM Serif Display", serif;
 }
@@ -42,6 +47,19 @@ body > div:first-of-type {
 body > div {
   background-color: var(--dark);
 }
+a {
+  text-decoration: none;
+}
+p {
+  margin: 0;
+}
+.flex-center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+/* End General */
+/* Start Special Components */
 button {
   font-family: "Source Serif Pro", serif !important;
   font-weight: bold !important;
@@ -64,10 +82,14 @@ button {
   background-color: transparent !important;
 }
 /* End Submit Cancel Buttons */
-a {
-  text-decoration: none;
+/* Start Title */
+.page-title {
+  color: var(--white);
+  font-size: 30px;
+  text-transform: capitalize;
 }
-/* End General */
+/* End Title */
+/* End Special Components */
 /* Start NavBar */
 nav {
   background-color: var(--dark);
@@ -165,10 +187,6 @@ nav .navbar-toggler:focus {
 .voting_history p {
   margin: 0;
 }
-.voting_history .container > p {
-  color: var(--white);
-  font-size: 30px;
-}
 .voting_history .container .each_vote {
   background-color: var(--white);
   margin-top: 50px;
@@ -183,6 +201,7 @@ nav .navbar-toggler:focus {
 .voting_history .container .each_vote p:nth-child(3) {
   color: var(--orange);
   font-size: 20px;
+  text-transform: capitalize;
 }
 .voting_history .container .each_vote div:nth-child(2) {
   border-radius: 50%;
@@ -193,8 +212,6 @@ nav .navbar-toggler:focus {
 .voting_history .container .each_vote div:last-child p {
   color: var(--bluegreen);
   font-size: 25px;
-  font-family: "Inter", sans-serif;
-  font-weight: 600;
 }
 .voting_history .container .each_vote {
   display: flex;
@@ -216,7 +233,7 @@ nav .navbar-toggler:focus {
   height: 100px;
 }
 .voting_history .container .each_vote p:first-child {
-  width: calc(100% - 50px);
+  width: calc(100% - 30px);
   border-radius: 3px;
   text-align: center;
 }
@@ -231,7 +248,7 @@ nav .navbar-toggler:focus {
   .voting_history .container .each_vote > div:first-child {
     flex-direction: row;
     width: auto;
-    gap: 70px;
+    gap: 30px;
   }
   .voting_history .container .each_vote div:nth-child(2) {
     width: 60px;
@@ -251,7 +268,16 @@ nav .navbar-toggler:focus {
     gap: 20px;
   }
 }
-
+@media (min-width: 992px) {
+  .voting_history .container .each_vote > div:first-child {
+    gap: 50px;
+  }
+}
+@media (min-width: 1200px) {
+  .voting_history .container .each_vote > div:first-child {
+    gap: 70px;
+  }
+}
 /* End voting_history */
 /* Start elections */
 .elections {
@@ -264,7 +290,103 @@ nav .navbar-toggler:focus {
 
 /* End voting_panel */
 /* Start voting_results */
-.voting_results {
+.voting_results .each-result:first-of-type {
+  margin: 100px 0 50px;
+  border: 15px solid var(--bluegreen);
+  position: relative;
 }
-
+.voting_results .each-result:first-of-type::before {
+  content: " winner ";
+  text-transform: uppercase;
+  position: absolute;
+  top: -100px;
+  font-size: 40px;
+  font-weight: 300;
+  color: var(--light);
+  background-color: var(--bluegreen);
+  border-radius: 20px;
+  padding: 5px;
+  outline: solid 3px var(--orange);
+}
+.voting_results .each-result {
+  background-color: var(--white);
+  font-size: 20px;
+  padding: 20px 0;
+  height: 400px;
+  flex-direction: column;
+  justify-content: space-evenly;
+}
+.voting_results .each-result .candidate-image img {
+  width: 100px;
+  border-radius: 50%;
+}
+.voting_results .each-result div:first-child {
+  flex-direction: column;
+  gap: 25px;
+  width: 100%;
+}
+.voting_results .each-result .rank {
+  background-color: var(--bluegreen);
+  width: calc(100% - 30px);
+  text-align: center;
+  border-radius: 3px;
+  color: var(--white);
+}
+.voting_results .each-result .name {
+  color: var(--orange);
+  text-transform: capitalize;
+}
+.voting_results .each-result div:last-child {
+  padding-top: 20px;
+  flex-direction: column;
+  gap: 10px;
+}
+.voting_results .each-result:not(:first-of-type, :last-of-type) {
+  border-bottom: 5px solid var(--bluegreen);
+}
+@media (min-width: 768px) {
+  .voting_results .each-result:first-of-type::before{
+    content: " winner ";
+    text-transform: uppercase;
+    position: absolute;
+    top: -100px;
+    font-size: 40px;
+    font-weight: 300;
+    color: var(--light);
+    background-color: var(--bluegreen);
+    border-radius: 20px;
+    padding: 5px;
+  }
+  .voting_results .each-result {
+    flex-direction: row;
+    height: auto;
+    padding: 20px;
+  }
+  .voting_results .each-result div:first-child {
+    flex-direction: row;
+    justify-content: flex-start;
+  }
+  .voting_results .each-result .rank {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    font-size: 25px;
+  }
+  .voting_results .each-result .candidate-image img {
+    width: 60px;
+  }
+  .voting_results .each-result div:last-child {
+    flex-direction: row;
+    padding: 0;
+  }
+  .voting_results .each-result .score {
+    font-size: 30px;
+  }
+  .voting_results .each-result:not(:first-of-type, :last-of-type) {
+    border-bottom: 2px solid var(--bluegreen);
+  }
+}
 /* End voting_results */
