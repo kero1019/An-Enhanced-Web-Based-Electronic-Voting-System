@@ -339,13 +339,13 @@ footer .container .box2 p:first-child::before {
 .register_enter_code {
 }
 /* End register_enter_code */
-/* Start re-enter_password */
-.re-enter_password {
+/* Start login */
+.login {
   background-color: var(--light);
   color: var(--bluegreen);
   height: 100vh;
 }
-.re-enter_password .container {
+.login .container {
   height: 100%;
   display: flex;
   flex-direction: column;
@@ -353,28 +353,28 @@ footer .container .box2 p:first-child::before {
   justify-content: center;
   row-gap: 15px;
 }
-.re-enter_password img {
+.login img {
   width: 250px;
   padding: 20px 0 0px;
 }
-.re-enter_password form {
+.login form {
   width: 80%;
 }
-.re-enter_password form > * {
+.login form > * {
   padding: 5px 0;
 }
-.re-enter_password form label {
+.login form label {
   display: block;
 }
-.re-enter_password form input {
+.login form input {
   background-color: var(--dark);
   color: var(--white);
 }
-.re-enter_password a {
+.login a {
   text-decoration: none;
   color: var(--bluegreen);
 }
-.re-enter_password .re-enter_password-btn {
+.login .login-btn {
   border: transparent;
   background-color: var(--orange);
   padding: 10px;
@@ -382,32 +382,32 @@ footer .container .box2 p:first-child::before {
   color: var(--white);
   width: 100%;
 }
-.re-enter_password p {
+.login p {
   color: black;
   text-align: end;
 }
 @media (min-width: 768px) {
-  .re-enter_password .container {
+  .login .container {
     flex-direction: row;
     row-gap: 0;
     column-gap: 5%;
   }
-  .re-enter_password img {
+  .login img {
     width: 60%;
     padding: 0;
     transform: translate(-55px, -11px);
   }
-  .re-enter_password form {
+  .login form {
     width: 30%;
   }
-  .re-enter_password .re-enter_password-btn {
+  .login .login-btn {
     width: 50%;
   }
-  .re-enter_password p {
+  .login p {
     text-align: start;
   }
 }
-/* End re-enter_password */
+/* End login */
 /* Start forgot_password */
 .forgot_password {
   background-color: var(--light);
