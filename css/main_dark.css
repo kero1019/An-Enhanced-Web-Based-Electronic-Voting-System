@@ -72,6 +72,7 @@ button {
   display: flex;
   margin-top: 10px !important;
   align-self: flex-end !important;
+  justify-content: flex-end;
 }
 .buttons button {
   color: var(--light) !important;
@@ -286,8 +287,72 @@ nav .navbar-toggler:focus {
 /* End elections */
 /* Start voting_panel */
 .voting_panel {
+  color: var(--white);
+  padding-bottom: 20px;
 }
-
+.voting_panel .candidate-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  grid-gap: 1rem;
+  max-width: 1400px;
+  margin: 50px auto 0;
+}
+.voting_panel .candidate-grid .candidate-card {
+  background-color: var(--light);
+  width: 300px;
+  height: 500px;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  z-index: 0;
+  align-items: center;
+  justify-content: space-around;
+  border-radius: 10px;
+  margin: 0 auto;
+}
+.voting_panel .candidate-grid .candidate-card::before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 200px;
+  background-color: var(--bluegreen);
+  z-index: -1;
+  top: 0;
+  border-radius: 10px 10px 0 0;
+}
+.voting_panel .candidate-grid .candidate-card > p {
+  font-size: 28px;
+  text-transform: capitalize;
+}
+.voting_panel .candidate-grid .candidate-card img {
+  width: 170px;
+  border-radius: 50%;
+}
+.voting_panel .candidate-grid .candidate-card .candidate-info {
+  color: var(--black);
+  width: 85%;
+  text-transform: capitalize;
+  font-size: 20px;
+  overflow-wrap: break-word;
+}
+.voting_panel .candidate-grid .candidate-card button {
+  width: 60%;
+  color: var(--white);
+  text-transform: capitalize;
+  font-size: 20px;
+  padding: 5px 0;
+}
+.voting_panel form {
+  margin-top: 20px;
+  display: flex;
+}
+.voting_panel form input {
+  align-self: start;
+  margin-top: 6px;
+}
+.voting_panel form label {
+  margin-left: 5px;
+}
 /* End voting_panel */
 /* Start voting_results */
 .voting_results .each-result:first-of-type {
