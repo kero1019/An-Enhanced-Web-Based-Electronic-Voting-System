@@ -153,8 +153,119 @@ nav .navbar-toggler:focus {
 
 /* Start personal_info */
 .personal_info {
+  display: grid;
+  grid-template-columns: 50% 50%;
+}
+.personal_info .leftside {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-top: -40px;
+}
+.personal_info .leftside img {
+  width: 40%;
+  margin-bottom: 40px;
+}
+.personal_info .leftside button {
+  width: 40%;
+  margin-bottom: 40px;
+  color: var(--light);
+}
+.personal_info .leftside .edit {
+  color: var(--orange);
+}
+.personal_info .leftside .edit a {
+  color: var(--light);
+  display: inline-block;
+  margin-left: 10px;
+}
+.personal_info .rightside {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+}
+.personal_info .rightside div {
+  font-size: 25px;
+  color: var(--bluegreen);
+  margin-bottom: 30px;
+  margin-left: 20px;
+}
+.personal_info .rightside div p {
+  display: inline-block;
+  color: var(--light);
+  margin-left: 15px;
+}
+.personal_info .rightside div input {
+  background-color: var(--light-AT);
+  margin-left: 15px;
+  width: 300px;
+  height: 42px;
+  font-size: 18px;
+  padding-left: 10px;
+}
+.another {
+  position: absolute;
+  bottom: 12px;
+  right: 200px;
+  background-color: var(--dark);
+}
+.another a {
+  color: var(--white);
+}
+.another button {
+  margin-left: 30px;
+  color: var(--white);
+  width: 97px;
+  height: 45px;
+  font-size: 20px;
 }
 
+body {
+  color: var(--dark);
+}
+.container {
+  height: 100vh;
+}
+body .container {
+  display: grid;
+  grid-template-rows: 15% 40% 15% 15% 15%;
+}
+.container h3 {
+  display: flex;
+  justify-content: center;
+  color: var(--white);
+}
+
+.container > div {
+  color: var(--bluegreen);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.container input {
+  margin-left: 15px;
+}
+.container img {
+  margin-left: 25px;
+}
+.container .part1 button {
+  background-color: var(--light-AT);
+  width: 140px;
+  color: var(--bluegreen);
+  margin-left: 25px;
+}
+.container .part2 .rightside {
+  margin-left: 40px;
+}
+.container .part2 .rightside input {
+  width: 60px;
+}
+.container .part3 input,
+.container .part4 input {
+  width: 300px;
+}
 /* End personal_info */
 /* Start personal_info_edit */
 .personal_info_edit {
