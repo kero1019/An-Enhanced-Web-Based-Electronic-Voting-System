@@ -69,48 +69,47 @@
     <!-- End Nav Bar -->
     <!-- Start personal_info_edit -->
     <div class="personal_info">
-      <div class="leftside">
-        <img src="../../imgs/123456.jpg" alt="" />
-        <button
-          href="Candidate_profile.html"
-          class="login-btn py-2"
-          type="submit"
-        >
-          Change profile picture
-        </button>
-        <div class="edit">
-          <i class="fa-sharp fa-light fa-pencil"></i>
-          <a href="personal_info_edit.html">Edit Profile</a>
+      <div class="container">
+        <div class="leftside">
+          <img src="../../imgs/123456.jpg" alt="" />
+          <button
+            href="Candidate_profile.html"
+            class="login-btn py-2"
+            type="submit"
+          >
+            Change profile picture
+          </button>
         </div>
-      </div>
-      <div class="rightside">
-        <div>
-          Name:
-          <input placeholder="Label" />
-        </div>
-        <div>
-          Gender:
-          <input placeholder="Dropdown" />
-        </div>
-        <div>
-          Age:
-          <p>19</p>
-        </div>
-        <div>
-          E-mail:
-          <input placeholder="Label" />
-        </div>
-        <div>
-          ID Number:
-          <p>John Doe</p>
-        </div>
-        <div>
-          Mobile Number:
-          <input type="phone" placeholder="Label" />
-        </div>
-        <div class="another">
-          <a href="personal_info.html">cancel</a>
-          <button>submit</button>
+        <div class="rightside">
+          <div>
+            <label>Name: </label>
+            <input type="text" placeholder="Enter your name" />
+          </div>
+          <div>
+            <label>Gender</label>
+            <select name="gender">
+              <option value="male">male</option>
+              <option value="female">female</option>
+            </select>
+          </div>
+          <div>
+            <p><span>Age: </span>19</p>
+          </div>
+          <div>
+            <label>E-mail: </label>
+            <input placeholder="example@gmail.com" />
+          </div>
+          <div>
+            <p><span>ID Number: </span>6100 4080 9126 0909</p>
+          </div>
+          <div>
+            <label>Mobile Number: </label>
+            <input type="number" placeholder="01225395050" />
+          </div>
+          <div class="buttons">
+            <a href="personal_info.html">Cancel</a>
+            <button>Submit</button>
+          </div>
         </div>
       </div>
     </div>

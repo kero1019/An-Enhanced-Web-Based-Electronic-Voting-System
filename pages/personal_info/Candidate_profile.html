@@ -23,34 +23,40 @@
   </head>
   <!-- Start candidate_profile -->
   <body>
-    <div class="container">
-      <h3>Candidate Profile</h3>
-      <div class="part1">
-        <p>Upload Image:</p>
-        <img src="../../imgs/123456.jpg" alt="" />
-        <button class="login-btn py-2">Upload</button>
-      </div>
-      <div class="part2">
-        <div class="leftside">
-          Name:
-            <input placeholder="Label" />
+    <div class="candidate">
+      <div class="container">
+        <h3>Candidate Profile</h3>
+        <div class="containx">
+          <div class="part1">
+            <span>Upload Image:</span>
+            <img src="../../imgs/123456.jpg" alt="" />
+            <button class="login-btn py-2">Upload</button>
+          </div>
+          <div class="part2">
+            <div class="leftside">
+              <label>Name: </label>
+                <input type="text" placeholder="Enter Name" />
+            </div>
+            <div class="rightside">
+              <label>Age: </label>
+                <input type="number" placeholder="16" min="16"/>
+            </div>
+          </div>
+          <div class="part3">
+            <div>
+              <label>Party: </label>
+                  <input type="text" placeholder="Label" />
+            </div>
+            <div>
+              <label>Education: </label>
+                  <input type="text" placeholder="Label" />
+            </div>
+          </div>
         </div>
-        <div class="rightside">
-          Age:
-            <input type="number" placeholder="16" min="16"/>
+        <div class="buttons">
+          <button>cancel</button>
+          <button type="submit">submit</button>
         </div>
-      </div>
-      <div class="part3">
-        Party:
-            <input placeholder="Label" />
-      </div>
-      <div class="part4">
-        Eduacation:
-            <input placeholder="Label" />
-      </div>
-      <div class="another">
-        <a href="personal_info.html">cancel</a>
-        <button>submit</button>
       </div>
     </div>
   </body>
