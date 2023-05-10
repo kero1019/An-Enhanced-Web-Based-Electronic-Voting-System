@@ -301,7 +301,6 @@ nav .navbar-toggler:focus {
 .candidate .part2 {
   display: flex;
   justify-content: space-around;
-  /* gap: 30px; */
 }
 .candidate .part3 {
   margin-left: 98px;
