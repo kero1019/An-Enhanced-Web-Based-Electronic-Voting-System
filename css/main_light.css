@@ -419,6 +419,7 @@ footer .container .box2 p:first-child::before {
   justify-content: center;
   row-gap: 15px;
   font-size: 18px;
+  /* delete this comment */
 }
 .forgot_password img {
   width: 250px;
