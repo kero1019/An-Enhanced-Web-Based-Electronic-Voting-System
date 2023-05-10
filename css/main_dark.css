@@ -298,6 +298,7 @@ nav .navbar-toggler:focus {
 .elections .container .curr {
   margin-bottom: 20px;
   display: flex;
+  flex-direction: column;
   flex-wrap: wrap;
 }
 .elections .container .curr h1,
@@ -323,7 +324,9 @@ nav .navbar-toggler:focus {
   font-size: 18px;
   margin: 10px;
 }
-
+.elections .to-votingpanel {
+  color: var(--black);
+}
 .elections .scroll-container {
   height: 150px;
   overflow-y: auto;
