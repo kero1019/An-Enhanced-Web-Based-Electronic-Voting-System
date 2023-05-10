@@ -232,7 +232,7 @@ nav .navbar-toggler:focus {
 }
 @media (min-width: 1400px) {
   .personal_info .leftside {
-    height: 750px;
+    height: 700px;
   }
 }
 /* End personal_info */
