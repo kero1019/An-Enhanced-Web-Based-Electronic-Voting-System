@@ -26,6 +26,9 @@
 }
 /* End Variables */
 /* Start General */
+html {
+  scroll-behavior: smooth;
+}
 .font-src {
   font-family: "Source Serif Pro", serif;
 }
@@ -39,6 +42,7 @@ button {
   font-family: "Source Serif Pro", serif !important;
   font-weight: bold !important;
   border-radius: 4px !important;
+  border: none !important;
 }
 a {
   text-decoration: none;
@@ -101,7 +105,6 @@ nav .navbar-toggler:focus {
 }
 .landing button {
   background-color: var(--bluegreen);
-  border: transparent;
   width: 100%;
   padding: 10px 0;
 }
@@ -117,7 +120,7 @@ nav .navbar-toggler:focus {
     transform: translate(-50%, -50%);
   }
   .landing button {
-    font-size: 5vw;
+    font-size: 4vw;
   }
 }
 @media (min-width: 768px) {
@@ -154,6 +157,301 @@ nav .navbar-toggler:focus {
 }
 /* end media query */
 /* End landing */
+/* start features */
+.features {
+  background-color: var(--light-AT);
+}
+.features .container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  gap: 20px;
+}
+.features .container h1 {
+  position: relative;
+  font-size: 40px;
+}
+.features .container h1::before {
+  content: "";
+  position: absolute;
+  height: 2px;
+  width: calc(100% + 30px);
+  background-color: var(--bluegreen);
+  bottom: 0;
+  left: -15px;
+}
+.features .container .right {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+.features .container .icons {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 5px;
+}
+.features .container .icons svg {
+  font-size: 30px;
+  color: var(--orange);
+}
+.features .container .icons p {
+  margin: 0;
+}
+/* Small devices (landscape phones, 576px and up) */
+@media (min-width: 576px) {
+  .features {
+    display: flex;
+  }
+  .features .container {
+    flex-direction: row;
+    gap: 10px;
+    justify-content: flex-start;
+  }
+  .features .container h1 {
+    writing-mode: vertical-lr;
+    text-orientation: mixed;
+    color: var(--dark);
+    transform: rotate(180deg);
+    font-size: 50px;
+    margin: 0;
+    border-left: 2px solid var(--bluegreen);
+    height: 80%;
+    text-align: center;
+  }
+  .features .container h1::before {
+    display: none;
+  }
+  .features .container .right {
+    display: flex;
+    flex-direction: column;
+    gap: 50px;
+    position: relative;
+  }
+  .features .container .icons {
+    flex-direction: row;
+  }
+  .features .container .icons svg {
+    width: 60px;
+  }
+  .features .container .icons p {
+    font-size: 20px;
+  }
+}
+/* // Medium devices (tablets, 768px and up) */
+@media (min-width: 768px) {
+  .features .container h1 {
+    font-size: 80px;
+  }
+}
+/* // Large devices (desktops, 992px and up) */
+@media (min-width: 992px) {
+  .features .container h1 {
+    font-size: 100px;
+  }
+  .features .container .icons p {
+    font-size: 30px;
+  }
+}
+/* End Features */
+/* Start About */
+.About {
+  background-color: var(--lightAT);
+  min-height: 100vh;
+  display: flex;
+  padding: 20px 0;
+}
+.About .container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.About .container h1 {
+  text-align: center;
+  font-size: 40px;
+  position: relative;
+  height: fit-content;
+  margin: 0 auto 30px;
+  width: fit-content;
+}
+.About .container h1::before {
+  content: "";
+  position: absolute;
+  height: 2px;
+  width: calc(100% + 30px);
+  background-color: var(--orange);
+  left: 50%;
+  bottom: 0;
+  transform: translateX(-50%);
+}
+.About .container p {
+  text-align: justify;
+  font-size: 20px;
+  margin: 0;
+}
+@media (min-width: 576px) {
+  .About .container {
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 20px;
+  }
+  .About .container h1 {
+    writing-mode: vertical-rl;
+    text-orientation: mixed;
+    margin: 0;
+    transform: rotate(180deg);
+    font-size: 50px;
+    border-left: 2px solid var(--orange);
+    height: 80%;
+    text-align: center;
+  }
+  .About .container h1::before {
+    display: none;
+  }
+  .About .container p {
+    max-width: 425px;
+    position: relative;
+  }
+}
+@media (min-width: 768px) {
+  .About .container h1 {
+    font-size: 80px;
+  }
+  .About .container p {
+    font-size: 25px;
+  }
+}
+@media (min-width: 992px) {
+  .About .container {
+    gap: 55px;
+  }
+  .About .container h1 {
+    font-size: 100px;
+  }
+  .About .container p {
+    font-size: 30px;
+    max-width: 60%;
+  }
+}
+@media (min-width: 1440px) {
+  .About .container p {
+    font-size: 40px;
+    max-width: 60%;
+  }
+}
+/* End About */
+/* start stepSection */
+.stepsection {
+  background: var(--light);
+  padding-top: 70px;
+  padding-bottom: 70px;
+}
+
+.stepsection .container {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.stepsection .headline h1 {
+  font-size: 80px;
+  color: var(--dark);
+  position: relative;
+  width: fit-content;
+}
+.stepsection .headline h1::before {
+  content: " ";
+  position: absolute;
+  width: 70%;
+  height: 2px;
+  background: var(--bluegreen);
+  bottom: 0px;
+}
+
+.stepsection .container .foursteps {
+  padding-top: 30px;
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+  position: relative;
+}
+
+.stepsection .foursteps p {
+  color: var(--orange);
+  font-size: 60px;
+  position: relative;
+  top: 10px;
+}
+
+.stepsection .foursteps h4 {
+  font-weight: 400;
+  font-size: 30px;
+}
+
+@media (min-width: 320px) {
+  .stepsection .container .foursteps div {
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    gap: 5px;
+    flex-direction: column;
+  }
+  .stepsection .foursteps h4 {
+    font-size: 20px;
+  }
+  .stepsection .headline h1 {
+    font-size: 28px;
+  }
+  .stepsection .foursteps p {
+    font-size: 30px;
+  }
+}
+
+@media (min-width: 425px) {
+  .stepsection .container .foursteps div {
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    gap: 5px;
+    flex-direction: column;
+  }
+  .stepsection .foursteps h4 {
+    font-size: 22px;
+  }
+  .stepsection .headline h1 {
+    font-size: 35px;
+  }
+  .stepsection .foursteps p {
+    font-size: 30px;
+  }
+}
+
+@media (min-width: 768px) {
+  .stepsection .container .foursteps div {
+    flex-direction: row;
+    gap: 15px;
+  }
+  .stepsection .container .foursteps {
+    align-items: flex-start;
+  }
+
+  .stepsection .foursteps h4 {
+    font-size: 25px;
+  }
+  .stepsection .headline h1 {
+    font-size: 45px;
+  }
+  .stepsection .foursteps p {
+    font-size: 35px;
+    width: 40px;
+  }
+}
+/* end stepSection */
 /* Start Footer */
 footer {
   padding: 50px 0;
@@ -331,31 +629,376 @@ footer .container .box2 p:first-child::before {
   }
 }
 /* End Footer */
-/* Start welcome_email */
-.welcome_email {
-}
-/* End welcome_email */
-/* Start register_enter_code */
-.register_enter_code {
-}
-/* End register_enter_code */
+
 /* Start login */
 .login {
+  background-color: var(--light);
+  color: var(--bluegreen);
+  height: 100vh;
+}
+.login .container {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  row-gap: 15px;
+}
+.login img {
+  width: 250px;
+  padding: 20px 0 0px;
+}
+.login form {
+  width: 80%;
+}
+.login form > * {
+  padding: 5px 0;
+}
+.login form label {
+  display: block;
+}
+.login form input {
+  background-color: var(--dark);
+  color: var(--white);
+}
+.login a {
+  text-decoration: none;
+  color: var(--bluegreen);
+}
+.login .login-btn {
+  border: transparent;
+  background-color: var(--orange);
+  padding: 10px;
+  border-radius: 4px;
+  color: var(--white);
+  width: 100%;
+}
+.login p {
+  color: black;
+  text-align: end;
+}
+@media (min-width: 768px) {
+  .login .container {
+    flex-direction: row;
+    row-gap: 0;
+    column-gap: 5%;
+  }
+  .login img {
+    width: 60%;
+    padding: 0;
+    transform: translate(-55px, -11px);
+  }
+  .login form {
+    width: 30%;
+  }
+  .login .login-btn {
+    width: 50%;
+  }
+  .login p {
+    text-align: start;
+  }
 }
 /* End login */
 /* Start forgot_password */
 .forgot_password {
+  background-color: var(--light);
+  color: var(--bluegreen);
+  height: 100vh;
+  display: flex;
+
+  row-gap: 15px;
+  font-size: 18px;
+}
+.forgot_password img {
+  width: 250px;
+  padding: 20px 0 0px;
+}
+.forgot_password p {
+  color: var(--bs-secondary-color);
+  font-size: 14px;
+}
+.forgot_password form {
+  width: 80%;
+  max-width: 340px;
+}
+.forgot_password form label {
+  display: block;
+}
+.forgot_password form input {
+  background-color: var(--dark);
+  color: var(--white);
+  width: 100%;
+  margin-bottom: 10px;
+}
+.forgot_password button {
+  border: transparent;
+  background-color: var(--orange);
+  padding: 10px;
+  border-radius: 4px;
+  color: var(--white);
+  width: 100%;
+}
+@media (min-width: 992px) {
+  .forgot_password {
+    flex-direction: row;
+    row-gap: 0;
+    column-gap: 5%;
+  }
+  .forgot_password img {
+    width: 45%;
+    padding: 0;
+    transform: translate(-55px, -11px);
+  }
+  .forgot_password form {
+    width: 30%;
+  }
+  .forgot_password button {
+    width: 50%;
+  }
 }
 /* End forgot_password */
 /* Start verification */
 .verification {
+  background-color: var(--light);
+}
+.verification .container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  height: 100vh;
+}
+.verification .container h3 {
+  font-size: 40px;
+  text-align: center;
+}
+.verification .container p {
+  color: var(--dark);
+  font-size: 30px;
+  max-width: 530px;
+  text-align: center;
+}
+@media (max-width: 575px) {
+  .verification .container h3 {
+    font-size: 27px;
+  }
+  .verification .container p {
+    font-size: 20px;
+  }
 }
 /* End verification */
 /* Start forgot_enter_code */
-.forgot_enter_code {
+.forgot_enter_code .container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  position: relative;
+  gap: 10px;
+}
+.forgot_enter_code .container img {
+  position: absolute;
+  top: 15px;
+  left: 15px;
+  width: 40px;
+}
+.forgot_enter_code .container div {
+  font-size: 20px;
+  color: var(--bluegreen);
+}
+.forgot_enter_code .container input {
+  border: transparent;
+  background-color: var(--dark);
+  color: white;
+  font-weight: bold;
+  text-align: center;
+  height: 30px;
+  font-size: 32px;
+}
+.forgot_enter_code .container input:focus {
+  outline: transparent;
+}
+.forgot_enter_code .container button {
+  background-color: var(--orange);
+  color: var(--white);
+}
+.forgot_enter_code .container input,
+.forgot_enter_code .container button {
+  width: 200px;
 }
 /* End forgot_enter_code */
+/* ---------------------------- */
 /* Start re-enter_password */
 .re-enter_password {
+  background-color: var(--light);
+  color: var(--bluegreen);
+  height: 100vh;
+}
+.re-enter_password .container {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  row-gap: 15px;
+}
+.re-enter_password img {
+  width: 250px;
+  padding: 20px 0 0px;
+}
+.re-enter_password form {
+  width: 80%;
+}
+.re-enter_password form > * {
+  padding: 5px 0;
+}
+.re-enter_password form label {
+  display: block;
+  font-size: 20px;
+}
+.re-enter_password form input {
+  background-color: var(--dark);
+  color: var(--white);
+}
+.re-enter_password a {
+  text-decoration: none;
+  color: var(--bluegreen);
+}
+.re-enter_password .enter-btn {
+  border: transparent;
+  background-color: var(--orange);
+  padding: 10px;
+  border-radius: 4px;
+  color: var(--white);
+  width: 100%;
+  margin-top: 20px;
+}
+.re-enter_password p {
+  color: black;
+  text-align: end;
+}
+@media (min-width: 768px) {
+  .re-enter_password .container {
+    flex-direction: row;
+    row-gap: 0;
+    column-gap: 5%;
+  }
+  .re-enter_password img {
+    width: 60%;
+    padding: 0;
+    transform: translate(-55px, -11px);
+  }
+  .re-enter_password form {
+    width: 30%;
+  }
+  .re-enter_password .enter-btn {
+    width: 50%;
+    margin-top: 20px;
+    font-size: 20px;
+  }
+  .re-enter_password p {
+    text-align: start;
+  }
+}
+@media (min-width: 1024px) {
+  .re-enter_password form input {
+    height: 40px;
+  }
 }
 /* End re-enter_password */
+
+/* Start welcome_email */
+.welcome_email {
+  height: 100vh;
+  background-color: var(--light);
+}
+.welcome_email .container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+.welcome_email .container img {
+  width: 300px;
+}
+.welcome_email .container p {
+  text-align: center;
+  font-size: calc(1rem + 1vw);
+}
+@media (min-width: 992px) {
+  .welcome_email .container p {
+    width: 60%;
+  }
+  .welcome_email .container img {
+    width: 450px;
+  }
+}
+/* End welcome_email */
+/* Start register_enter_code */
+.register_enter_code {
+  height: 100vh;
+  background-color: var(--light);
+}
+.register_enter_code .navbar-brand {
+  padding: 20px;
+}
+.register_enter_code .container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 5px;
+}
+.register_enter_code .container input {
+  background-color: var(--dark);
+  border: none;
+  color: var(--white);
+  width: 250px;
+  height: 40px;
+  margin-bottom: 5px;
+}
+.register_enter_code .container button {
+  background-color: var(--orange);
+  border: none;
+  width: 250px;
+  height: 35bpx;
+  color: var(--white);
+}
+.register_enter_code .container img {
+  width: 400px;
+}
+/* xl screen */
+@media (min-width: 1400px) {
+  .register_enter_code .container img {
+    width: fit-content;
+  }
+}
+/* small screen */
+@media (max-width: 400px) {
+  .register_enter_code .container img {
+    width: inherit;
+  }
+  .register_enter_code .container button {
+    background-color: var(--orange);
+    border: none;
+    width: inherit;
+    height: 35bpx;
+    color: var(--white);
+  }
+  .register_enter_code .container input {
+    background-color: var(--dark);
+    border: none;
+    color: var(--white);
+    width: inherit;
+    height: 40px;
+    margin-bottom: 5px;
+  }
+}
+.register_enter_code .container p {
+  font-size: 30px;
+  text-align: center;
+  color: var(--bluegreen);
+}
+/* End register_enter_code */
