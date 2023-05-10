@@ -152,6 +152,10 @@ nav .navbar-toggler:focus {
 }
 
 /* Start personal_info */
+.personal_info{
+  display: flex;
+  align-items: center;
+}
 .personal_info .container {
   color: var(--white);
 }
@@ -185,11 +189,11 @@ nav .navbar-toggler:focus {
   .personal_info .container {
     display: flex;
     flex-direction: column;
+    gap: 30px;
   }
   .personal_info .container .leftside {
     display: flex;
     flex-direction: column;
-    height: 500px;
     justify-content: center;
     gap: 20px;
   }
@@ -202,7 +206,6 @@ nav .navbar-toggler:focus {
   .personal_info .container {
     display: grid;
     grid-template-columns: 50% 50%;
-    height: calc(100vh - 72px);
   }
   .personal_info .leftside {
     display: flex;
@@ -210,7 +213,6 @@ nav .navbar-toggler:focus {
     justify-content: center;
     align-items: center;
     gap: 20px;
-    height: 500px;
   }
   .personal_info .rightside {
     display: flex;
@@ -223,16 +225,8 @@ nav .navbar-toggler:focus {
   .personal_info .container .rightside p {
     font-size: 30px;
   }
-  .personal_info .leftside {
-    /* height: 750px; */
-  }
   .personal_info .rightside .buttons {
-    font-size: 25px;
-  }
-}
-@media (min-width: 1400px) {
-  .personal_info .leftside {
-    height: 700px;
+    font-size: 20px;
   }
 }
 /* End personal_info */
@@ -271,9 +265,7 @@ nav .navbar-toggler:focus {
   color: var(--white);
 }
 /* End personal_info_edit */
-.candidate .container {
-  height: 100vh;
-}
+/* Start Candidate  */
 .candidate .container {
   display: flex;
   flex-direction: column;
@@ -323,10 +315,6 @@ nav .navbar-toggler:focus {
 .candidate .container label {
   margin-right: 20px;
 }
-/* .candidate .buttons {
-  position: absolute;
-  bottom: 40px;
-} */
 @media (max-width: 767px) {
   .candidate .part1,
   .candidate .part2,
@@ -367,6 +355,7 @@ nav .navbar-toggler:focus {
     margin-left: 188px;
   }
 }
+/* End Candidate  */
 /* Start voting_history */
 .voting_history {
 }
