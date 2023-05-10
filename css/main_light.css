@@ -705,10 +705,11 @@ footer .container .box2 p:first-child::before {
   color: var(--bluegreen);
   height: 100vh;
   display: flex;
-
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
   row-gap: 15px;
   font-size: 18px;
-  /* delete this comment */
 }
 .forgot_password img {
   width: 250px;
