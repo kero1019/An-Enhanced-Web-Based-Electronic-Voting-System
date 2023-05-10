@@ -283,7 +283,7 @@ nav .navbar-toggler:focus {
 /* ----------------------------- */
 /* Start elections */
 .elections .container {
-  height: fit-content;
+  padding-bottom: 20px;
 }
 .elections .container .elec {
   color: var(--white);
@@ -300,8 +300,8 @@ nav .navbar-toggler:focus {
   flex-wrap: wrap;
 }
 .elections .container .curr h1,
-.outside {
-  font-size: 18px;
+.elections .outside {
+  font-size: 20px;
   font-weight: normal;
   color: var(--white);
   margin-left: 15px;
@@ -319,7 +319,7 @@ nav .navbar-toggler:focus {
 }
 .elections .container .curr .curr1 p {
   font-weight: 400;
-  font-size: 14px;
+  font-size: 18px;
   margin: 10px;
 }
 
@@ -373,14 +373,13 @@ nav .navbar-toggler:focus {
     justify-content: space-between;
     padding: 10px;
   }
-  .elections .container .curr h1 {
+  .elections .container .curr h1,
+  .elections .outside {
     margin-left: 20px;
+    font-size: 30px;
   }
-}
-/* // X-Large devices (large desktops, 1200px and up)  */
-@media (min-width: 992px) {
-  .elections .container .curr .curr1 {
-    height: 25%;
+  .elections .container .curr .curr1 p {
+    font-size: 20px;
   }
 }
 /* End elections */
