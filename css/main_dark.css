@@ -37,6 +37,9 @@ body > div:first-of-type {
 body > div {
   background-color: var(--dark);
 }
+p {
+  margin: 0 !important;
+}
 /* End General */
 /* Start NavBar */
 nav {
@@ -89,39 +92,44 @@ nav .navbar-toggler:focus {
 /* End voting_history */
 /* ----------------------------- */
 /* Start elections */
-.elections .container{
+.elections .container {
   height: fit-content;
 }
-.elections .container .elec{
-color: var(--white);
-font-size: xx-large;
-display: flex;
-align-items: center;
-text-align: center;
-padding-left: 15px;
+.elections .container .elec {
+  color: var(--white);
+  font-size: xx-large;
+  display: flex;
+  align-items: center;
+  text-align: center;
+  padding-left: 15px;
+  margin-bottom: 30px;
 }
-.elections .container .curr{
- margin-bottom: 20px;
+.elections .container .curr {
+  margin-bottom: 20px;
   display: flex;
   flex-wrap: wrap;
 }
-.elections .container .curr h1,.outside{
-font-size: 18px;
-font-weight: normal;
-color: var(--white);
-margin-left: 15px;
-
+.elections .container .curr h1,
+.outside {
+  font-size: 18px;
+  font-weight: normal;
+  color: var(--white);
+  margin-left: 15px;
 }
-.elections .container .curr .curr1{
+.elections .container .curr .curr1 {
   background-color: var(--light);
   display: flex;
-  justify-content: space-between;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
   margin-bottom: 10px;
-  
+  width: 95%;
+  border-radius: 5px;
+  margin-left: 7px;
 }
-.elections .container .curr .curr1 p{
+.elections .container .curr .curr1 p {
   font-weight: 400;
-  font-Size: 14px;
+  font-size: 14px;
   margin: 10px;
 }
 
@@ -165,45 +173,43 @@ margin-left: 15px;
 #scrollable-div::-moz-scrollbar-thumb:hover {
   background-color: #555;
 }
-/* // Small devices (landscape phones, 576px and up) */
-@media (max-width: 575px){
-  .elections .container .curr .curr1{
-    width: 95%;
-    border-radius: 5px;
-    margin-left: 7px;
-  }
-}
 /* // Large devices (desktops, 992px and up) */
 @media (min-width: 768px) {
-  .elections .container .curr .curr1{
+  .elections .container .curr .curr1 {
     width: 95%;
     border-radius: 5px;
     margin-left: 20px;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 10px;
   }
-  .elections .container .curr h1{
-  margin-left: 20px;
+  .elections .container .curr h1 {
+    margin-left: 20px;
+  }
 }
-}
-
 
 /* // Small devices (landscape phones, 576px and up) */
-@media (max-width: 575px){}
+@media (max-width: 575px) {
+}
 
 /* // Medium devices (tablets, 768px and up) */
-@media (min-width: 576px) { }
+@media (min-width: 576px) {
+}
 
 /* // Large devices (desktops, 992px and up)  */
-@media (min-width: 768px) {}
+@media (min-width: 768px) {
+}
 
 /* // X-Large devices (large desktops, 1200px and up)  */
 @media (min-width: 992px) {
-  .elections .container .curr .curr1{
-  height: 25%;
-}
+  .elections .container .curr .curr1 {
+    height: 25%;
+  }
 }
 
-/* // XX-Large devices (larger desktops, 1400px and up) */ 
-@media (min-width: 1200px) {}
+/* // XX-Large devices (larger desktops, 1400px and up) */
+@media (min-width: 1200px) {
+}
 
 /* End elections */
 /* ----------------------------- */
