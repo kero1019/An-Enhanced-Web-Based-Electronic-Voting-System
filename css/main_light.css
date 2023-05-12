@@ -97,67 +97,53 @@ nav .navbar-toggler:focus {
   background-color: var(--light);
   position: relative;
   background-image: url(../imgs/your_vote_counts.png);
-  overflow: hidden;
   background-repeat: no-repeat;
-  background-size: 150%;
-  background-position: -65px;
+  background-size: cover;
+  background-position: 35%;
 }
 .landing .buttons-group {
   position: absolute;
   display: grid;
   row-gap: 20%;
-  width: 175px;
+  width: 150px;
+  bottom: 0;
+  right: 50%;
+  transform: translate(50%, -50%);
 }
 .landing button {
   background-color: var(--bluegreen);
   width: 100%;
   padding: 10px 0;
+  font-size: 20px;
 }
 /* start media query */
-@media (max-width: 767px) {
+@media (min-width: 576px) {
   .landing {
-    background-size: 150% 100%;
-    background-position: -60px;
-  }
-  .landing .buttons-group {
-    top: 85%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-  }
-  .landing button {
-    font-size: 4vw;
+    background-size: contain;
   }
 }
 @media (min-width: 768px) {
   .landing {
-    background-size: 150%;
-    background-position: -145px;
+    background-size: 36rem;
+    background-position: left;
   }
   .landing .buttons-group {
-    top: 85%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    width: 200px;
-  }
-  .landing button {
-    font-size: 20px;
-    padding: 10px 0;
+    bottom: 50%;
+    right: 0;
+    transform: translate(-50%, 50%);
   }
 }
 @media (min-width: 992px) {
-  .landing {
-    background-size: 110%;
-    background-position: 20px;
+  .landing .buttons-group {
+    width: 200px;
   }
 }
 @media (min-width: 1200px) {
   .landing {
-    background-size: 50%;
-    background-position: 20px;
+    background-size: 45rem;
   }
   .landing .buttons-group {
-    top: 48%;
-    left: 80%;
+    transform: translate(-75%, 50%);
   }
 }
 /* end media query */
