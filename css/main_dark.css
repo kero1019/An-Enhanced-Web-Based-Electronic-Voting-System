@@ -54,6 +54,10 @@ a {
 p {
   margin: 0 !important;
 }
+input {
+  padding: 5px;
+  border-radius: 5px;
+}
 .flex-center {
   display: flex;
   justify-content: center;
@@ -176,7 +180,7 @@ nav .navbar-toggler:focus {
 }
 
 /* Start personal_info */
-.personal_info{
+.personal_info {
   display: flex;
   align-items: center;
 }
@@ -290,11 +294,13 @@ nav .navbar-toggler:focus {
 }
 /* End personal_info_edit */
 /* Start Candidate  */
+.candidate {
+  padding: 20px 0;
+}
 .candidate .container {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  gap: 20px;
 }
 .candidate .container h3 {
   display: flex;
@@ -304,13 +310,16 @@ nav .navbar-toggler:focus {
 .candidate .containx {
   display: flex;
   flex-direction: column;
-  gap: 30px;
-}
-.candidate .part1 {
-  display: flex;
-  justify-content: center;
-  gap: 20px;
   align-items: center;
+}
+.candidate .part1,
+.candidate .part2,
+.candidate .part3 {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
 }
 .candidate .container span,
 .candidate .container label {
@@ -322,60 +331,64 @@ nav .navbar-toggler:focus {
   background-color: var(--light-AT);
   width: 140px;
 }
-.candidate .part2 {
-  display: flex;
-  justify-content: space-around;
-}
-.candidate .part3 {
-  margin-left: 98px;
-  display: flex;
-  gap: 30px;
-  flex-direction: column;
-}
+.candidate .part2 div,
 .candidate .part3 div {
   display: flex;
+  flex-direction: column;
 }
-.candidate .container label {
-  margin-right: 20px;
+.candidate .container,
+.candidate .containx,
+.candidate .part1,
+.candidate .part2,
+.candidate .part3 {
+  gap: 20px;
 }
 @media (max-width: 767px) {
-  .candidate .part1,
-  .candidate .part2,
-  .candidate .part3 {
-    display: flex;
-    flex-direction: column;
-  }
-  .candidate .part3 {
-    margin: 0;
-  }
-  .candidate .container {
-    gap: 5px;
-  }
   .candidate .container label {
-    margin: 0;
+    margin-bottom: 5px;
   }
-  .candidate .part2 {
-    gap: 10px;
+  .candidate .part2 div,
+  .candidate .part3 div {
+    width: 100%;
   }
 }
 @media (min-width: 768px) {
-  .candidate .part3 {
-    margin-left: 38px;
+  .candidate .part2 {
+    flex-direction: row;
   }
-}
-@media (min-width: 992px) {
+  .candidate .part2,
   .candidate .part3 {
-    margin-left: 98px;
+    width: 500px;
   }
-}
-@media (min-width: 1200px) {
-  .candidate .part3 {
-    margin-left: 142px;
+  .candidate .part2 .rightside,
+  .candidate .part2 .rightside label {
+    width: fit-content;
   }
-}
-@media (min-width: 1400px) {
+  .candidate .part2 .rightside input {
+    width: 50px;
+    text-align: center;
+  }
+  .candidate .part2 .leftside input {
+    width: 270px;
+  }
+  .candidate .part2 div,
+  .candidate .part3 div {
+    flex-direction: row;
+    width: 100%;
+  }
+  .candidate .part3 input {
+    width: 395px;
+  }
+  .candidate .container label {
+    margin-right: 5px;
+    width: 100px;
+  }
+  .candidate .container,
+  .candidate .containx,
+  .candidate .part1,
+  .candidate .part2,
   .candidate .part3 {
-    margin-left: 188px;
+    gap: 30px;
   }
 }
 /* End Candidate  */
@@ -707,7 +720,7 @@ nav .navbar-toggler:focus {
   border-bottom: 5px solid var(--bluegreen);
 }
 @media (min-width: 768px) {
-  .voting_results .each-result:first-of-type::before{
+  .voting_results .each-result:first-of-type::before {
     content: " winner ";
     text-transform: uppercase;
     position: absolute;
