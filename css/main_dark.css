@@ -353,6 +353,7 @@ nav .navbar-toggler:focus {
   }
 }
 @media (min-width: 768px) {
+  .candidate .part1,
   .candidate .part2 {
     flex-direction: row;
   }
