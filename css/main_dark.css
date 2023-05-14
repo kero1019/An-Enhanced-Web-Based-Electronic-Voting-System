@@ -326,10 +326,10 @@ nav .navbar-toggler:focus {
   color: var(--bluegreen);
   font-size: 20px;
 }
-.candidate .container .part1 button {
+.candidate .container .part1 .upload-btn {
   color: var(--bluegreen);
   background-color: var(--light-AT);
-  width: 140px;
+  width: 210px;
 }
 .candidate .part2 div,
 .candidate .part3 div {
@@ -766,3 +766,22 @@ nav .navbar-toggler:focus {
   }
 }
 /* End voting_results */
+/* Start voting panel admin */
+.voting_panel.admin .add-card {
+  background-color: #afbaca;
+  width: 300px;
+  height: 500px;
+  border-radius: 10px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.voting_panel.admin .add-card i {
+  font-size: 150px;
+  color:var(--black);
+}
+.voting_panel.admin .candidate-grid {
+  padding-bottom: 20px;
+}
+/* End voting panel admin */
