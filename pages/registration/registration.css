@@ -1,0 +1,24 @@
+:root {
+  --succes-color: #2ecc71;
+  --error-color: #e74c3c;
+}
+.registration input {
+  border: 2px solid #f0f0f0;
+}
+.registration input:focus {
+  outline: 0;
+  border-color: #777;
+}
+.registration .success input {
+  border-color: var(--succes-color);
+}
+.registration .error input {
+  border-color: var(--error-color);    
+}
+.registration small{
+  color: var(--error-color);
+  visibility: hidden;
+}
+.registration .error small{
+  visibility: visible;
+}

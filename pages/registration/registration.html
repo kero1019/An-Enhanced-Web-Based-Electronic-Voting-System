@@ -1,137 +1,121 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Voting System</title>
-    <!-- Small Icon Beside Title -->
-    <link rel="icon" type="image/x-icon" href="../../imgs/favicon.ico" />
-    <!-- Bootstrap -->
-    <link rel="stylesheet" href="../../css/bootstrap.min.css" />
-    <!-- Font Awesome -->
-    <link rel="stylesheet" href="../../css/all.min.css" />
-    <!-- main_dark CSS -->
-    <link rel="stylesheet" href="../../css/main_dark.css" />
-    <!-- Google Fonts -->
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=DM+Serif+Display&family=Source+Serif+Pro:wght@300;400;600;700&display=swap"
-      rel="stylesheet"
-    />
-  </head>
-  <body>
-    <!-- Start Nav Bar -->
-    <nav class="navbar navbar-expand-lg sticky-top">
-      <div class="container text-center">
-        <a class="navbar-brand" href="../../index.html">
-          <img src="../../imgs/logo.png" alt="LOGO" />
-        </a>
-        <button
-          class="navbar-toggler"
-          type="button"
-          data-bs-toggle="collapse"
-          data-bs-target="#main"
-          aria-controls="main"
-          aria-expanded="false"
-          aria-label="Toggle navigation"
-        >
-          <i class="fa-solid fa-bars"></i>
-        </button>
-        <div class="collapse navbar-collapse" id="main">
-          <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
-            <li class="nav-item p-2">
-              <a class="nav-link" href="../voting_history/voting_history.html"
-                >Voting History</a
-              >
-            </li>
-            <li class="nav-item p-2">
-              <a class="nav-link" href="../personal_info/personal_info.html"
-                >Personal Info</a
-              >
-            </li>
-            <li class="nav-item p-2">
-              <a class="nav-link" href="../elections/elections.html"
-                >Elections</a
-              >
-            </li>
-            <li class="nav-item p-2">
-              <a class="nav-link" href="../../index.html">Home</a>
-            </li>
-            <li class="nav-item p-2">
-              <a class="nav-link font-src" href="../login/login.html">Login</a>
-            </li>
-          </ul>
-        </div>
-      </div>
-    </nav>
-    <!-- End Nav Bar -->
-    <!-- Start registration -->
-    <div class="registration">
-      <div class="container">
-        <img src="../../imgs/Registration.png" alt="" />
-        <form>
-          <h1>registration form</h1>
-          <div>
-            <label>full name</label>
-            <input
-              type="text"
-              placeholder="كيرلس فايز فوزي حنا"
-              required
-              autofocus
-            />
-          </div>
-          <div>
-            <label>date of birth</label>
-            <input type="date" />
-          </div>
-          <div>
-            <label>gender</label>
-            <select name="gender" id="gender" required>
-              <option value="male">male</option>
-              <option value="female">female</option>
-            </select>
-          </div>
-          <div>
-            <label>e-mail</label>
-            <input type="email" required placeholder="voting@example.com" />
-          </div>
-          <div>
-            <label>moblile number</label>
-            <input type="text" placeholder="01129436059" />
-          </div>
-          <div>
-            <label>password</label>
-            <input type="password" required placeholder="Write Strong Password" />
-          </div>
-          <div>
-            <label>re-enter password</label>
-            <input
-              type="password"
-              required
-              placeholder="Write The Same Password"
-            />
-          </div>
-          <div>
-            <label>ID number</label>
-            <input
-              type="text"
-              required
-              maxlength="14"
-              placeholder="203 09 15 20 8664"
-            />
-          </div>
-          <div class="buttons">
-            <button>cancel</button>
-            <button type="submit">submit</button>
-          </div>
-        </form>
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Voting System</title>
+  <!-- Small Icon Beside Title -->
+  <link rel="icon" type="image/x-icon" href="../../imgs/favicon.ico" />
+  <!-- Bootstrap -->
+  <link rel="stylesheet" href="../../css/bootstrap.min.css" />
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="../../css/all.min.css" />
+  <!-- main_dark CSS -->
+  <link rel="stylesheet" href="../../css/main_dark.css" />
+  <!-- Registration CSS -->
+  <link rel="stylesheet" href="registration.css">
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=DM+Serif+Display&family=Source+Serif+Pro:wght@300;400;600;700&display=swap"
+    rel="stylesheet" />
+</head>
+
+<body>
+  <!-- Start Nav Bar -->
+  <nav class="navbar navbar-expand-lg sticky-top">
+    <div class="container text-center">
+      <a class="navbar-brand" href="../../index.html">
+        <img src="../../imgs/logo.png" alt="LOGO" />
+      </a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#main" aria-controls="main"
+        aria-expanded="false" aria-label="Toggle navigation">
+        <i class="fa-solid fa-bars"></i>
+      </button>
+      <div class="collapse navbar-collapse" id="main">
+        <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+          <li class="nav-item p-2">
+            <a class="nav-link" href="../voting_history/voting_history.html">Voting History</a>
+          </li>
+          <li class="nav-item p-2">
+            <a class="nav-link" href="../personal_info/personal_info.html">Personal Info</a>
+          </li>
+          <li class="nav-item p-2">
+            <a class="nav-link" href="../elections/elections.html">Elections</a>
+          </li>
+          <li class="nav-item p-2">
+            <a class="nav-link" href="../../index.html">Home</a>
+          </li>
+          <li class="nav-item p-2">
+            <a class="nav-link font-src" href="../login/login.html">Login</a>
+          </li>
+        </ul>
       </div>
     </div>
-    <!-- End registration -->
-    <!-- js files -->
-    <script src="../../js/bootstrap.bundle.min.js"></script>
-    <script src="../../js/all.min.js"></script>
-  </body>
+  </nav>
+  <!-- End Nav Bar -->
+  <!-- Start registration -->
+  <div class="registration">
+    <div class="container">
+      <img src="../../imgs/Registration.png" alt="Registration Photo" />
+      <form id="form">
+        <h1>registration form</h1>
+        <div>
+          <label for="username">full name</label>
+          <input type="text" id="username" placeholder="Enter Name in Arabic" />
+          <small>Error Message</small>
+        </div>
+        <div>
+          <label for="date">date of birth</label>
+          <input type="date" id="date" />
+        </div>
+        <div>
+          <label for="gender">gender</label>
+          <select name="gender" id="gender">
+            <option value="male">male</option>
+            <option value="female">female</option>
+          </select>
+        </div>
+        <div>
+          <label for="email">e-mail</label>
+          <input type="text" id="email" placeholder="voting@example.com" />
+          <small>Error Message</small>
+        </div>
+        <div>
+          <label for="mobile">mobile number</label>
+          <input type="text" id="mobile" placeholder="01129436059" />
+          <small>Error Message</small>
+        </div>
+        <div>
+          <label for="password">password</label>
+          <input type="password" id="password" placeholder="Write Strong Password" />
+          <small>Error Message</small>
+        </div>
+        <div>
+          <label for="password2">re-enter password</label>
+          <input type="password" id="password2" placeholder="Write The Same Password" />
+          <small>Error Message</small>
+        </div>
+        <div>
+          <label for="idNum">ID number</label>
+          <input type="text" id="idNum" placeholder="203 09 15 20 8664" />
+          <small>Error Message</small>
+        </div>
+        <div class="buttons">
+          <button>cancel</button>
+          <button type="submit">submit</button>
+        </div>
+      </form>
+    </div>
+  </div>
+  <!-- End registration -->
+  <!-- js files -->
+  <script src="../../js/bootstrap.bundle.min.js"></script>
+  <script src="../../js/all.min.js"></script>
+  <script src="registration.js"></script>
+</body>
+
 </html>
