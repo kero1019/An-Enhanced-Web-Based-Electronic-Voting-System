@@ -1,14 +1,39 @@
+let myPhoto = document.querySelector('#photo');
+let myName = document.querySelector('#cName');
+let myAge = document.querySelector('#age');
+let myParty = document.querySelector('#party');
+let myedu = document.querySelector('#education');
+let sub = document.querySelector('#sub');
+
+// to upload image 
 let img = document.querySelector("#photo");
 let input_image = document.querySelector("#upload");
 let uploadBtn = document.querySelector("#upload-btn");
-
+let reader ;
 input_image.addEventListener("change", function () {
   let choosedImage = this.files[0];
   if (choosedImage) {
-    let reader = new FileReader();
+    reader = new FileReader();
     reader.addEventListener("load", function () {
       img.setAttribute("src", reader.result);
     });
     reader.readAsDataURL(choosedImage);
   }
+});
+
+// to create card 
+export const person = {
+  name:myName.value,
+  age:myAge.value,
+  party:myParty.value,
+  edu:myedu.value,
+  photo:reader.result,
+}
+sub.addEventListener('click', function () {
+  person.name=myName.value;
+  person.age=myAge.value;
+  person.party=myParty.value;
+  person.edu=myedu.value;
+  person.photo=reader.reader;
+  window.location.href="../voting_panel/voting_panel_Admin.html";
 });
