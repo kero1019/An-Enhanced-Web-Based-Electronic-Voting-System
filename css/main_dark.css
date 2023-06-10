@@ -199,9 +199,21 @@ nav .navbar-toggler:focus {
   color: var(--bluegreen);
   margin-right: 20px;
 }
-.personal_info .container .leftside button {
+.personal_info .container .leftside #upload {
+  display: none;
+}
+.personal_info .container .leftside #upload-btn {
+  cursor: pointer;
   color: var(--white);
   font-size: 20px;
+  background-color: var(--orange);
+  padding: 10px;
+  border-radius: 4px;
+}
+.personal_info .container .leftside #photo {
+  width: 250px;
+  height: 250px;
+  border-radius: 50%;
 }
 .personal_info .container .leftside .edit {
   display: flex;
@@ -326,10 +338,21 @@ nav .navbar-toggler:focus {
   color: var(--bluegreen);
   font-size: 20px;
 }
-.candidate .container .part1 .upload-btn {
+.candidate .container .part1 #upload-btn {
+  cursor: pointer;
   color: var(--bluegreen);
   background-color: var(--light-AT);
-  width: 210px;
+  text-align: center;
+  border-radius: 7px;
+  padding: 10px;
+}
+.candidate .container .part1 #upload {
+  display: none;
+}
+.candidate .container .part1 #photo {
+  width: 250px;
+  height: 250px;
+  border-radius: 50%;
 }
 .candidate .part2 div,
 .candidate .part3 div {

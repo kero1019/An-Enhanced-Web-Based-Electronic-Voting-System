@@ -71,14 +71,9 @@
     <div class="personal_info">
       <div class="container">
         <div class="leftside">
-          <img src="../../imgs/123456.jpg" alt="" />
-          <button
-            href="Candidate_profile.html"
-            class="login-btn py-2"
-            type="submit"
-          >
-            Change profile picture
-          </button>
+          <img src="../../imgs/123456.jpg" alt="Photo" id="photo" />
+          <input type="file" id="upload">
+          <label for="upload" class="font-src fw-bold" id="upload-btn">Change Profile Picture</label>
         </div>
         <div class="rightside">
           <div>
@@ -117,5 +112,6 @@
     <!-- js files -->
     <script src="../../js/bootstrap.bundle.min.js"></script>
     <script src="../../js/all.min.js"></script>
+    <script src="personal_info.js"></script>
   </body>
 </html>

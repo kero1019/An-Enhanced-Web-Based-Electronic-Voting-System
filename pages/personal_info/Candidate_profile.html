@@ -64,27 +64,28 @@
       <div class="containx">
         <div class="part1">
           <span>Upload Image:</span>
-          <img src="../../imgs/123456.jpg" alt="Photo" />
-          <input type="file" class="upload-btn py-2" value="Upload">
+          <img src="../../imgs/123456.jpg" alt="Photo" id="photo" />
+          <input type="file" id="upload">
+          <label for="upload" id="upload-btn">Upload</label>
         </div>
         <div class="part2">
           <div class="leftside">
             <label>Name: </label>
-            <input type="text" placeholder="Enter Name" />
+            <input type="text" placeholder="Candidate's Full Name" />
           </div>
           <div class="rightside">
             <label>Age: </label>
-            <input type="number" placeholder="16" min="16" />
+            <input type="number" placeholder="00" min="16" />
           </div>
         </div>
         <div class="part3">
           <div>
             <label>Party: </label>
-            <input type="text" placeholder="Label" />
+            <input type="text" placeholder="Enter Party" />
           </div>
           <div>
             <label>Education: </label>
-            <input type="text" placeholder="Label" />
+            <input type="text" placeholder="Enter Education" />
           </div>
         </div>
       </div>
@@ -99,6 +100,7 @@
 <!-- js files -->
 <script src="../../js/bootstrap.bundle.min.js"></script>
 <script src="../../js/all.min.js"></script>
+<script src="candidate_profile.js"></script>
 </body>
 
 </html>
