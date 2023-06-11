@@ -21,16 +21,18 @@ function showSucces(input) {
   const formControl = input.parentElement;
   formControl.className = 'success';
 }
+
 //check email is valid
 function checkEmail(input) {
   const re = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
   if(re.test(input.value.trim())) {
-      showSucces(input)
+    showSucces(input)
+  }else if (input.value.trim() === ''){
+    showError(input,`required`)
   }else {
-      showError(input,'Email is not invalid');
+    showError(input,'Email is not invalid');
   }
 }
-
 
 //checkRequired fields
 function checkRequired(inputArr) {
@@ -42,7 +44,8 @@ function checkRequired(inputArr) {
       }
   });
 }
-// showError(input,`${getFieldName(input)} is required`) [show error with field name]
+// [show error with field name]
+// showError(input,`${getFieldName(input)} is required`) 
 
 //check input Length
 function checkLength(input, min ,max) {
@@ -118,6 +121,8 @@ function checkExactNumbers(input, val) {
     else {
       showSucces(input)
     }
+  }else if (input.value.trim() === '') {
+    showError(input,'Required');
   }else {
     showError(input,'Numeral Characters are only allowed here [0 - 9]');
   }
@@ -127,9 +132,11 @@ function checkExactNumbers(input, val) {
 function checkLetters(input) {
   const re = /[\u0600-\u065F\u066A-\u06EF\u06FA-\u06FF]/;
   if(re.test(input.value.trim())) {
-      showSucces(input)
+    showSucces(input)
+  }else if (input.value.trim() === '') {
+    showError(input,'Required');
   }else {
-      showError(input,'Arabic letters only allowed [أ - ي]');
+    showError(input,'Arabic letters only allowed [أ - ي]');
   }
 }
 
@@ -137,7 +144,7 @@ function checkLetters(input) {
 form.addEventListener('submit',function(e) {
   e.preventDefault();
 
-  checkRequired([username, email, password, password2]);
+  checkRequired([password, password2]);
   checkLength(password,8,25);
   checkEmail(email);
   checkPasswordMatch(password, password2);
