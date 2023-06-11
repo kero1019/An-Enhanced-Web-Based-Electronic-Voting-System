@@ -149,7 +149,7 @@ form.addEventListener('submit',function(e) {
   checkEmail(email);
   checkPasswordMatch(password, password2);
 
-  getAge(date)
+  getAge(date);
   
   checkExactNumbers(mobile,11);
   checkExactNumbers(idNum,14);
