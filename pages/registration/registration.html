@@ -71,7 +71,7 @@
     <div class="registration">
       <div class="container">
         <img src="../../imgs/Registration.png" alt="" />
-        <form>
+        <form id="data">
           <h1>registration form</h1>
           <div>
             <label>full name</label>
@@ -80,34 +80,47 @@
               placeholder="كيرلس فايز فوزي حنا"
               required
               autofocus
+              name="name"
             />
           </div>
           <div>
             <label>date of birth</label>
-            <input type="date" />
+            <input type="date" name="date" />
           </div>
           <div>
             <label>gender</label>
             <select name="gender" id="gender" required>
-              <option value="male">male</option>
-              <option value="female">female</option>
+              <option value="Male">Male</option>
+              <option value="Female">Female</option>
             </select>
           </div>
           <div>
             <label>e-mail</label>
-            <input type="email" required placeholder="voting@example.com" />
+            <input
+              type="email"
+              required
+              placeholder="voting@example.com"
+              name="email"
+            />
           </div>
           <div>
             <label>moblile number</label>
-            <input type="text" placeholder="01129436059" />
+            <input type="text" placeholder="01129436059" name="phone" />
           </div>
           <div>
             <label>password</label>
-            <input type="password" required placeholder="Write Strong Password" />
+            <input
+              name="password"
+              type="password"
+              required
+              placeholder="Write Strong Password"
+            />
           </div>
           <div>
             <label>re-enter password</label>
             <input
+              name="rePassword"
+              ;
               type="password"
               required
               placeholder="Write The Same Password"
@@ -116,6 +129,7 @@
           <div>
             <label>ID number</label>
             <input
+              name="ID"
               type="text"
               required
               maxlength="14"
@@ -126,6 +140,7 @@
             <button>cancel</button>
             <button type="submit">submit</button>
           </div>
+          <p style="color: red" id="error"></p>
         </form>
       </div>
     </div>
@@ -133,5 +148,6 @@
     <!-- js files -->
     <script src="../../js/bootstrap.bundle.min.js"></script>
     <script src="../../js/all.min.js"></script>
+    <script src="./registration.js"></script>
   </body>
 </html>

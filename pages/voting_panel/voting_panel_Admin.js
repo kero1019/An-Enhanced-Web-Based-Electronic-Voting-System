@@ -1,13 +1,13 @@
-// import { person } from "../personal_info/candidate_profile";
-console.log("fuck fahd");
-console.log(person);
+const all = [1];
+
+console.log(all);
 // document.addEventListener('DOMContentLoaded', function() {
 //   const addCardDiv = document.querySelector('.add-card');
 //   addCardDiv.addEventListener('click', function() {
 //     // Create a new candidate card element
 //     const newCard = document.createElement('div');
 //     newCard.className = 'candidate-card';
-    
+
 //     // Set the content of the new card
 //     newCard.innerHTML = `
 //       <p>New candidate name</p>
@@ -19,9 +19,11 @@ console.log(person);
 //       </div>
 //       <button>vote</button>
 //     `;
-    
+
 //     // Append the new card to the candidate grid
 //     const candidateGrid = document.querySelector('.candidate-grid');
 //     candidateGrid.appendChild(newCard);
 //   });
 // });
+
+// create Profile Cndidiare
