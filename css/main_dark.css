@@ -199,9 +199,21 @@ nav .navbar-toggler:focus {
   color: var(--bluegreen);
   margin-right: 20px;
 }
-.personal_info .container .leftside button {
+.personal_info .container .leftside #upload {
+  display: none;
+}
+.personal_info .container .leftside #upload-btn {
+  cursor: pointer;
   color: var(--white);
   font-size: 20px;
+  background-color: var(--orange);
+  padding: 10px;
+  border-radius: 4px;
+}
+.personal_info .container .leftside #photo {
+  width: 250px;
+  height: 250px;
+  border-radius: 50%;
 }
 .personal_info .container .leftside .edit {
   display: flex;
@@ -326,10 +338,21 @@ nav .navbar-toggler:focus {
   color: var(--bluegreen);
   font-size: 20px;
 }
-.candidate .container .part1 button {
+.candidate .container .part1 #upload-btn {
+  cursor: pointer;
   color: var(--bluegreen);
   background-color: var(--light-AT);
-  width: 140px;
+  text-align: center;
+  border-radius: 7px;
+  padding: 10px;
+}
+.candidate .container .part1 #upload {
+  display: none;
+}
+.candidate .container .part1 #photo {
+  width: 250px;
+  height: 250px;
+  border-radius: 50%;
 }
 .candidate .part2 div,
 .candidate .part3 div {
@@ -757,3 +780,22 @@ nav .navbar-toggler:focus {
   }
 }
 /* End voting_results */
+/* Start voting panel admin */
+.voting_panel.admin .add-card {
+  background-color: #afbaca;
+  width: 300px;
+  height: 500px;
+  border-radius: 10px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.voting_panel.admin .add-card i {
+  font-size: 150px;
+  color:var(--black);
+}
+.voting_panel.admin .candidate-grid {
+  padding-bottom: 20px;
+}
+/* End voting panel admin */
