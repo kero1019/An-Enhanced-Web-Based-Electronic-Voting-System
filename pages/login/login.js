@@ -26,6 +26,7 @@ form.addEventListener('submit', async function(e){
         document.getElementById("error").innerHTML = data.message;
       }
       else{
+        localStorage.setItem("token",data.data.accessToken);
         window.location.href="../../index.html";
       }
       console.log(data);
