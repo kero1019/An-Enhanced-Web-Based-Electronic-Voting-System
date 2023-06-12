@@ -60,7 +60,7 @@
               <a class="nav-link" href="../../index.html">Home</a>
             </li>
             <li class="nav-item p-2">
-              <a class="nav-link font-src" href="../login/login.html">Login</a>
+              <a class="nav-link font-src" href="../login/login.html" id="log" onclick="logout()">Login</a>
             </li>
           </ul>
         </div>
@@ -72,39 +72,41 @@
       <div class="container">
         <div class="leftside">
           <img src="../../imgs/123456.jpg" alt="Photo" id="photo" />
-          <input type="file" id="upload">
+          <input type="file" id="upload" name="image">
           <label for="upload" class="font-src fw-bold" id="upload-btn">Change Profile Picture</label>
         </div>
         <div class="rightside">
-          <div>
-            <label>Name: </label>
-            <input type="text" placeholder="Enter your name" />
-          </div>
-          <div>
-            <label>Gender</label>
-            <select name="gender">
-              <option value="male">male</option>
-              <option value="female">female</option>
-            </select>
-          </div>
-          <div>
-            <p><span>Age: </span>19</p>
-          </div>
-          <div>
-            <label>E-mail: </label>
-            <input placeholder="example@gmail.com" />
-          </div>
-          <div>
-            <p><span>ID Number: </span>6100 4080 9126 0909</p>
-          </div>
-          <div>
-            <label>Mobile Number: </label>
-            <input type="number" placeholder="01225395050" />
-          </div>
-          <div class="buttons">
-            <a href="personal_info.html">Cancel</a>
-            <button>Submit</button>
-          </div>
+          <form id="data">
+            <div>
+              <label>Name: </label>
+              <input type="text" name="name" placeholder="Enter your name" />
+            </div>
+            <div>
+              <label>Gender</label>
+              <select name="gender">
+                <option value="male">male</option>
+                <option value="female">female</option>
+              </select>
+            </div>
+            <div>
+              <p><span>Age: </span>19</p>
+            </div>
+            <div>
+              <label>E-mail: </label>
+              <input name="email" placeholder="example@gmail.com" />
+            </div>
+            <div>
+              <p><span>ID Number: </span>6100 4080 9126 0909</p>
+            </div>
+            <div>
+              <label>Mobile Number: </label>
+              <input name="phone" type="text" placeholder="01225395050" />
+            </div>
+            <div class="buttons">
+              <a onclick="back()" href="personal_info.html">Cancel</a>
+              <button id="submit">Submit</button>
+            </div>
+          </form>
         </div>
       </div>
     </div>
@@ -113,5 +115,6 @@
     <script src="../../js/bootstrap.bundle.min.js"></script>
     <script src="../../js/all.min.js"></script>
     <script src="personal_info_edit.js"></script>
+    <script src="../../js/Log(in-out)-pages.js"></script>
   </body>
 </html>
