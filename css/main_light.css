@@ -44,6 +44,10 @@ button {
   border-radius: 4px !important;
   border: none !important;
 }
+::selection {
+  background-color: var(--bluegreen);
+  color: var(--light);
+}
 a {
   text-decoration: none;
 }
@@ -57,6 +61,7 @@ input {
 nav {
   background-color: var(--light);
   height: 72px;
+  user-select: none;
 }
 nav .navbar-nav {
   background-color: var(--light);

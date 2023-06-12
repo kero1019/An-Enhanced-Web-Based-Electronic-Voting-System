@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Voting System</title>
+  <!-- Small Icon Beside Title -->
+  <link rel="icon" type="image/x-icon" href="../../imgs/favicon.ico" />
+  <!-- Bootstrap -->
+  <link rel="stylesheet" href="../../css/bootstrap.min.css" />
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="../../css/all.min.css" />
+  <!-- main_dark CSS -->
+  <link rel="stylesheet" href="../../css/main_dark.css" />
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=DM+Serif+Display&family=Source+Serif+Pro:wght@300;400;600;700&display=swap"
+    rel="stylesheet" />
+</head>
+
+<body>
+  <!-- Start Nav Bar -->
+  <nav class="navbar navbar-expand-lg sticky-top">
+    <div class="container text-center">
+      <a class="navbar-brand" href="../../index.html">
+        <img src="../../imgs/logo.png" alt="LOGO" />
+      </a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#main" aria-controls="main"
+        aria-expanded="false" aria-label="Toggle navigation">
+        <i class="fa-solid fa-bars"></i>
+      </button>
+      <div class="collapse navbar-collapse" id="main">
+        <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+          <li class="nav-item p-2">
+            <a class="nav-link" href="../voting_history/voting_history.html">Voting History</a>
+          </li>
+          <li class="nav-item p-2">
+            <a class="nav-link" href="../personal_info/personal_info.html">Personal Info</a>
+          </li>
+          <li class="nav-item p-2">
+            <a class="nav-link active" href="elections.html">Elections</a>
+          </li>
+          <li class="nav-item p-2">
+            <a class="nav-link" href="../../index.html">Home</a>
+          </li>
+          <li class="nav-item p-2">
+            <a class="nav-link font-src" href="../login/login.html" id="log" onclick="logout()">Login</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+  <!-- End Nav Bar -->
+  <!-- Start elections -->
+  <div class="elections admin">
+    <div class="container">
+      <h1 class="page-title">Elections</h1>
+      <h1>Current Elections:</h1>
+      <div class="current">
+        <a class="to-votingpanel" href="../voting_panel/voting_panel.html">
+          <div class="election">
+            <p>Up state election:</p>
+            <p>02-04-2022</p>
+          </div>
+        </a>
+      </div>
+
+      <h1>Upcoming Elections:</h1>
+      <div class="upcoming">
+        <div class="election">
+          <p>Up state election:</p>
+          <p>02-04-2022</p>
+        </div>
+        <div class="election">
+          <p>Manipur state Election:</p>
+          <p>04-04-2022</p>
+        </div>
+      </div>
+
+      <div class="viewmore">
+        <a href="../elections/Upcoming_elections_admin.html">view more</a>
+        <i class="fa-regular fa-circle-down"></i>
+      </div>
+
+      <h1>Past Elections:</h1>
+      <div id="scrollable-div" class="scroll-container">
+        <div class="past">
+          <div class="election">
+            <p>Bangluru state Election:</p>
+            <p>12-04-2022</p>
+          </div>
+          <div class="election">
+            <p>Bangluru state Election:</p>
+            <p>20-04-2022</p>
+          </div>
+          <div class="election">
+            <p>Bangluru state Election</p>
+            <p>26-04-2022</p>
+          </div>
+          <div class="election">
+            <p>Bangluru state Election:</p>
+            <p>12-04-2022</p>
+          </div>
+          <div class="election">
+            <p>Bangluru state Election:</p>
+            <p>20-04-2022</p>
+          </div>
+          <div class="election">
+            <p>Bangluru state Election</p>
+            <p>26-04-2022</p>
+          </div>
+        </div>
+      </div>
+
+      <a href="" class="createElection"><button class="createElectionBtn">Create New Election</button></a>
+    </div>
+
+  </div>
+
+
+  <!-- End elections -->
+  <!-- js files -->
+  <script src="../../js/bootstrap.bundle.min.js"></script>
+  <script src="../../js/all.min.js"></script>
+  <script src="../../js/Log(in-out)-pages.js"></script>
+</body>
+
+</html>
