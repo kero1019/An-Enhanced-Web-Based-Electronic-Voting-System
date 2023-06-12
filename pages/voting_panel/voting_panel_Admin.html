@@ -47,7 +47,7 @@
               >
             </li>
             <li class="nav-item p-2">
-              <a class="nav-link active" href="personal_info.html"
+              <a class="nav-link" href="../personal_info/personal_info.html"
                 >Personal Info</a
               >
             </li>
@@ -67,41 +67,35 @@
       </div>
     </nav>
     <!-- End Nav Bar -->
-    <!-- Start personal_info -->
-    <div class="personal_info">
+    <!-- Start voting Panel Admin -->
+    <div class="voting_panel admin">
       <div class="container">
-        <div class="leftside">
-          <img src="../../imgs/123456.jpg" alt="Photo" id="photo" />
-          <div class="edit">
-            <i class="fa-sharp fa-light fa-pencil"></i>
-            <a href="personal_info_edit.html">Edit Profile</a>
+        <h1 class="page-title">Add candidate</h1>
+        <div class="candidate-grid">
+          <a href="../personal_info/Candidate_profile.html">
+            <div class="add-card">
+              <i class="fa-solid fa-circle-plus"></i>
+            </div>
+          </a>
+          <div class="candidate-card">
+            <p>candidate name</p>
+            <div><img src="../../imgs/WhatsApp Image 2023-05-02 at 20.05.18.jpg" alt=""></div>
+            <div class="candidate-info">
+              <p>age: 28</p>
+              <p>party: </p>
+              <p>education: </p>
+            </div>
+            <button id="myButton">vote</button>
           </div>
         </div>
-        <div class="rightside">
-          <div>
-            <p><span>Name: </span>John Doe</p>
-          </div>
-          <div>
-            <p><span>Gender: </span>Male</p>
-          </div>
-          <div>
-            <p><span>Age: </span>19</p>
-          </div>
-          <div>
-            <p><span>E-mail: </span>John.Doe@gmail.com</p>
-          </div>
-          <div>
-            <p><span>ID Number: </span>6100 4080 9126 0909</p>
-          </div>
-          <div>
-            <p><span>Mobile Number: </span>+91 919150010</p>
-          </div>
+        <div class="buttons">
+          <button>cancel</button>
+          <button type="submit">submit</button>
         </div>
       </div>
     </div>
-    <!-- End personal_info -->
-    <!-- js files -->
-    <script src="../../js/bootstrap.bundle.min.js"></script>
-    <script src="../../js/all.min.js"></script>
+    <!-- End voting Panel Admin -->
+    <script src="../personal_info/candidate_profile.js"></script>
+    <script src="voting_panel_Admin.js"></script>
   </body>
 </html>
