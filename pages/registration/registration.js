@@ -9,6 +9,8 @@ const date = document.getElementById('date');
 const mobile = document.getElementById('mobile');
 const idNum = document.getElementById('idNum')
 
+let check = 0
+
 //Show input error messages
 function showError(input, message) {
   const formControl = input.parentElement;
@@ -156,6 +158,7 @@ form.addEventListener('submit',function(e) {
   checkExactNumbers(idNum,14);
 
   checkLetters(username);
+  // check = 1;
 });
 
 // Submit form to server
@@ -201,6 +204,10 @@ form.addEventListener("submit", async (e) => {
       // Handle any errors
       console.error("Error:", error);
     });
+    if (check === 1) {
+      window.location.href = 'welcome_email.html';
+    }
+    
 });
 
 // Cancel Button
