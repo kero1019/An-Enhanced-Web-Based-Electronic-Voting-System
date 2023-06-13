@@ -808,7 +808,7 @@ nav .navbar-toggler:focus {
   width: fit-content;
   text-align: center;
   padding: 0 5px;
-  margin: 5px auto;
+  margin: 0 auto;
 }
 .elections.admin .viewmore * {
   color: var(--bluegreen);
@@ -830,6 +830,40 @@ nav .navbar-toggler:focus {
   .createElectionBtn {
     width: 80%;
     font-size: 24px;
+  }
+}
+.elections.admin .upcoming {
+  display: flex;
+  gap: 20px;
+}
+.elections.admin .upcoming .group {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 10px;
+}
+.elections.admin .upcoming .group .election {
+  width: 100%;
+}
+.elections.admin .election_icons {
+  display: flex;
+  color: var(--light);
+  gap: 5px;
+  font-size: large;
+}
+.elections.admin .election_icons .cancel,
+.elections.admin .election_icons .edit {
+  background-color: var(--light);
+  color: var(--orange);
+  width: 100%;
+}
+@media (min-width: 777px) {
+  .elections.admin .upcoming .group {
+    flex-direction: row;
+    align-items: center;
+  }
+  .elections.admin .upcoming .group .election {
+    width: 100%;
   }
 }
 /* End Elections-admin */
