@@ -2,24 +2,25 @@
   --succes-color: #2ecc71;
   --error-color: #e74c3c;
 }
-.registration input {
+input {
   border: 2px solid #f0f0f0;
 }
-.registration input:focus {
+input:focus {
   outline: 0;
   border-color: #777;
 }
-.registration .success input {
+.success input {
   border-color: var(--succes-color);
 }
-.registration .error input {
+.error input {
   border-color: var(--error-color);
 }
-.registration small {
+small {
   display: block;
   color: var(--error-color);
   visibility: hidden;
 }
-.registration .error small {
+.error small {
   visibility: visible;
 }
+

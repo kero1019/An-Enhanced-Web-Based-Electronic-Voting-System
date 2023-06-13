@@ -153,9 +153,9 @@ form.addEventListener('submit',function(e) {
   getAge(date);
   
   checkExactNumbers(mobile,11);
-  // checkExactNumbers(idNum,14);
+  checkExactNumbers(idNum,14);
 
-  // checkLetters(username);
+  checkLetters(username);
 });
 
 // Submit form to server
