@@ -61,7 +61,7 @@
       <h1 class="page-title">Elections</h1>
       <h1>Current Elections:</h1>
       <div class="current">
-        <a class="to-votingpanel" href="../voting_panel/voting_panel.html">
+        <a class="to-votingpanel" onclick="pop()">
           <div class="election">
             <p>Up state election:</p>
             <p>02-04-2022</p>
@@ -113,13 +113,61 @@
     </div>
 
   </div>
-
-
   <!-- End elections -->
+  <!-- Start Rules -->
+  <div class="rules" id="rules">
+    <div class="container">
+      <h2>This election is conducted by the election commision of Egypt</h2>
+      <div class="R1">
+        <p>
+          Please take the following steps in order to cast a valid vote. You
+          are requested to cast vote on your own decision and not by being
+          pressurized or terrorized by someone. <br> If someone threatens you for
+          making a voting decision please contact the given helpline numbers.
+        </p>
+        <li>
+          <span><i class="fa-solid fa-circle"></i></span>
+          <p>You are allowed to enter an election only once.</p>
+        </li>
+        <li>
+          <span><i class="fa-solid fa-circle"></i></span>
+          <p>You are allowed to choose only a specific number of candidates per election.</p>
+        </li>
+        <li>
+          <span><i class="fa-solid fa-circle"></i></span>
+          <p>Candidates information are available on the page.</p>
+        </li>
+        <li>
+          <span><i class="fa-solid fa-circle"></i></span>
+          <p>Make sure that you are selecting your wanted candidate by confirming the name and symbol on the scrreen</p>
+        </li>
+        <li>
+          <span><i class="fa-solid fa-circle"></i></span>
+          <p>After selecting the candidates make sure to submit the vote.</p>
+        </li>
+        <li>
+          <span><i class="fa-solid fa-circle"></i></span>
+          <p>You can verify your vote after the election results are announced.</p>
+        </li>
+      </div>
+      <div class="R2">
+        <div class="group">
+          <input type="checkbox" id="check" />
+          <label for="check">I understand and will follow above steps.</label>
+        </div>
+        <div class="buttons">
+          <a href="../voting_panel/voting_panel.html"><input type="button" value="Proceed" style="background-color: #015fc7; color: #ffffff ;" /></a>
+          <a href="elections.html"><input type="button" value="Cancel" style="background-color: #015fc7; color: #ffffff ;" /></a>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- End Rules -->
   <!-- js files -->
   <script src="../../js/bootstrap.bundle.min.js"></script>
   <script src="../../js/all.min.js"></script>
   <script src="../../js/Log(in-out)-pages.js"></script>
+  <script src="../../js/popup.js"></script>
 </body>
 
 </html>
