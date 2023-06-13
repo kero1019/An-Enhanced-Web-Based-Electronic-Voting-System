@@ -5,15 +5,17 @@
   <meta charset="UTF-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Voting System</title>
+  <title>Candidate Profile</title>
   <!-- Small Icon Beside Title -->
-  <link rel="icon" type="image/x-icon" href="../../imgs/favicon.ico" />
+  <link rel="icon" type="image/x-icon" href="../../imgs/admin.ico" />
   <!-- Bootstrap -->
   <link rel="stylesheet" href="../../css/bootstrap.min.css" />
   <!-- Font Awesome -->
   <link rel="stylesheet" href="../../css/all.min.css" />
   <!-- main_dark CSS -->
   <link rel="stylesheet" href="../../css/main_dark.css" />
+  <!-- Validation CSS -->
+  <link rel="stylesheet" href="../../css/Validation.css">
   <!-- Google Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -27,7 +29,8 @@
   <!-- Start Nav Bar -->
   <nav class="navbar navbar-expand-lg sticky-top">
     <div class="container text-center">
-      <a class="navbar-brand" href="../../index.html">
+      <a class="navbar-brand" href="../admin/homepage.html">
+        <img src="../../imgs/admin.ico" alt="Admin-LOGO" style="width: 50px;" />
         <img src="../../imgs/logo.png" alt="LOGO" />
       </a>
       <button class="navbar-toggler p-2" type="button" data-bs-toggle="collapse" data-bs-target="#main"
@@ -37,19 +40,16 @@
       <div class="collapse navbar-collapse" id="main">
         <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
           <li class="nav-item p-2">
-            <a class="nav-link" href="../voting_history/voting_history.html">Voting History</a>
+            <a class="nav-link" href="Upcoming_elections_admin.html">Upcoming Elections</a>
           </li>
           <li class="nav-item p-2">
-            <a class="nav-link" href="personal_info.html">Personal Info</a>
+            <a class="nav-link" href="elections-admin.html">Elections</a>
           </li>
           <li class="nav-item p-2">
-            <a class="nav-link" href="../elections/elections.html">Elections</a>
+            <a class="nav-link" href="../admin/pre-homepage.html">Pre-Home</a>
           </li>
           <li class="nav-item p-2">
-            <a class="nav-link" href="../../index.html">Home</a>
-          </li>
-          <li class="nav-item p-2">
-            <a class="nav-link font-src" href="../login/login.html">Login</a>
+            <a class="nav-link font-src" href="../../index.html" id="log" onclick="logout()">Logout</a>
           </li>
         </ul>
       </div>
@@ -60,39 +60,72 @@
   <!-- Start Edit-Candidate-Profile -->
   <div class="candidate">
     <div class="container">
-      <h3>Candidate Profile</h3>
-      <div class="containx">
+      <h3 class="page-title">Candidate Profile</h3>
+      <form id="data" class="containx">
         <div class="part1">
+
           <span>Upload Image:</span>
-          <img src="../../imgs/123456.jpg" alt="Photo" id="photo" />
-          <input type="file" id="upload">
-          <label for="upload" id="upload-btn">Upload</label>
-        </div>
-        <div class="part2">
-          <div class="leftside">
-            <label>Name: </label>
-            <input type="text" placeholder="Candidate's Full Name" id="cName"/>
+
+          <img src="../../imgs/123456.jpg" alt="Photo" id="photo" name="image" />
+          <input type="file" id="upload" accept=".jpg,.jpeg,.png">
+          
+          <div class="group" style="text-align: center;">
+            <label for="upload" id="upload-btn">Upload</label>
+            <small>Show Error Message</small>
           </div>
+
+        </div>
+
+        <div class="part2">
+
+          <div class="leftside">
+
+            <label>Name: </label>
+
+            <div id="group">
+              <input type="text" placeholder="Candidate's Full Name" id="cName" name="name" />
+              <small>Show Error Message</small>
+            </div>
+
+          </div>
+
           <div class="rightside">
             <label>Age: </label>
-            <input type="number" placeholder="00" min="16" id="age" />
+
+            <div id="group">
+              <input type="number" placeholder="21" id="age" name="age" min="21" />
+              <small>Required</small>
+            </div>
+
           </div>
+
         </div>
         <div class="part3">
-          <div>
-            <label>Party: </label>
-            <input type="text" placeholder="Enter Party" id="party" />
+          <label>Party: </label>
+
+          <div id="group">
+            <input type="text" placeholder="Enter Party" id="party" name="party" />
+            <small>Show Error Message</small>
           </div>
-          <div>
-            <label>Education: </label>
-            <input type="text" placeholder="Enter Education" id="education"/>
-          </div>
+
         </div>
-      </div>
-      <div class="buttons">
-        <button>cancel</button>
-        <button type="button" id="sub">submit</button>
-      </div>
+        <div class="part4">
+
+          <label>Education: </label>
+
+          <div id="group">
+            <input type="text" placeholder="Enter Education" id="education" name="education" />
+            <small>Show Error Message</small>
+          </div>
+
+        </div>
+
+
+        <div class="buttons">
+          <button>cancel</button>
+          <button type="submit" id="sub">submit</button>
+        </div>
+      </form>
     </div>
   </div>
   <!-- Start Edit-Candidate-Profile -->
@@ -101,7 +134,6 @@
 <script src="../../js/bootstrap.bundle.min.js"></script>
 <script src="../../js/all.min.js"></script>
 <script src="candidate_profile.js"></script>
-<script src="../voting_panel/voting_panel_Admin.js"></script>
 </body>
 
 </html>

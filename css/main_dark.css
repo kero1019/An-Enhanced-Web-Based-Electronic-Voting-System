@@ -314,35 +314,82 @@ nav .navbar-toggler:focus {
 .candidate {
   padding: 20px 0;
 }
-.candidate .container {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
+.candidate .container .part1 span {
+  display: none;
 }
-.candidate .container h3 {
-  display: flex;
-  justify-content: center;
-  color: var(--white);
+.candidate .container .part1 {
+  text-align: center;
 }
-.candidate .containx {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+.candidate .container .part1 #group small {
+  margin: auto;
+  margin-top: 5px;
 }
-.candidate .part1,
-.candidate .part2,
-.candidate .part3 {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  width: 100%;
-}
-.candidate .container span,
-.candidate .container label {
+.candidate label {
   color: var(--bluegreen);
   font-size: 20px;
 }
+
+.candidate .container input {
+  width: 100%;
+}
+.candidate .container .part2 #age {
+  text-align: center;
+}
+
+@media (min-width: 768px) {
+  .candidate .container .part1 span {
+    display: block;
+    color: var(--bluegreen);
+    font-size: 20px;
+    margin-right: 10px;
+  }
+  .candidate .container .part1 {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 10px;
+  }
+
+  .candidate .container .part2 {
+    justify-content: space-between;
+  }
+  .candidate .container .part2 #age {
+    width: 60px;
+  }
+  .candidate .container .part2 .leftside,
+  .candidate .container .part2 .rightside {
+    display: flex;
+  }
+
+  .candidate .container .part2,
+  .candidate .container .part3,
+  .candidate .container .part4 {
+    display: flex;
+    width: 650px;
+    margin: 0 auto;
+  }
+
+  .candidate .container .part3 {
+    margin-top: 20px;
+    margin-bottom: 20px;
+  }
+
+  .candidate .container .part2 .leftside #group {
+    width: 400px;
+  }
+
+  .candidate .container .part3 #group,
+  .candidate .container .part4 #group {
+    width: 550px;
+  }
+
+  .candidate .container .part2 .leftside label,
+  .candidate .container .part3 label,
+  .candidate .container .part4 label {
+    width: 100px;
+  }
+}
+
 .candidate .container .part1 #upload-btn {
   cursor: pointer;
   color: var(--bluegreen);
@@ -358,67 +405,6 @@ nav .navbar-toggler:focus {
   width: 250px;
   height: 250px;
   border-radius: 50%;
-}
-.candidate .part2 div,
-.candidate .part3 div {
-  display: flex;
-  flex-direction: column;
-}
-.candidate .container,
-.candidate .containx,
-.candidate .part1,
-.candidate .part2,
-.candidate .part3 {
-  gap: 20px;
-}
-@media (max-width: 767px) {
-  .candidate .container label {
-    margin-bottom: 5px;
-  }
-  .candidate .part2 div,
-  .candidate .part3 div {
-    width: 100%;
-  }
-}
-@media (min-width: 768px) {
-  .candidate .part1,
-  .candidate .part2 {
-    flex-direction: row;
-  }
-  .candidate .part2,
-  .candidate .part3 {
-    width: 500px;
-  }
-  .candidate .part2 .rightside,
-  .candidate .part2 .rightside label {
-    width: fit-content;
-  }
-  .candidate .part2 .rightside input {
-    width: 50px;
-    text-align: center;
-  }
-  .candidate .part2 .leftside input {
-    width: 270px;
-  }
-  .candidate .part2 div,
-  .candidate .part3 div {
-    flex-direction: row;
-    width: 100%;
-  }
-  .candidate .part3 input {
-    width: 395px;
-  }
-  .candidate .container label {
-    margin-right: 5px;
-    width: 100px;
-  }
-  .candidate .container,
-  .candidate .containx,
-  .candidate .part1,
-  .candidate .part2,
-  .candidate .part3 {
-    gap: 30px;
-  }
 }
 /* End Candidate  */
 /* Start voting_history */
@@ -999,7 +985,7 @@ nav .navbar-toggler:focus {
     flex-direction: column;
     gap: 0px;
   }
-  .create_elections .inputs #input3  .numberE {
+  .create_elections .inputs #input3 .numberE {
     width: 100%;
   }
   .create_elections form input {
@@ -1030,7 +1016,7 @@ nav .navbar-toggler:focus {
     align-items: center;
   }
 }
-@media (min-width:1024px) {
+@media (min-width: 1024px) {
   .create_elections .inputs p {
     font-size: 32px;
   }
