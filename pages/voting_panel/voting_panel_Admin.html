@@ -1,101 +1,88 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Voting System</title>
-    <!-- Small Icon Beside Title -->
-    <link rel="icon" type="image/x-icon" href="../../imgs/favicon.ico" />
-    <!-- Bootstrap -->
-    <link rel="stylesheet" href="../../css/bootstrap.min.css" />
-    <!-- Font Awesome -->
-    <link rel="stylesheet" href="../../css/all.min.css" />
-    <!-- main_dark CSS -->
-    <link rel="stylesheet" href="../../css/main_dark.css" />
-    <!-- Google Fonts -->
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=DM+Serif+Display&family=Source+Serif+Pro:wght@300;400;600;700&display=swap"
-      rel="stylesheet"
-    />
-  </head>
-  <body>
-    <!-- Start Nav Bar -->
-    <nav class="navbar navbar-expand-lg sticky-top">
-      <div class="container text-center">
-        <a class="navbar-brand" href="../../index.html">
-          <img src="../../imgs/logo.png" alt="LOGO" />
-        </a>
-        <button
-          class="navbar-toggler"
-          type="button"
-          data-bs-toggle="collapse"
-          data-bs-target="#main"
-          aria-controls="main"
-          aria-expanded="false"
-          aria-label="Toggle navigation"
-        >
-          <i class="fa-solid fa-bars"></i>
-        </button>
-        <div class="collapse navbar-collapse" id="main">
-          <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
-            <li class="nav-item p-2">
-              <a class="nav-link" href="../voting_history/voting_history.html"
-                >Voting History</a
-              >
-            </li>
-            <li class="nav-item p-2">
-              <a class="nav-link" href="../personal_info/personal_info.html"
-                >Personal Info</a
-              >
-            </li>
-            <li class="nav-item p-2">
-              <a class="nav-link" href="../elections/elections.html"
-                >Elections</a
-              >
-            </li>
-            <li class="nav-item p-2">
-              <a class="nav-link" href="../../index.html">Home</a>
-            </li>
-            <li class="nav-item p-2">
-              <a class="nav-link font-src" href="../login/login.html">Login</a>
-            </li>
-          </ul>
-        </div>
-      </div>
-    </nav>
-    <!-- End Nav Bar -->
-    <!-- Start voting Panel Admin -->
-    <div class="voting_panel admin">
-      <div class="container">
-        <h1 class="page-title">Add candidate</h1>
-        <div class="candidate-grid">
-          <a href="../personal_info/Candidate_profile.html">
-            <div class="add-card">
-              <i class="fa-solid fa-circle-plus"></i>
-            </div>
-          </a>
-          <div class="candidate-card">
-            <p>candidate name</p>
-            <div><img src="../../imgs/WhatsApp Image 2023-05-02 at 20.05.18.jpg" alt=""></div>
-            <div class="candidate-info">
-              <p>age: 28</p>
-              <p>party: </p>
-              <p>education: </p>
-            </div>
-            <button id="myButton">vote</button>
-          </div>
-        </div>
-        <div class="buttons">
-          <button>cancel</button>
-          <button type="submit">submit</button>
-        </div>
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Voting System</title>
+  <!-- Small Icon Beside Title -->
+  <link rel="icon" type="image/x-icon" href="../../imgs/admin.ico" />
+  <!-- Bootstrap -->
+  <link rel="stylesheet" href="../../css/bootstrap.min.css" />
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="../../css/all.min.css" />
+  <!-- main_dark CSS -->
+  <link rel="stylesheet" href="../../css/main_dark.css" />
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=DM+Serif+Display&family=Source+Serif+Pro:wght@300;400;600;700&display=swap"
+    rel="stylesheet" />
+</head>
+
+<body>
+  <!-- Start Nav Bar -->
+  <nav class="navbar navbar-expand-lg sticky-top">
+    <div class="container text-center">
+      <a class="navbar-brand" href="../admin/pre-homepage.html">
+        <img src="../../imgs/admin.ico" alt="Admin-LOGO" style="width: 50px;" />
+        <img src="../../imgs/logo.png" alt="LOGO" />
+      </a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#main" aria-controls="main"
+        aria-expanded="false" aria-label="Toggle navigation">
+        <i class="fa-solid fa-bars"></i>
+      </button>
+      <div class="collapse navbar-collapse" id="main">
+        <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+          <li class="nav-item p-2">
+            <a class="nav-link" href="../elections/Upcoming_elections_admin.html">Upcoming Elections</a>
+          </li>
+          <li class="nav-item p-2">
+            <a class="nav-link" href="../elections/elections-admin.html">Elections</a>
+          </li>
+          <li class="nav-item p-2">
+            <a class="nav-link" href="../admin/pre-homepage.html">Pre-Home</a>
+          </li>
+          <li class="nav-item p-2">
+            <a class="nav-link font-src" href="../../index.html" id="log" onclick="logout()">Logout</a>
+          </li>
+        </ul>
       </div>
     </div>
-    <!-- End voting Panel Admin -->
-    <script src="../personal_info/candidate_profile.js"></script>
-    <script src="voting_panel_Admin.js"></script>
-  </body>
+  </nav>
+  <!-- End Nav Bar -->
+  <!-- Start voting Panel Admin -->
+  <div class="voting_panel admin">
+    <div class="container">
+      <h1 class="page-title">Add candidate</h1>
+      <div class="candidate-grid">
+        <a href="../personal_info/Candidate_profile.html">
+          <div class="add-card">
+            <i class="fa-solid fa-circle-plus"></i>
+          </div>
+        </a>
+        <div class="candidate-card">
+          <p>candidate name</p>
+          <div><img src="../../imgs/WhatsApp Image 2023-05-02 at 20.05.18.jpg" alt=""></div>
+          <div class="candidate-info">
+            <p>age: 28</p>
+            <p>party: </p>
+            <p>education: </p>
+          </div>
+          <button id="myButton">vote</button>
+        </div>
+      </div>
+      <div class="buttons">
+        <button>cancel</button>
+        <button type="submit">submit</button>
+      </div>
+    </div>
+  </div>
+  <!-- End voting Panel Admin -->
+  <script src="../personal_info/candidate_profile.js"></script>
+  <script src="voting_panel_Admin.js"></script>
+</body>
+
 </html>
