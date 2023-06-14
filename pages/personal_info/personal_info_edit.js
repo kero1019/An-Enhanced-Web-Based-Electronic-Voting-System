@@ -17,31 +17,32 @@ input_image.addEventListener("change", function () {
 // catch form
 const form = document.getElementById("data");
 
+const data2 = {
+  name: "string",
+  Email: "string",
+  age: 10,
+  Gender: "string",
+  Mobile: "string",
+  image: img.getAttribute("src"),
+}
+
 form.addEventListener('submit', async(e) => {
   e.preventDefault();
   
   const name = e.target.name.value;
-  const Email = e.target.email.value;
-  const Gender = e.target.gender.value;
   const Mobile = e.target.phone.value;
-
-  const data = {
-    name: name,
-    Email: Email,
-    age: 0,
-    Gender: Gender,
-    Mobile: Mobile,
-    image: img.getAttribute("src"),
-  }
-
+  data2.name = name;
+  data2.Mobile = Mobile;
+  data2.age = age;
   await fetch(
     "https://votingsyste-production-a0f3.up.railway.app/user",
     {
-      method: "POST",
+      method: "PATCH",
       headers: {
         "Content-Type": "application/json", // Adjust the content type based on your requirements
+        "Authorization": `Bearer ${localStorage.getItem("token")}`
       },
-      body: JSON.stringify(data), // Adjust the data payload based on your requirements
+      body: JSON.stringify(data2), // Adjust the data payload based on your requirements
     }
   )
     .then((response) => response.json())
@@ -62,3 +63,34 @@ form.addEventListener('submit', async(e) => {
 function back() {
   window.location.href = 'personal_info.html';
 }
+
+
+fetch(
+  "https://votingsyste-production-a0f3.up.railway.app/user",
+  {
+    method: "GET",
+    headers: {
+      "Content-Type": "application/json", // Adjust the content type based on your requirements
+      "Authorization": `Bearer ${localStorage.getItem("token")}`
+    },
+  }
+)
+  .then((response) => response.json())
+  .then((data) => {
+    data2.Email = data.data.Email;
+    data2.age = data.data.age;
+    data2.Gender = data.data.Gender;
+    document.getElementById('name').value = data.data.name;
+    document.getElementById('phone').value = data.data.Mobile;
+    document.getElementById('age').innerHTML = `<span>Age: </span>${data.data.age}`;
+    document.getElementById('id').innerHTML = `<span>ID: </span>${data.data.IDNumber}`;
+    document.getElementById('gender').innerHTML = `<span>Gender: </span>${data.data.Gender}`;
+    document.getElementById('mail').innerHTML = `<span>E-mail: </span>${data.data.Email}`;
+    document.getElementById('photo').src = `${data.data.image}`;
+    // Handle the response data
+    console.log(data);
+  })
+  .catch((error) => {
+    // Handle any errors
+    console.error("Error:", error);
+  });
