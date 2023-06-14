@@ -214,11 +214,14 @@ nav .navbar-toggler:focus {
   background-color: var(--orange);
   padding: 10px;
   border-radius: 4px;
+  width: fit-content;
+  margin: auto;
 }
 .personal_info .container .leftside #photo {
   width: 250px;
   height: 250px;
   border-radius: 50%;
+  margin: auto;
 }
 .personal_info .container .leftside .edit {
   display: flex;
@@ -276,28 +279,46 @@ nav .navbar-toggler:focus {
 }
 /* End personal_info */
 /* Start personal_info_edit */
+.personal_info .container .rightside form {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
 .personal_info .container .rightside label {
   color: var(--bluegreen);
-  margin-right: 20px;
   font-size: 19px;
 }
 @media (max-width: 767px) {
   .personal_info .container .rightside input {
-    width: 135px;
+    width: 100%;
   }
 }
 @media (min-width: 768px) {
   .personal_info .container .rightside input {
-    width: 180px;
     height: 30px;
+  }
+  .personal_info .container .rightside form div:nth-child(1) input {
+    width: 83%;
+  }
+  .personal_info .container .rightside form div:nth-child(4) input {
+    width: 81%;
+  }
+  .personal_info .container .rightside form div:nth-child(6) input {
+    width: 60%;
   }
 }
 @media (min-width: 992px) {
   .personal_info .container .rightside label {
     font-size: 30px;
   }
-  .personal_info .container .rightside input {
-    width: 220px;
+  .personal_info .container .rightside form div:nth-child(1) input {
+    width: 81%;
+  }
+  .personal_info .container .rightside form div:nth-child(4) input {
+    width: 79%;
+  }
+  .personal_info .container .rightside form div:nth-child(6) input {
+    width: 53%;
   }
 }
 .personal_info .container .buttons {
