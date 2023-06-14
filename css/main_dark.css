@@ -1158,6 +1158,7 @@ nav .navbar-toggler:focus {
   background-color: var(--light);
   z-index: 9999;
   display: none;
+  overflow-y: scroll;
 }
 .rules .container {
   max-width: 800px;
