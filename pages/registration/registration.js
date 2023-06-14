@@ -159,7 +159,7 @@ form.addEventListener("submit", function (e) {
   getAge(date);
 
   checkExactNumbers(mobile, 11);
-  checkExactNumbers(idNum, 14);
+  checkExactNumbers(idNum, 3);
 
   checkLetters(username);
   let mycheck = document.getElementsByClassName("success");
@@ -176,6 +176,8 @@ form.addEventListener("submit", function (e) {
 // Submit form to server
 form.addEventListener("submit", async (e) => {
   e.preventDefault();
+  if(check === 0)
+  return;
   const name = e.target.name.value;
   const email = e.target.email.value;
   const password = e.target.password.value;
@@ -207,6 +209,10 @@ form.addEventListener("submit", async (e) => {
   )
     .then((response) => response.json())
     .then((data) => {
+      localStorage.setItem("secret",data.data.secret);
+      if (data.type === "Success" && check === 1) { // I love messi@10
+        window.location.href = "register_enter_code.html";
+      }
       // Handle the response data
       console.log(data);
 
@@ -216,9 +222,6 @@ form.addEventListener("submit", async (e) => {
       // Handle any errors
       console.error("Error:", error);
     });
-  if (data.type === "Success" && check === 1) {
-    window.location.href = "welcome_email.html";
-  }
 });
 
 // Cancel Button
