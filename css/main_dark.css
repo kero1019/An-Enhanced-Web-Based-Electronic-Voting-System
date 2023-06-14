@@ -27,6 +27,13 @@
 
 /* End Variables */
 /* Start General */
+input:-webkit-autofill,
+input:-webkit-autofill:hover, 
+input:-webkit-autofill:focus, 
+input:-webkit-autofill:active{
+    -webkit-box-shadow: 0 0 0 30px var(--light) inset !important;
+    -webkit-text-fill-color: var(--dark) !important;
+}
 .font-src {
   font-family: "Source Serif Pro", serif;
 }
