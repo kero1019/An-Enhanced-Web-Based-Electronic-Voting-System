@@ -538,6 +538,7 @@ nav .navbar-toggler:focus {
 }
 .elections .to-votingpanel {
   color: var(--black);
+  cursor: pointer;
 }
 .elections .scroll-container {
   height: 165px;
@@ -790,6 +791,9 @@ nav .navbar-toggler:focus {
 }
 /* End voting panel admin */
 /* Start Elections-admin */
+.elections.admin .to-votingpanel {
+  cursor: default;
+}
 .elections.admin .viewmore {
   width: fit-content;
   text-align: center;
@@ -1028,6 +1032,100 @@ nav .navbar-toggler:focus {
   }
 }
 /* end create_election */
+
+/* start edit_election */
+.edit_elections {
+  height: fit-content;
+}
+.edit_elections .container {
+  display: flex;
+  justify-content: start;
+  flex-direction: column;
+  gap: 30px;
+}
+.edit_elections h1 {
+  color: var(--light);
+  margin-top: 30px;
+}
+
+.edit_elections .inputs p {
+  color: var(--bluegreen);
+  font-size: 25px;
+}
+
+.edit_elections form .nameE {
+  width: 100%;
+}
+
+.edit_elections .inputs .input2 #startend,
+.edit_elections .inputs .input1,
+.edit_elections .inputs #input3 {
+  display: flex;
+  flex-direction: row;
+  gap: 35px;
+}
+
+.edit_elections form .numberE {
+  width: 70px;
+  text-align: center;
+}
+@media (max-width: 767px) {
+  .edit_elections .inputs p {
+    font-size: 15px;
+    margin-bottom: 5px;
+    margin-top: 5px;
+  }
+  .edit_elections .inputs .input2 #startend,
+  .edit_elections .inputs .input1,
+  .edit_elections .inputs #input3 {
+    display: flex;
+    flex-direction: column;
+    gap: 0px;
+  }
+  .edit_elections .inputs #input3 .numberE {
+    width: 100%;
+  }
+  .edit_elections form input {
+    margin-top: 0px;
+  }
+  .edit_elections .inputs {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+}
+@media (min-width: 768px) {
+  .edit_elections .inputs {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+  .edit_elections .inputs .input1 {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+  }
+  .edit_elections .inputs .input2 > p {
+    margin-bottom: 10px !important;
+  }
+  .edit_elections .inputs .input2 #startend,
+  .edit_elections .inputs #input3 {
+    align-items: center;
+  }
+}
+@media (min-width: 1024px) {
+  .edit_elections .inputs p {
+    font-size: 32px;
+  }
+  .edit_elections input {
+    font-size: x-large;
+  }
+  .edit_elections button {
+    font-size: large;
+  }
+}
+/* end edit_election */
+
 /* Start Rules */
 .rules {
   position: absolute;
