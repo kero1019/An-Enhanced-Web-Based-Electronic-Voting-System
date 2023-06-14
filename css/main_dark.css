@@ -538,7 +538,6 @@ nav .navbar-toggler:focus {
 }
 .elections .to-votingpanel {
   color: var(--black);
-  cursor: pointer;
 }
 .elections .scroll-container {
   height: 165px;

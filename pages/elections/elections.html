@@ -1,173 +1,207 @@
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Elections</title>
+    <!-- Small Icon Beside Title -->
+    <link rel="icon" type="image/x-icon" href="../../imgs/favicon.ico" />
+    <!-- Bootstrap -->
+    <link rel="stylesheet" href="../../css/bootstrap.min.css" />
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="../../css/all.min.css" />
+    <!-- main_dark CSS -->
+    <link rel="stylesheet" href="../../css/main_dark.css" />
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=DM+Serif+Display&family=Source+Serif+Pro:wght@300;400;600;700&display=swap"
+      rel="stylesheet"
+    />
+  </head>
 
-<head>
-  <meta charset="UTF-8" />
-  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Elections</title>
-  <!-- Small Icon Beside Title -->
-  <link rel="icon" type="image/x-icon" href="../../imgs/favicon.ico" />
-  <!-- Bootstrap -->
-  <link rel="stylesheet" href="../../css/bootstrap.min.css" />
-  <!-- Font Awesome -->
-  <link rel="stylesheet" href="../../css/all.min.css" />
-  <!-- main_dark CSS -->
-  <link rel="stylesheet" href="../../css/main_dark.css" />
-  <!-- Google Fonts -->
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link
-    href="https://fonts.googleapis.com/css2?family=DM+Serif+Display&family=Source+Serif+Pro:wght@300;400;600;700&display=swap"
-    rel="stylesheet" />
-</head>
-
-<body>
-  <!-- Start Nav Bar -->
-  <nav class="navbar navbar-expand-lg sticky-top">
-    <div class="container text-center">
-      <a class="navbar-brand" href="../../index.html">
-        <img src="../../imgs/logo.png" alt="LOGO" />
-      </a>
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#main" aria-controls="main"
-        aria-expanded="false" aria-label="Toggle navigation">
-        <i class="fa-solid fa-bars"></i>
-      </button>
-      <div class="collapse navbar-collapse" id="main">
-        <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
-          <li class="nav-item p-2">
-            <a class="nav-link" href="../voting_history/voting_history.html">Voting History</a>
-          </li>
-          <li class="nav-item p-2">
-            <a class="nav-link" href="../personal_info/personal_info.html">Personal Info</a>
-          </li>
-          <li class="nav-item p-2">
-            <a class="nav-link active" href="elections.html">Elections</a>
-          </li>
-          <li class="nav-item p-2">
-            <a class="nav-link" href="../../index.html">Home</a>
-          </li>
-          <li class="nav-item p-2">
-            <a class="nav-link font-src" href="../login/login.html" id="log" onclick="logout()">Login</a>
-          </li>
-        </ul>
+  <body>
+    <!-- Start Nav Bar -->
+    <nav class="navbar navbar-expand-lg sticky-top">
+      <div class="container text-center">
+        <a class="navbar-brand" href="../../index.html">
+          <img src="../../imgs/logo.png" alt="LOGO" />
+        </a>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#main"
+          aria-controls="main"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <i class="fa-solid fa-bars"></i>
+        </button>
+        <div class="collapse navbar-collapse" id="main">
+          <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+            <li class="nav-item p-2">
+              <a class="nav-link" href="../voting_history/voting_history.html"
+                >Voting History</a
+              >
+            </li>
+            <li class="nav-item p-2">
+              <a class="nav-link" href="../personal_info/personal_info.html"
+                >Personal Info</a
+              >
+            </li>
+            <li class="nav-item p-2">
+              <a class="nav-link active" href="elections.html">Elections</a>
+            </li>
+            <li class="nav-item p-2">
+              <a class="nav-link" href="../../index.html">Home</a>
+            </li>
+            <li class="nav-item p-2">
+              <a
+                class="nav-link font-src"
+                href="../login/login.html"
+                id="log"
+                onclick="logout()"
+                >Login</a
+              >
+            </li>
+          </ul>
+        </div>
       </div>
-    </div>
-  </nav>
-  <!-- End Nav Bar -->
-  <!-- Start elections -->
-  <div class="elections">
-    <div class="container">
-      <h1 class="page-title">Elections</h1>
-      <h1>Current Elections:</h1>
-      <div class="current">
-        <a class="to-votingpanel" onclick="pop()">
+    </nav>
+    <!-- End Nav Bar -->
+    <!-- Start elections -->
+    <div class="elections">
+      <div class="container">
+        <h1 class="page-title">Elections</h1>
+        <h1>Current Elections:</h1>
+        <div class="current">
+          <a class="to-votingpanel" onclick="pop()">
+            <div class="election">
+              <p>Up state election:</p>
+              <p>02-04-2022</p>
+            </div>
+          </a>
+        </div>
+
+        <h1>Upcoming Elections:</h1>
+        <div class="upcoming">
           <div class="election">
             <p>Up state election:</p>
             <p>02-04-2022</p>
           </div>
-        </a>
-      </div>
-
-      <h1>Upcoming Elections:</h1>
-      <div class="upcoming">
-        <div class="election">
-          <p>Up state election:</p>
-          <p>02-04-2022</p>
+          <div class="election">
+            <p>Manipur state Election:</p>
+            <p>04-04-2022</p>
+          </div>
         </div>
-        <div class="election">
-          <p>Manipur state Election:</p>
-          <p>04-04-2022</p>
-        </div>
-      </div>
 
-      <h1>Past Elections:</h1>
-      <div id="scrollable-div" class="scroll-container">
-        <div class="past">
-          <div class="election">
-            <p>Bangluru state Election:</p>
-            <p>12-04-2022</p>
-          </div>
-          <div class="election">
-            <p>Bangluru state Election:</p>
-            <p>20-04-2022</p>
-          </div>
-          <div class="election">
-            <p>Bangluru state Election</p>
-            <p>26-04-2022</p>
-          </div>
-          <div class="election">
-            <p>Bangluru state Election:</p>
-            <p>12-04-2022</p>
-          </div>
-          <div class="election">
-            <p>Bangluru state Election:</p>
-            <p>20-04-2022</p>
-          </div>
-          <div class="election">
-            <p>Bangluru state Election</p>
-            <p>26-04-2022</p>
+        <h1>Past Elections:</h1>
+        <div id="scrollable-div" class="scroll-container">
+          <div class="past">
+            <div class="election">
+              <p>Bangluru state Election:</p>
+              <p>12-04-2022</p>
+            </div>
+            <div class="election">
+              <p>Bangluru state Election:</p>
+              <p>20-04-2022</p>
+            </div>
+            <div class="election">
+              <p>Bangluru state Election</p>
+              <p>26-04-2022</p>
+            </div>
+            <div class="election">
+              <p>Bangluru state Election:</p>
+              <p>12-04-2022</p>
+            </div>
+            <div class="election">
+              <p>Bangluru state Election:</p>
+              <p>20-04-2022</p>
+            </div>
+            <div class="election">
+              <p>Bangluru state Election</p>
+              <p>26-04-2022</p>
+            </div>
           </div>
         </div>
       </div>
     </div>
-
-  </div>
-  <!-- End elections -->
-  <!-- Start Rules -->
-  <div class="rules" id="rules">
-    <div class="container">
-      <h2>This election is conducted by the election commision of Egypt</h2>
-      <div class="R1">
-        <p>
-          Please take the following steps in order to cast a valid vote. You
-          are requested to cast vote on your own decision and not by being
-          pressurized or terrorized by someone. <br> If someone threatens you for
-          making a voting decision please contact the given helpline numbers.
-        </p>
-        <li>
-          <span><i class="fa-solid fa-circle"></i></span>
-          <p>You are allowed to enter an election only once.</p>
-        </li>
-        <li>
-          <span><i class="fa-solid fa-circle"></i></span>
-          <p>You are allowed to choose only a specific number of candidates per election.</p>
-        </li>
-        <li>
-          <span><i class="fa-solid fa-circle"></i></span>
-          <p>Candidates information are available on the page.</p>
-        </li>
-        <li>
-          <span><i class="fa-solid fa-circle"></i></span>
-          <p>Make sure that you are selecting your wanted candidate by confirming the name and symbol on the scrreen</p>
-        </li>
-        <li>
-          <span><i class="fa-solid fa-circle"></i></span>
-          <p>After selecting the candidates make sure to submit the vote.</p>
-        </li>
-        <li>
-          <span><i class="fa-solid fa-circle"></i></span>
-          <p>You can verify your vote after the election results are announced.</p>
-        </li>
-      </div>
-      <div class="R2">
-        <div class="group">
-          <input type="checkbox" id="check" />
-          <label for="check">I understand and will follow above steps.</label>
+    <!-- End elections -->
+    <!-- Start Rules -->
+    <div class="rules" id="rules">
+      <div class="container">
+        <h2>This election is conducted by the election commision of Egypt</h2>
+        <div class="R1">
+          <p>
+            Please take the following steps in order to cast a valid vote. You
+            are requested to cast vote on your own decision and not by being
+            pressurized or terrorized by someone. <br />
+            If someone threatens you for making a voting decision please contact
+            the given helpline numbers.
+          </p>
+          <li>
+            <span><i class="fa-solid fa-circle"></i></span>
+            <p>You are allowed to enter an election only once.</p>
+          </li>
+          <li>
+            <span><i class="fa-solid fa-circle"></i></span>
+            <p>
+              You are allowed to choose only a specific number of candidates per
+              election.
+            </p>
+          </li>
+          <li>
+            <span><i class="fa-solid fa-circle"></i></span>
+            <p>Candidates information are available on the page.</p>
+          </li>
+          <li>
+            <span><i class="fa-solid fa-circle"></i></span>
+            <p>
+              Make sure that you are selecting your wanted candidate by
+              confirming the name and symbol on the scrreen
+            </p>
+          </li>
+          <li>
+            <span><i class="fa-solid fa-circle"></i></span>
+            <p>After selecting the candidates make sure to submit the vote.</p>
+          </li>
+          <li>
+            <span><i class="fa-solid fa-circle"></i></span>
+            <p>
+              You can verify your vote after the election results are announced.
+            </p>
+          </li>
         </div>
-        <div class="buttons">
-          <a href="../voting_panel/voting_panel.html"><input type="button" value="Proceed" style="background-color: #015fc7; color: #ffffff ;" /></a>
-          <a href="elections.html"><input type="button" value="Cancel" style="background-color: #015fc7; color: #ffffff ;" /></a>
+        <div class="R2">
+          <div class="group">
+            <input type="checkbox" id="check" />
+            <label for="check">I understand and will follow above steps.</label>
+          </div>
+          <div class="buttons">
+            <input
+              type="button"
+              id="checked"
+              value="Proceed"
+              style="background-color: #015fc7; color: #ffffff"
+            />
+            <input
+              type="button"
+              id="cancel"
+              value="Cancel"
+              style="background-color: #015fc7; color: #ffffff"
+            />
+          </div>
         </div>
       </div>
     </div>
-  </div>
-  <!-- End Rules -->
-  <!-- js files -->
-  <script src="../../js/bootstrap.bundle.min.js"></script>
-  <script src="../../js/all.min.js"></script>
-  <script src="../../js/Log(in-out)-pages.js"></script>
-  <script src="../../js/popup.js"></script>
-</body>
-
+    <!-- End Rules -->
+    <!-- js files -->
+    <script src="../../js/bootstrap.bundle.min.js"></script>
+    <script src="../../js/all.min.js"></script>
+    <script src="../../js/Log(in-out)-pages.js"></script>
+    <script src="../../js/popup.js"></script>
+  </body>
 </html>

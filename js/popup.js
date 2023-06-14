@@ -9,3 +9,17 @@ function pop() {
     c = 0;
   }
 }
+
+let myele = document.getElementById('check');
+myele.onclick = function(){
+  myele.toggleAttribute("checked");
+}
+document.getElementById('checked').onclick = function(){
+  if(myele.hasAttribute("checked")){
+    console.log("smart ass");
+    window.location.href="../voting_panel/voting_panel.html";
+  }
+}
+document.getElementById('cancel').onclick = ()=>{
+  window.location.href="elections.html";
+}
