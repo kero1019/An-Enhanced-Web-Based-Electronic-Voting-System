@@ -16,7 +16,6 @@ myele.onclick = function(){
 }
 document.getElementById('checked').onclick = function(){
   if(myele.hasAttribute("checked")){
-    console.log("smart ass");
     window.location.href="../voting_panel/voting_panel.html";
   }
 }

@@ -543,6 +543,13 @@ nav .navbar-toggler:focus {
   flex-direction: column;
   gap: 10px;
 }
+.elections .container #current,
+.elections .container #upcoming,
+.elections .container #past {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
 .elections .container h1:not(.page-title) {
   font-size: 20px;
   color: var(--white);
@@ -670,6 +677,7 @@ nav .navbar-toggler:focus {
 }
 .voting_panel .candidate-grid .candidate-card img {
   width: 170px;
+  height: 170px;
   border-radius: 50%;
 }
 .voting_panel .candidate-grid .candidate-card .candidate-info {
@@ -679,6 +687,10 @@ nav .navbar-toggler:focus {
   font-size: 20px;
   overflow-wrap: break-word;
 }
+.voting_panel .candidate-grid .candidate-card .candidate-info div {
+  display: flex;
+  gap: 10px;
+}
 .voting_panel .candidate-grid .candidate-card button {
   width: 60%;
   color: var(--white);
@@ -687,15 +699,10 @@ nav .navbar-toggler:focus {
   padding: 5px 0;
 }
 .voting_panel form {
-  margin-top: 20px;
   display: flex;
-}
-.voting_panel form input {
-  align-self: start;
-  margin-top: 6px;
-}
-.voting_panel form label {
-  margin-left: 5px;
+  margin-top: 20px;
+  width: 100%;
+  justify-content: flex-end;
 }
 /* End voting_panel */
 /* Start voting_results */
@@ -1221,5 +1228,9 @@ nav .navbar-toggler:focus {
   .rules .container .R1 {
     font-size: 16px;
   }
+}
+.currentDate{
+  display: flex;
+  gap:20px;
 }
 /* End Rules */

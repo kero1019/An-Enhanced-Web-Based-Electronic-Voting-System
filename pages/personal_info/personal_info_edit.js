@@ -20,7 +20,7 @@ const form = document.getElementById("data");
 const data2 = {
   name: "string",
   Email: "string",
-  age: 10,
+  age:20,
   Gender: "string",
   Mobile: "string",
   image: img.getAttribute("src"),
@@ -33,7 +33,7 @@ form.addEventListener('submit', async(e) => {
   const Mobile = e.target.phone.value;
   data2.name = name;
   data2.Mobile = Mobile;
-  data2.age = age;
+  console.log(data2);
   await fetch(
     "https://votingsyste-production-a0f3.up.railway.app/user",
     {
