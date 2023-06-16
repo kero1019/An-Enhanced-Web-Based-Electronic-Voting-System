@@ -65,7 +65,12 @@ body > div:first-of-type {
   justify-content: center;
   overflow: none;
 }
-
+.prof {
+  width: 80px;
+  height: 80px;
+  border: 1px solid transparent;
+  border-radius: 50%;
+}
 body > div {
   background-color: var(--dark);
 }
@@ -465,8 +470,8 @@ nav .navbar-toggler:focus {
   color: var(--white);
   font-size: 20px;
 }
-.voting_history .container .each_vote p:nth-child(2),
-.voting_history .container .each_vote p:nth-child(3) {
+.voting_history .container .each_vote p:nth-child(3),
+.voting_history .container .each_vote p:nth-child(4) {
   color: var(--orange);
   font-size: 20px;
   text-transform: capitalize;

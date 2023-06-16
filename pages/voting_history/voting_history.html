@@ -67,7 +67,13 @@
               <a class="nav-link" href="../../index.html">Home</a>
             </li>
             <li class="nav-item p-2">
-              <a class="nav-link font-src" href="../login/login.html" id="log" onclick="logout()">Login</a>
+              <a
+                class="nav-link font-src"
+                href="../login/login.html"
+                id="log"
+                onclick="logout()"
+                >Login</a
+              >
             </li>
           </ul>
         </div>
@@ -78,7 +84,8 @@
     <div class="voting_history">
       <div class="container">
         <p class="page-title">voting history</p>
-        <div class="each_vote">
+        <div id="elections"></div>
+        <!-- <div class="each_vote">
           <div>
             <p>6</p>
             <div></div>
@@ -89,24 +96,14 @@
             <img src="../../imgs/Small chart line.jpg" alt="Icon" />
             <p class="per font-inter">87.5%</p>
           </div>
-        </div>
-        <div class="each_vote">
-          <div>
-            <p>6</p>
-            <div></div>
-          </div>
-          <p>candidate name</p>
-          <p>elections name</p>
-          <div>
-            <img src="../../imgs/Small chart line.jpg" alt="Icon" />
-            <p class="per font-inter">87.5%</p>
-          </div>
-        </div>
+        </div> -->
       </div>
     </div>
     <!-- End voting_history -->
     <!-- js files -->
     <script src="../../js/bootstrap.bundle.min.js"></script>
+    <script src="./votingHistory.js"></script>
+
     <script src="../../js/all.min.js"></script>
     <script src="../../js/Log(in-out)-pages.js"></script>
   </body>
