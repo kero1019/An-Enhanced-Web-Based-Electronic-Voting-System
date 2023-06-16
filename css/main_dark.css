@@ -28,11 +28,11 @@
 /* End Variables */
 /* Start General */
 input:-webkit-autofill,
-input:-webkit-autofill:hover, 
-input:-webkit-autofill:focus, 
-input:-webkit-autofill:active{
-    -webkit-box-shadow: 0 0 0 30px var(--light) inset !important;
-    -webkit-text-fill-color: var(--dark) !important;
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus,
+input:-webkit-autofill:active {
+  -webkit-box-shadow: 0 0 0 30px var(--light) inset !important;
+  -webkit-text-fill-color: var(--dark) !important;
 }
 .font-src {
   font-family: "Source Serif Pro", serif;
@@ -49,6 +49,21 @@ body {
 
 body > div:first-of-type {
   min-height: calc(100vh - 72px);
+}
+/* For Loading Page */
+.big {
+  min-height: 100vh;
+}
+.big > div {
+  min-height: calc(100vh - 72px);
+}
+.load {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: none;
 }
 
 body > div {
@@ -192,6 +207,7 @@ nav .navbar-toggler:focus {
 }
 /* End registration */
 /* Start personal_info */
+
 .personal_info {
   display: flex;
   align-items: center;
@@ -1229,8 +1245,8 @@ nav .navbar-toggler:focus {
     font-size: 16px;
   }
 }
-.currentDate{
+.currentDate {
   display: flex;
-  gap:20px;
+  gap: 20px;
 }
 /* End Rules */

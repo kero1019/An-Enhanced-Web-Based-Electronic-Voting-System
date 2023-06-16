@@ -82,6 +82,19 @@ function checkPasswordMatch(input1, input2) {
   }
 }
 
+//check password complexity
+function checkpasscomplex(input) {
+  const re = /^(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?=.*[a-zA-Z]).{8,}$/;
+  if (re.test(input.value.trim())) {
+    showSucces(input);
+  } else if (input.value.trim() === "") {
+    showError(input, "Required");
+  } else {
+    showError(input, "password must have at least 8 chars which should contain \n uppercase characters, lowercase characters, special characters, and numbers");
+  }
+}
+
+
 // check date
 date.addEventListener("change", function () {}); // To get Date changes from input
 
@@ -154,9 +167,12 @@ form.addEventListener("submit", function (e) {
   e.preventDefault();
 
   checkRequired([password, password2]);
-  checkLength(password, 8, 25);
+  
   checkEmail(email);
+
+  checkLength(password, 8, 25);
   checkPasswordMatch(password, password2);
+  checkpasscomplex(password)
 
   getAge(date);
 

@@ -813,6 +813,11 @@ footer .container .box2 p:first-child::before {
   font-size: 20px;
   color: var(--bluegreen);
 }
+.forgot_enter_code form {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
 .forgot_enter_code .container input {
   border: transparent;
   background-color: var(--dark);
