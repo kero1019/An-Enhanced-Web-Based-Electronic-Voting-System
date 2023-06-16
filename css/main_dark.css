@@ -577,8 +577,7 @@ nav .navbar-toggler:focus {
   flex-direction: column;
   gap: 10px;
 }
-.elections .container #past,
-.elections .container .past {
+.elections .container #past {
   padding-right: 5px;
 }
 .elections .container h1:not(.page-title) {
