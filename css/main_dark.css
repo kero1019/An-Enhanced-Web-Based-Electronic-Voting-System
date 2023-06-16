@@ -185,8 +185,13 @@ nav .navbar-toggler:focus {
 .registration .container form {
   display: flex;
   flex-direction: column;
-  row-gap: 10px;
+  row-gap: 20px;
   justify-content: center;
+}
+@media (min-width: 992px) {
+  .registration .container form {
+    width: 420px;
+  }
 }
 
 .registration .container form label {
@@ -492,6 +497,7 @@ nav .navbar-toggler:focus {
   align-items: center;
   justify-content: space-around;
   height: 400px;
+  border-radius: 4px;
 }
 .voting_history .container .each_vote > div:first-child {
   display: flex;
@@ -571,6 +577,10 @@ nav .navbar-toggler:focus {
   flex-direction: column;
   gap: 10px;
 }
+.elections .container #past,
+.elections .container .past {
+  padding-right: 5px;
+}
 .elections .container h1:not(.page-title) {
   font-size: 20px;
   color: var(--white);
@@ -584,9 +594,6 @@ nav .navbar-toggler:focus {
   justify-content: center;
   align-items: center;
   border-radius: 5px;
-}
-.elections .container .past .election {
-  width: calc(100% - 10px);
 }
 .elections .container .election p {
   font-weight: 400;

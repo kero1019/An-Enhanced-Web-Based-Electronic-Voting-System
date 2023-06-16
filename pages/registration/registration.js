@@ -77,7 +77,7 @@ function getFieldName(input) {
 function checkPasswordMatch(input1, input2) {
   if (input1.value !== input2.value) {
     showError(input2, "Passwords do not match");
-  }else {
+  } else {
     showSucces(input2);
   }
 }
@@ -90,13 +90,13 @@ function checkpasscomplex(input) {
   } else if (input.value.trim() === "") {
     showError(input, "Required");
   } else {
-    showError(input, "password must have at least 8 chars which should contain \n uppercase characters, lowercase characters, special characters, and numbers");
+    showError(input, "Must have uppercase, lowercase, special characters, and numbers");
   }
 }
 
 
 // check date
-date.addEventListener("change", function () {}); // To get Date changes from input
+date.addEventListener("change", function () { }); // To get Date changes from input
 
 function getAge(input) {
   var today = new Date();
@@ -167,7 +167,7 @@ form.addEventListener("submit", function (e) {
   e.preventDefault();
 
   checkRequired([password, password2]);
-  
+
   checkEmail(email);
 
   checkLength(password, 8, 25);
@@ -194,8 +194,8 @@ form.addEventListener("submit", function (e) {
 // Submit form to server
 form.addEventListener("submit", async (e) => {
   e.preventDefault();
-  if(check === 0)
-  return;
+  if (check === 0)
+    return;
   const name = e.target.name.value;
   const email = e.target.email.value;
   const password = e.target.password.value;
@@ -227,7 +227,7 @@ form.addEventListener("submit", async (e) => {
   )
     .then((response) => response.json())
     .then((data) => {
-      localStorage.setItem("secret",data.data.secret);
+      localStorage.setItem("secret", data.data.secret);
       if (data.type === "Success" && check === 1) { // I love messi@10
         window.location.href = "register_enter_code.html";
       }
