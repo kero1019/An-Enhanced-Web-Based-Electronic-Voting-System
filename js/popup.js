@@ -22,7 +22,8 @@ document.getElementById('proceed').onclick = function () {
     c = 0;
     checkbox.toggleAttribute("checked")
     checkbox.checked = false;
-    window.open("../voting_panel/voting_panel.html", 'Voting Panel');
+    // window.open("../voting_panel/voting_panel.html", 'Voting Panel');
+    window.location.href = '../voting_panel/voting_panel.html';
   }
 }
 // Cancel Button
