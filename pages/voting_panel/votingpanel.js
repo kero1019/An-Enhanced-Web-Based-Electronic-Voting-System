@@ -44,11 +44,10 @@ async function getData() {
               <span>${arr[i]["education"]}</span>
             </div>
           </div>
-          <button id=${arr[i]["id"]}  style=${
-          arr[i]["voted"]
+          <button id=${arr[i]["id"]}  style=${arr[i]["voted"]
             ? "background-color:#008000"
             : "background-color:#ff5722"
-        }>vote</button>
+          }>vote</button>
         </div>`;
 
         console.log(mydiv);
@@ -56,6 +55,11 @@ async function getData() {
         mainstyle = getComputedStyle(document.getElementById(arr[i]["id"]));
         let but = document.getElementById(arr[i]["id"]);
         allSize = data.data["allowedCandidted"];
+        // Showing the Number Of Candidates allowed for voting
+        console.log(allSize);
+        document.getElementById('allowedNumberOfVotes').innerHTML = `Number Of Candidates You Can Choose: (${allSize})`;
+        // Showing the Number Of Candidates allowed for voting
+
         let mainbackcolor = mainstyle.backgroundColor;
         console.log(mainbackcolor);
         if (!alreadyVoted) {
@@ -83,7 +87,6 @@ async function getData() {
           });
         }
       }
-      loding = true;
     })
     .catch((error) => {
       // Handle any errors

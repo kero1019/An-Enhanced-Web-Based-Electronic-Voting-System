@@ -18,7 +18,6 @@ input:focus {
 small {
   display: block;
   color: var(--error-color);
-  width: max-content;
   visibility: hidden;
 }
 .error small {

@@ -9,16 +9,27 @@ function pop() {
     c = 0;
   }
 }
+// checkbox
+let checkbox = document.getElementById('check');
 
-let myele = document.getElementById('check');
-myele.onclick = function(){
-  myele.toggleAttribute("checked");
+checkbox.onclick = function () {
+  checkbox.toggleAttribute("checked")
 }
-document.getElementById('checked').onclick = function(){
-  if(myele.hasAttribute("checked")){
-    window.location.href="../voting_panel/voting_panel.html";
+
+document.getElementById('proceed').onclick = function () {
+  if (checkbox.hasAttribute("checked")) {
+    document.getElementById('rules').style.display = 'none';
+    c = 0;
+    checkbox.toggleAttribute("checked")
+    checkbox.checked = false;
+    // window.open("../voting_panel/voting_panel.html", 'Voting Panel');
+    window.location.href = '../voting_panel/voting_panel.html';
   }
 }
-document.getElementById('cancel').onclick = ()=>{
-  window.location.href="elections.html";
+// Cancel Button
+document.getElementById('cancel').onclick = () => {
+  document.getElementById('rules').style.display = 'none';
+  c = 0;
+  checkbox.toggleAttribute("checked")
+  checkbox.checked = false;
 }

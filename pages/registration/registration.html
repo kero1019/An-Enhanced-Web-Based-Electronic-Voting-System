@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Voting System</title>
+    <title>Registration</title>
     <!-- Small Icon Beside Title -->
     <link rel="icon" type="image/x-icon" href="../../imgs/favicon.ico" />
     <!-- Bootstrap -->
@@ -125,7 +125,7 @@
             />
             <small>Error Message</small>
           </div>
-          <div>
+          <div style="position: relative;">
             <label for="password">password</label>
             <input
               type="password"
@@ -133,13 +133,10 @@
               name="password"
               placeholder="Write Strong Password"
             />
-            <p id="togglePassword">
+            <p id="togglePassword" style="position: absolute; width: fit-content; top: 33px; left: calc(100% - 27px);">
               <i
                 class="far fa-eye"
                 style="
-                  position: relative;
-                  top: -30px;
-                  left: calc(100% - 30px);
                   cursor: pointer;
                   color: black;
                 "
@@ -147,7 +144,7 @@
             </p>
             <small>Error Message</small>
           </div>
-          <div>
+          <div style="position: relative;">
             <label for="password2">re-enter password</label>
             <input
               type="password"
@@ -155,13 +152,10 @@
               name="rePassword"
               placeholder="Write The Same Password"
             />
-            <p id="togglePassword2">
+            <p id="togglePassword2" style="position: absolute; width: fit-content; top: 33px; left: calc(100% - 27px);">
               <i
                 class="far fa-eye"
                 style="
-                  position: relative;
-                  top: -30px;
-                  left: calc(100% - 30px);
                   cursor: pointer;
                   color: black;
                 "

@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Voting System</title>
+    <title>Login</title>
     <!-- Small Icon Beside Title -->
     <link rel="icon" type="image/x-icon" href="../../imgs/favicon.ico" />
     <!-- Bootstrap -->
@@ -37,14 +37,24 @@
               class="w-100"
             />
           </div>
-          <div class="password">
+          <div class="password" style="position: relative;">
             <label>Password</label>
             <input
               type="password"
+              id="password"
               placeholder="Enter Password"
               name="password"
               class="w-100"
             />
+            <p id="togglePassword" style="position: absolute; width: fit-content; top: 33px; left: calc(100% - 27px);">
+              <i
+                class="far fa-eye"
+                style="
+                  cursor: pointer;
+                  color: white;
+                "
+              ></i>
+            </p>
             <a
               class="forgotPassword-link d-block pb-2 pt-1 font-src"
               href="../login/forgot_password.html"
@@ -58,7 +68,7 @@
               >Register now</a
             >
           </p>
-          <p id="error" style="color: red; font-size:20px;"></p>
+          <p id="error" style="color: red; font-size:20px; margin: 0; text-transform: capitalize; position: relative;top: -20px;"></p>
         </form>
       </div>
     </div>
@@ -66,6 +76,7 @@
     <!-- js files -->
     <script src="../../js/bootstrap.bundle.min.js"></script>
     <script src="../../js/all.min.js"></script>
-    <script src="./login.js"></script>
+    <script src="login.js"></script>
+    <script src="../../js/togglepassword.js"></script>
   </body>
 </html>
