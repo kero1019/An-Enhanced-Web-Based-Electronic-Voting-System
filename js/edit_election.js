@@ -21,19 +21,15 @@ function showSucces(input) {
   formControl.className = "success";
 }
 
-//check arabic letters only is valid
-function checkLetters(input) {
-  const re = /[\u0600-\u065F\u066A-\u06EF\u06FA-\u06FF]/;
-  if (re.test(input.value.trim())) {
-    showSucces(input);
-    return true;
-  } else if (input.value.trim() === "") {
-    showError(input, "Required");
-    return false;
-  } else {
-    showError(input, "Arabic letters only allowed [أ - ي]");
-    return false;
-  }
+//checkRequired fields
+function checkRequired(inputArr) {
+  inputArr.forEach(function (input) {
+    if (input.value.trim() === "") {
+      showError(input, `required`);
+    } else {
+      showSucces(input);
+    }
+  });
 }
 // check date start end validation
 function checkDate() {
@@ -80,7 +76,7 @@ let check = 0;
 button.addEventListener("submit", (e) => {
   e.preventDefault();
 
-  checkLetters(electionName);
+  checkRequired([electionName]);
   checkDate();
   checkCandidatesNumber();
 
