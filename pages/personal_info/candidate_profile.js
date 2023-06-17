@@ -97,9 +97,7 @@ async function uplaod(data2) {
 form.addEventListener("submit", async function (e) {
   e.preventDefault();
 
-  checkRequired(myName);
-  checkRequired(myParty);
-  checkRequired(myedu);
+  checkRequired([myName,myParty,myedu]);
   checkAge();
 
   // if (!checkLetters(myName)) return;
