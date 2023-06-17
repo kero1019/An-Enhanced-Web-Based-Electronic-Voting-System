@@ -88,6 +88,18 @@ async function getData() {
    </div>
  </div>
    `;
+   let mylog = document.getElementById('log');
+
+if (localStorage.getItem("token")) {
+  mylog.innerHTML =`Logout`;
+  mylog.href = '../../index.html';
+}else {
+  mylog.innerHTML =`Login`;
+}
+mylog.addEventListener('click',()=>{
+  localStorage.removeItem("token");
+  mylog.innerHTML =`Login`;
+})
       let myname = document.getElementById("name");
       myname.innerHTML = `<span>Name: </span>${data.data.name}`;
       document.getElementById(

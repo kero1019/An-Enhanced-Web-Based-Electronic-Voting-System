@@ -4,7 +4,7 @@ let cancel = document.getElementById("cancel");
 console.log(cancel);
 cancel.addEventListener("click", (e) => {
   console.log("ana d5lt ");
-  window.location.href = "elections-admin.html";
+  window.location.href = "/pages/elections/Upcoming_elections_admin.html";
   return;
 });
 //Show input error messages

@@ -933,6 +933,9 @@ nav .navbar-toggler:focus {
   color: var(--orange);
   width: 100%;
 }
+.elections.admin .container #past .election{
+  cursor:default;
+}
 @media (min-width: 777px) {
   .elections.admin .upcoming .group {
     flex-direction: row;

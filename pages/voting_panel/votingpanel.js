@@ -1,6 +1,5 @@
 let voteCounter = 0;
 let mainstyle; //getComputedStyle(document.getElementById("myButton"));
-
 let mainbackcolor; //= mainstyle.backgroundColor;
 let voting = [];
 let allSize = 0;
@@ -94,6 +93,10 @@ async function getData() {
     });
 }
 getData();
+// cancel button
+document.getElementById('cancel').addEventListener('click',()=>{
+  window.location.href = "../elections/elections.html";
+});
 // how to make object in js ?
 const fol = document.getElementById("sub");
 if (!alreadyVoted) {

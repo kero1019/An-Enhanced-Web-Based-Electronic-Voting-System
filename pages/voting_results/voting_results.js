@@ -36,7 +36,7 @@ fetch(
     </div>
     <div class="flex-center">
       <img src="../../imgs/Small chart line.jpg" alt="Icon" />
-      <p class="score font-inter">${data["data"]["candidates"][i]["percent"]}%</p>
+      <p class="score font-inter">${data["data"]["candidates"][i]["percent"].toFixed()}%</p>
     </div>
   </div>
     `;

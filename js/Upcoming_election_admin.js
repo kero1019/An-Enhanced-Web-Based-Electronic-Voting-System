@@ -1,17 +1,3 @@
-// // Remove Election Button
-// let child = document.querySelectorAll('.cancel');
-// child.forEach( (e) => {
-//   e.onclick = function(){
-//     e.parentElement.parentElement.remove();
-//   }
-// });
-// // Edit Election Button
-// let ed = document.querySelectorAll('.edit');
-// ed.forEach((e)=> {
-//   e.onclick = function(){
-//     window.location.href="edit_election.html";
-//   }
-// })
 
 // Upcoming
 fetch("https://votingsyste-production-a0f3.up.railway.app/election/upcomming", {
@@ -75,3 +61,27 @@ fetch("https://votingsyste-production-a0f3.up.railway.app/election/upcomming", {
     // Handle any errors
     console.error("Error:", error);
   });
+  async function deleteElection(id) {
+    console.log(id);
+    await fetch(
+      `https://votingsyste-production-a0f3.up.railway.app/election/${id}`,
+      {
+        method: "DELETE",
+        headers: {
+          "Content-Type": "application/json", // Adjust the content type based on your requirements
+          Authorization: `Bearer ${localStorage.getItem("token")}`,
+        },
+      }
+    )
+      .then((response) => response.json())
+      .then((data) => {
+        window.location.reload();
+        // Handle the response data
+        console.log(data);
+      })
+  
+      .catch((error) => {
+        // Handle any errors
+        console.error("Error:", error);
+      });
+  }

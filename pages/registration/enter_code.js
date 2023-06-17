@@ -16,10 +16,14 @@ await fetch(
   .then((response) => response.json())
   .then((data) => {
     localStorage.clear();
-    window.location.href="../login/login.html";
+    console.log(data.type);
+    if (data.type === "Invalid Code") {
+    }
+    else{
+      window.location.href="../login/login.html";
+    }
     // Handle the response data
     console.log(data);
-
     console.log(data.message);
   })
   .catch((error) => {

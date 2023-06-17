@@ -81,7 +81,7 @@ async function deleteCandidte(id) {
   )
     .then((response) => response.json())
     .then((data) => {
-      // window.location.reload();
+      window.location.reload();
       // Handle the response data
       console.log(data);
     })
@@ -90,4 +90,9 @@ async function deleteCandidte(id) {
       // Handle any errors
       console.error("Error:", error);
     });
-}
+}document.getElementById('cancel').addEventListener('click',()=>{
+  window.location.href = "/pages/elections/elections-admin.html";  
+});
+document.getElementById('submit').addEventListener('click',()=>{
+  window.location.href = "/pages/elections/elections-admin.html";  
+});
