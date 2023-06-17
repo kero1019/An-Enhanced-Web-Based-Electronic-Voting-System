@@ -74,10 +74,6 @@ form.addEventListener("submit", async function (e) {
   checkDate();
   checkCandidatesNumber();
 
-  if (!checkRequired([electionName])) return;
-  if (!checkDate()) return;
-  if (!checkCandidatesNumber()) return;
-
 
 
   const date = new Date(e.target.start.value);

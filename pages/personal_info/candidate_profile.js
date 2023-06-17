@@ -53,19 +53,15 @@ function checkAge() {
   }
 }
 
-//check arabic letters only is valid
-function checkLetters(input) {
-  const re = /[\u0600-\u065F\u066A-\u06EF\u06FA-\u06FF]/;
-  if (re.test(input.value.trim())) {
-    showSucces(input);
-    return true;
-  } else if (input.value.trim() === "") {
-    showError(input, "Required");
-    return false;
-  } else {
-    showError(input, "Arabic letters only allowed [أ - ي]");
-    return false;
-  }
+//checkRequired fields
+function checkRequired(inputArr) {
+  inputArr.forEach(function (input) {
+    if (input.value.trim() === "") {
+      showError(input, `required`);
+    } else {
+      showSucces(input);
+    }
+  });
 }
 const data = {
   name: "e.target.name.value",
@@ -101,10 +97,15 @@ async function uplaod(data2) {
 form.addEventListener("submit", async function (e) {
   e.preventDefault();
 
-  if (!checkLetters(myName)) return;
-  if (!checkLetters(myParty)) return;
-  if (!checkLetters(myedu)) return;
-  if (!checkAge()) return;
+  checkRequired(myName);
+  checkRequired(myParty);
+  checkRequired(myedu);
+  checkAge();
+
+  // if (!checkLetters(myName)) return;
+  // if (!checkLetters(myParty)) return;
+  // if (!checkLetters(myedu)) return;
+  // if (!checkAge()) return;
   data.name = e.target.name.value;
   data.age = Number(e.target.age.value);
   data.party = e.target.party.value;
