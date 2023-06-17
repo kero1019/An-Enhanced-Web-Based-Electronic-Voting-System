@@ -177,7 +177,7 @@ form.addEventListener("submit", function (e) {
   getAge(date);
 
   checkExactNumbers(mobile, 11);
-  checkExactNumbers(idNum, 3);
+  checkExactNumbers(idNum, 14);
 
   checkLetters(username);
   let mycheck = document.getElementsByClassName("success");
