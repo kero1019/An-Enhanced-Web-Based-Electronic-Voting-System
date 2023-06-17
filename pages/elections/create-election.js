@@ -70,9 +70,15 @@ function checkCandidatesNumber() {
 form.addEventListener("submit", async function (e) {
   e.preventDefault();
 
+  checkRequired([electionName]);
+  checkDate();
+  checkCandidatesNumber();
+
   if (!checkRequired([electionName])) return;
   if (!checkDate()) return;
   if (!checkCandidatesNumber()) return;
+
+
 
   const date = new Date(e.target.start.value);
   const date2 = new Date(e.target.end.value);
