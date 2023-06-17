@@ -1,7 +1,12 @@
-let form = document.getElementById("data");
 let electionName = document.getElementById("electionName");
 let candidatesNumber = document.getElementById("candidatesNumber");
-
+let cancel = document.getElementById("cancel");
+console.log(cancel);
+cancel.addEventListener("click", (e) => {
+  console.log("ana d5lt ");
+  window.location.href = "elections-admin.html";
+  return;
+});
 //Show input error messages
 function showError(input, message) {
   const formControl = input.parentElement;
@@ -69,15 +74,37 @@ function checkCandidatesNumber() {
   }
 }
 
-// Event Listeners
-// Validation
-form.addEventListener("submit", async function (e) {
+const button = document.getElementById("data");
+let mycheck = document.getElementsByClassName("success");
+let check = 0;
+button.addEventListener("submit", (e) => {
   e.preventDefault();
 
-  if (!checkLetters(electionName)) return;
-  if (!checkDate()) return;
-  if (!checkCandidatesNumber()) return;
+  checkLetters(electionName);
+  checkDate();
+  checkCandidatesNumber();
 
+  console.log(mycheck);
+  for (let i = 0; i < 3; i++) {
+    if (mycheck[i].className === "success" && i === 2) {
+      check = 1;
+    } else if (mycheck[i] === "error") {
+      check = 0;
+      break;
+    }
+  }
+  console.log(check);
+  if (check === 0) {
+    console.log("i entered check 0");
+    return;
+  } else {
+    console.log("i entered check 1");
+    submit(e);
+  }
+});
+
+async function submit(e) {
+  console.log(e.target.name.value);
   const date = new Date(e.target.start.value);
   const date2 = new Date(e.target.end.value);
 
@@ -87,27 +114,31 @@ form.addEventListener("submit", async function (e) {
     end: date2,
     numberOfCandidates: Number(e.target.numberOfCandidates.value),
   };
-  await fetch(`https://votingsyste-production-a0f3.up.railway.app/election`, {
-    method: "POST",
-    headers: {
-      "Content-Type": "application/json", // Adjust the content type based on your requirements
-      Authorization: `Bearer ${localStorage.getItem("token")}`,
-    },
-    body: JSON.stringify(data),
-  })
+
+  await fetch(
+    `https://votingsyste-production-a0f3.up.railway.app/election/${localStorage.getItem(
+      "ip"
+    )}`,
+    {
+      method: "PATCH",
+      headers: {
+        "Content-Type": "application/json", // Adjust the content type based on your requirements
+        Authorization: `Bearer ${localStorage.getItem("token")}`,
+      },
+      body: JSON.stringify(data),
+    }
+  )
     .then((response) => response.json())
     .then((data) => {
       if (data["type"] !== "Success") {
         const err = document.getElementById("error");
         console.log(err);
         err.innerHTML = `
-      ${data["message"]}
-      `;
-      } else {
-        localStorage.setItem("ip", data["data"]["id"]);
-        window.location.href = "../voting_panel/voting_panel_Admin.html";
+        ${data["message"]}
+        `;
       }
-      // console.log("a7a b2a ");
+
+      window.location.href = "elections-admin.html";
 
       // Handle the response data
       console.log(data);
@@ -117,4 +148,4 @@ form.addEventListener("submit", async function (e) {
       // Handle any errors
       console.error("Error:", error);
     });
-});
+}

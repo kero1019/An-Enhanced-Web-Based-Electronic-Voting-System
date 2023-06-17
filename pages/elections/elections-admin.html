@@ -1,148 +1,111 @@
+
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Elections</title>
+    <!-- Small Icon Beside Title -->
+    <link rel="icon" type="image/x-icon" href="../../imgs/admin.ico" />
+    <!-- Bootstrap -->
+    <link rel="stylesheet" href="../../css/bootstrap.min.css" />
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="../../css/all.min.css" />
+    <!-- main_dark CSS -->
+    <link rel="stylesheet" href="../../css/main_dark.css" />
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=DM+Serif+Display&family=Source+Serif+Pro:wght@300;400;600;700&display=swap"
+      rel="stylesheet"
+    />
+  </head>
 
-<head>
-  <meta charset="UTF-8" />
-  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Elections</title>
-  <!-- Small Icon Beside Title -->
-  <link rel="icon" type="image/x-icon" href="../../imgs/admin.ico" />
-  <!-- Bootstrap -->
-  <link rel="stylesheet" href="../../css/bootstrap.min.css" />
-  <!-- Font Awesome -->
-  <link rel="stylesheet" href="../../css/all.min.css" />
-  <!-- main_dark CSS -->
-  <link rel="stylesheet" href="../../css/main_dark.css" />
-  <!-- Google Fonts -->
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link
-    href="https://fonts.googleapis.com/css2?family=DM+Serif+Display&family=Source+Serif+Pro:wght@300;400;600;700&display=swap"
-    rel="stylesheet" />
-</head>
-
-<body>
-  <!-- Start Nav Bar -->
-  <nav class="navbar navbar-expand-lg sticky-top">
-    <div class="container text-center">
-      <a class="navbar-brand" href="../admin/pre-homepage.html">
-        <img src="../../imgs/admin.ico" alt="Admin-LOGO" style="width: 50px;" />
-        <img src="../../imgs/logo.png" alt="LOGO" />
-      </a>
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#main" aria-controls="main"
-        aria-expanded="false" aria-label="Toggle navigation">
-        <i class="fa-solid fa-bars"></i>
-      </button>
-      <div class="collapse navbar-collapse" id="main">
-        <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
-          <li class="nav-item p-2">
-            <a class="nav-link" href="Upcoming_elections_admin.html">Upcoming Elections</a>
-          </li>
-          <li class="nav-item p-2">
-            <a class="nav-link active" href="elections-admin.html">Elections</a>
-          </li>
-          <li class="nav-item p-2">
-            <a class="nav-link" href="../admin/pre-homepage.html">Pre-Home</a>
-          </li>
-          <li class="nav-item p-2">
-            <a class="nav-link font-src" href="../../index.html" id="log" onclick="logout()">Logout</a>
-          </li>
-        </ul>
-      </div>
-    </div>
-  </nav>
-  <!-- End Nav Bar -->
-  <!-- Start elections -->
-  <div class="elections admin">
-    <div class="container">
-      <h1 class="page-title">Elections</h1>
-      <h1>Current Elections:</h1>
-      <div class="current">
-        <a class="to-votingpanel">
-          <div class="election">
-            <p>Up state election:</p>
-            <p>02-04-2022</p>
-          </div>
+  <body>
+    <!-- Start Nav Bar -->
+    <nav class="navbar navbar-expand-lg sticky-top">
+      <div class="container text-center">
+        <a class="navbar-brand" href="../admin/pre-homepage.html">
+          <img
+            src="../../imgs/admin.ico"
+            alt="Admin-LOGO"
+            style="width: 50px"
+          />
+          <img src="../../imgs/logo.png" alt="LOGO" />
         </a>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#main"
+          aria-controls="main"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <i class="fa-solid fa-bars"></i>
+        </button>
+        <div class="collapse navbar-collapse" id="main">
+          <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+            <li class="nav-item p-2">
+              <a class="nav-link" href="Upcoming_elections_admin.html"
+                >Upcoming Elections</a
+              >
+            </li>
+            <li class="nav-item p-2">
+              <a class="nav-link active" href="elections-admin.html"
+                >Elections</a
+              >
+            </li>
+            <li class="nav-item p-2">
+              <a class="nav-link" href="../admin/pre-homepage.html">Pre-Home</a>
+            </li>
+            <li class="nav-item p-2">
+              <a
+                class="nav-link font-src"
+                href="../../index.html"
+                id="log"
+                onclick="logout()"
+                >Logout</a
+              >
+            </li>
+          </ul>
+        </div>
       </div>
+    </nav>
+    <!-- End Nav Bar -->
+    <!-- Start elections -->
+    <div class="elections admin">
+      <div class="container">
+        <h1 class="page-title">Elections</h1>
+        <h1>Current Elections:</h1>
+        <div id="current"></div>
 
-      <h1>Upcoming Elections:</h1>
-      <div class="upcoming">
-        <div class="group">
-          <div class="election">
-            <p>Up state election:</p>
-            <p>02-04-2022</p>
-          </div>
-          <div class="election_icons">
-            <button class="cancel">
-              <i class="fa-regular fa-circle-xmark"></i>
-            </button>
-            <button class="edit">
-              <i class="fa-regular fa-pen-to-square"></i>
-            </button>
-          </div>
-        </div>
+        <h1>Upcoming Elections:</h1>
+        <div id="upcoming"></div>
 
-        <div class="group">
-          <div class="election">
-            <p>Up state election:</p>
-            <p>02-04-2022</p>
-          </div>
-          <div class="election_icons">
-            <button class="cancel">
-              <i class="fa-regular fa-circle-xmark"></i>
-            </button>
-            <button class="edit">
-              <i class="fa-regular fa-pen-to-square"></i>
-            </button>
-          </div>
-        </div>
-
-        <div class="viewmore">
-          <a href="../elections/Upcoming_elections_admin.html">view more</a>
+        <div class="viewmore" id="viewmore">
+          <a href="../elections/Upcoming_elections_admin.html">
+          view more
           <i class="fa-regular fa-circle-down"></i>
+        </a>
         </div>
 
         <h1>Past Elections:</h1>
         <div id="scrollable-div" class="scroll-container">
-          <div class="past">
-            <div class="election">
-              <p>Bangluru state Election:</p>
-              <p>12-04-2022</p>
-            </div>
-            <div class="election">
-              <p>Bangluru state Election:</p>
-              <p>20-04-2022</p>
-            </div>
-            <div class="election">
-              <p>Bangluru state Election</p>
-              <p>26-04-2022</p>
-            </div>
-            <div class="election">
-              <p>Bangluru state Election:</p>
-              <p>12-04-2022</p>
-            </div>
-            <div class="election">
-              <p>Bangluru state Election:</p>
-              <p>20-04-2022</p>
-            </div>
-            <div class="election">
-              <p>Bangluru state Election</p>
-              <p>26-04-2022</p>
-            </div>
-          </div>
-        </div>
+          <div id="past"></div>
 
-        <a href="create_election.html" class="createElection"><button class="createElectionBtn">Create New
-            Election</button></a>
+        <a href="create_election.html" class="createElection"
+          ><button class="createElectionBtn">Create New Election</button></a
+        >
       </div>
     </div>
     <!-- End elections -->
     <!-- js files -->
     <script src="../../js/bootstrap.bundle.min.js"></script>
     <script src="../../js/all.min.js"></script>
-    <script src="../../js/Upcoming_election_admin.js"></script>
-</body>
-
+    <!-- <script src="../../js/Upcoming_election_admin.js"></script> -->
+    <script src="../../js/election_Admin.js"></script>
+  </body>
 </html>

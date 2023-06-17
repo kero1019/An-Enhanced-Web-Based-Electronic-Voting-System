@@ -60,7 +60,13 @@
               <a class="nav-link" href="../../index.html">Home</a>
             </li>
             <li class="nav-item p-2">
-              <a class="nav-link font-src" href="../login/login.html" id="log" onclick="logout()">Login</a>
+              <a
+                class="nav-link font-src"
+                href="../login/login.html"
+                id="log"
+                onclick="logout()"
+                >Login</a
+              >
             </li>
           </ul>
         </div>
@@ -71,39 +77,82 @@
     <div class="voting_results">
       <div class="container">
         <p class="page-title">voting results</p>
-        <div class="results">
-          <div class="each-result flex-center">
-            <div class="flex-center">
-              <p class="rank">1</p>
-              <div class="candidate-image"><img src="../../imgs/WhatsApp Image 2023-05-02 at 20.05.18.jpg" alt="Candidate Picture"></div>
-              <p class="name">candidate name</p>
+        <div class="results" id="result">
+          <div>
+            <div class="winnerText">
+              <div class="winnerBody">
+                <h1 style="margin: 0">Winner</h1>
+              </div>
             </div>
-            <div class="flex-center">
-              <img src="../../imgs/Small chart line.jpg" alt="Icon">
-              <p class="score font-inter">52%</p>
+            <div class="winner" id="winner">
+              <!-- <div class="each-result flex-center">
+                <div class="flex-center">
+                  <p class="rank">1</p>
+                  <div class="candidate-image">
+                    <img
+                      src="../../imgs/WhatsApp Image 2023-05-02 at 20.05.18.jpg"
+                      alt="Candidate Picture"
+                    />
+                  </div>
+                  <p class="name">candidate name</p>
+                </div>
+                <div class="flex-center">
+                  <img src="../../imgs/Small chart line.jpg" alt="Icon" />
+                  <p class="score font-inter">52%</p>
+                </div>
+              </div>
+
+              <div class="each-result flex-center">
+                <div class="flex-center">
+                  <p class="rank">1</p>
+                  <div class="candidate-image">
+                    <img
+                      src="../../imgs/WhatsApp Image 2023-05-02 at 20.05.18.jpg"
+                      alt="Candidate Picture"
+                    />
+                  </div>
+                  <p class="name">candidate name</p>
+                </div>
+                <div class="flex-center">
+                  <img src="../../imgs/Small chart line.jpg" alt="Icon" />
+                  <p class="score font-inter">52%</p>
+                </div>
+              </div> -->
             </div>
           </div>
-          <div class="each-result flex-center">
-            <div class="flex-center">
-              <p class="rank">2</p>
-              <div class="candidate-image"><img src="../../imgs/WhatsApp Image 2023-05-02 at 20.05.18.jpg" alt="Candidate Picture"></div>
-              <p class="name">candidate name</p>
+          <div class="losers" id="losers">
+            <!-- <div class="each-result flex-center">
+              <div class="flex-center">
+                <p class="rank">2</p>
+                <div class="candidate-image">
+                  <img
+                    src="../../imgs/WhatsApp Image 2023-05-02 at 20.05.18.jpg"
+                    alt="Candidate Picture"
+                  />
+                </div>
+                <p class="name">candidate name</p>
+              </div>
+              <div class="flex-center">
+                <img src="../../imgs/Small chart line.jpg" alt="Icon" />
+                <p class="score font-inter">22%</p>
+              </div>
             </div>
-            <div class="flex-center">
-              <img src="../../imgs/Small chart line.jpg" alt="Icon">
-              <p class="score font-inter">22%</p>
-            </div>
-          </div>
-          <div class="each-result flex-center">
-            <div class="flex-center">
-              <p class="rank">3</p>
-              <div class="candidate-image"><img src="../../imgs/WhatsApp Image 2023-05-02 at 20.05.18.jpg" alt="Candidate Picture"></div>
-              <p class="name">candidate name</p>
-            </div>
-            <div class="flex-center">
-              <img src="../../imgs/Small chart line.jpg" alt="Icon">
-              <p class="score font-inter">15%</p>
-            </div>
+            <div class="each-result flex-center">
+              <div class="flex-center">
+                <p class="rank">3</p>
+                <div class="candidate-image">
+                  <img
+                    src="../../imgs/WhatsApp Image 2023-05-02 at 20.05.18.jpg"
+                    alt="Candidate Picture"
+                  />
+                </div>
+                <p class="name">candidate name</p>
+              </div>
+              <div class="flex-center">
+                <img src="../../imgs/Small chart line.jpg" alt="Icon" />
+                <p class="score font-inter">15%</p>
+              </div>
+            </div> -->
           </div>
         </div>
       </div>

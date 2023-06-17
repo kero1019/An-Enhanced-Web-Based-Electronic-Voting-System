@@ -94,7 +94,7 @@ fetch("https://votingsyste-production-a0f3.up.railway.app/user", {
     data2.Email = data.data.Email;
     data2.age = data.data.age;
     data2.Gender = data.data.Gender;
-
+    data2.image = data.data.image;
     document.getElementById("name").value = data.data.name;
     document.getElementById("phone").value = data.data.Mobile;
     document.getElementById(

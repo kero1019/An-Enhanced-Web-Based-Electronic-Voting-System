@@ -27,11 +27,11 @@
 /* End Variables */
 /* Start General */
 input:-webkit-autofill,
-input:-webkit-autofill:hover, 
-input:-webkit-autofill:focus, 
-input:-webkit-autofill:active{
-    -webkit-box-shadow: 0 0 0 30px var(--dark) inset !important;
-    -webkit-text-fill-color: var(--light) !important;
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus,
+input:-webkit-autofill:active {
+  -webkit-box-shadow: 0 0 0 30px var(--dark) inset !important;
+  -webkit-text-fill-color: var(--light) !important;
 }
 html {
   scroll-behavior: smooth;
@@ -822,10 +822,9 @@ footer .container .box2 p:first-child::before {
   border: transparent;
   background-color: var(--dark);
   color: white;
-  font-weight: bold;
   text-align: center;
-  height: 30px;
-  font-size: 32px;
+  height: 40px;
+  font-size: 25px;
 }
 .forgot_enter_code .container input:focus {
   outline: transparent;
@@ -967,6 +966,7 @@ footer .container .box2 p:first-child::before {
   color: var(--white);
   width: 250px;
   height: 40px;
+  font-size: 25px;
   margin-bottom: 5px;
 }
 .register_enter_code .container button {

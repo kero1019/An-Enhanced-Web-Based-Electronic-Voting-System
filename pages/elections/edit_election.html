@@ -1,99 +1,136 @@
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Edit Election</title>
+    <!-- Small Icon Beside Title -->
+    <link rel="icon" type="image/x-icon" href="../../imgs/admin.ico" />
+    <!-- Bootstrap -->
+    <link rel="stylesheet" href="../../css/bootstrap.min.css" />
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="../../css/all.min.css" />
+    <!-- main_dark CSS -->
+    <link rel="stylesheet" href="../../css/main_dark.css" />
+    <!-- Validation CSS -->
+    <link rel="stylesheet" href="../../css/Validation.css" />
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=DM+Serif+Display&family=Source+Serif+Pro:wght@300;400;600;700&display=swap"
+      rel="stylesheet"
+    />
+  </head>
 
-<head>
-  <meta charset="UTF-8" />
-  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Edit Election</title>
-  <!-- Small Icon Beside Title -->
-  <link rel="icon" type="image/x-icon" href="../../imgs/admin.ico" />
-  <!-- Bootstrap -->
-  <link rel="stylesheet" href="../../css/bootstrap.min.css" />
-  <!-- Font Awesome -->
-  <link rel="stylesheet" href="../../css/all.min.css" />
-  <!-- main_dark CSS -->
-  <link rel="stylesheet" href="../../css/main_dark.css" />
-  <!-- Validation CSS -->
-  <link rel="stylesheet" href="../../css/Validation.css">
-  <!-- Google Fonts -->
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link
-    href="https://fonts.googleapis.com/css2?family=DM+Serif+Display&family=Source+Serif+Pro:wght@300;400;600;700&display=swap"
-    rel="stylesheet" />
-</head>
-
-<body>
-  <!-- Start Nav Bar -->
-  <nav class="navbar navbar-expand-lg sticky-top">
-    <div class="container text-center">
-      <a class="navbar-brand" href="../admin/pre-homepage.html">
-        <img src="../../imgs/admin.ico" alt="Admin-LOGO" style="width: 50px;" />
-        <img src="../../imgs/logo.png" alt="LOGO" />
-      </a>
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#main" aria-controls="main"
-        aria-expanded="false" aria-label="Toggle navigation">
-        <i class="fa-solid fa-bars"></i>
-      </button>
-      <div class="collapse navbar-collapse" id="main">
-        <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
-          <li class="nav-item p-2">
-            <a class="nav-link" href="Upcoming_elections_admin.html">Upcoming Elections</a>
-          </li>
-          <li class="nav-item p-2">
-            <a class="nav-link" href="elections-admin.html">Elections</a>
-          </li>
-          <li class="nav-item p-2">
-            <a class="nav-link" href="../admin/pre-homepage.html">Pre-Home</a>
-          </li>
-          <li class="nav-item p-2">
-            <a class="nav-link font-src" href="../../index.html" id="log" onclick="logout()">Logout</a>
-          </li>
-        </ul>
-      </div>
-    </div>
-  </nav>
-  <!-- End Nav Bar -->
-  <!-- Start edit_elections -->
-  <div class="edit_elections">
-    <div class="container">
-      <h1 class="page-title">Edit Election</h1>
-      <form id="data" class="inputs">
-        <div class="input1">
-          <p>Election Name:</p>
-          <input name="name" class="nameE" type="text" id="electionName" />
-          <small>Show Error Message</small>
+  <body>
+    <!-- Start Nav Bar -->
+    <nav class="navbar navbar-expand-lg sticky-top">
+      <div class="container text-center">
+        <a class="navbar-brand" href="../admin/pre-homepage.html">
+          <img
+            src="../../imgs/admin.ico"
+            alt="Admin-LOGO"
+            style="width: 50px"
+          />
+          <img src="../../imgs/logo.png" alt="LOGO" />
+        </a>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#main"
+          aria-controls="main"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <i class="fa-solid fa-bars"></i>
+        </button>
+        <div class="collapse navbar-collapse" id="main">
+          <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+            <li class="nav-item p-2">
+              <a class="nav-link" href="Upcoming_elections_admin.html"
+                >Upcoming Elections</a
+              >
+            </li>
+            <li class="nav-item p-2">
+              <a class="nav-link" href="elections-admin.html">Elections</a>
+            </li>
+            <li class="nav-item p-2">
+              <a class="nav-link" href="../admin/pre-homepage.html">Pre-Home</a>
+            </li>
+            <li class="nav-item p-2">
+              <a
+                class="nav-link font-src"
+                href="../../index.html"
+                id="log"
+                onclick="logout()"
+                >Logout</a
+              >
+            </li>
+          </ul>
         </div>
-
-        <div class="input2">
-          <p>Election date:</p>
-          <div id="startend">
-            <p>start:</p>
-            <input name="start" type="date" id="from" />
-            <p>End:</p>
-            <input name="end" type="date" id="to" />
+      </div>
+    </nav>
+    <!-- End Nav Bar -->
+    <!-- Start edit_elections -->
+    <div class="edit_elections">
+      <div class="container">
+        <h1 class="page-title">Edit Election</h1>
+        <form id="data" class="inputs">
+          <div id="input1" class="input1 input">
+            <p>Election Name:</p>
+            <input name="name" class="nameE" type="text" id="electionName" />
             <small>Show Error Message</small>
           </div>
-        </div>
 
-        <div id="input3">
-          <p>Number of candidate votter can choose</p>
-          <input name="numberOfCandidates" id="candidatesNumber" class="numberE" type="number" placeholder="0" />
-          <small>Show Error Message</small>
-        </div>
-        <div class="buttons">
-          <button onclick="location.href = '../elections/elections-admin.html'">cancel</button>
-          <button type="submit">submit</button>
-        </div>
-      </form>
+          <div id="input2" class="input2">
+            <p>Election date:</p>
+            <div id="startend" class="input">
+              <p>start:</p>
+              <input name="start" type="date" id="from" />
+              <p>End:</p>
+              <input name="end" type="date" id="to" />
+              <small>Show Error Message</small>
+            </div>
+          </div>
+
+          <div id="input3" class="input">
+            <p>Number of candidate voter can choose</p>
+            <input
+              name="numberOfCandidates"
+              id="candidatesNumber"
+              class="numberE input"
+              type="number"
+              placeholder="0"
+              min="1"
+              max="5"
+            />
+            <small>Show Error Message</small>
+          </div>
+
+          <div class="buttons">
+            <p
+              style="
+                color: red;
+                font-size: 20px;
+                display: flex;
+                align-items: center;
+              "
+              id="error"
+            ></p>
+            <button type="reset" id="cancel">cancel</button>
+            <button type="submit" id="submit">submit</button>
+          </div>
+        </form>
+      </div>
     </div>
-  </div>
-  <!-- End edit_elections -->
-  <!-- js files -->
-  <script src="../../js/bootstrap.bundle.min.js"></script>
-  <script src="../../js/all.min.js"></script>
-  <script src="create-election.js"></script>
-</body>
-
+    <!-- End edit_elections -->
+    <!-- js files -->
+    <script src="../../js/bootstrap.bundle.min.js"></script>
+    <script src="../../js/all.min.js"></script>
+    <script src="../../js/edit_election.js"></script>
+    <!-- <script src="create-election.js"></script> -->
+  </body>
 </html>

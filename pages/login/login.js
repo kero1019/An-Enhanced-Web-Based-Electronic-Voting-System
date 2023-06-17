@@ -1,13 +1,13 @@
 const form = document.getElementById("data");
-form.addEventListener('submit', async function(e){
+form.addEventListener("submit", async function (e) {
   e.preventDefault();
-  const mail=e.target.mail.value;
-  const password=e.target.password.value;
+  const mail = e.target.mail.value;
+  const password = e.target.password.value;
   const data = {
-    "Email": mail,
-  "Password": password
+    Email: mail,
+    Password: password,
   };
-  
+
   await fetch(
     "https://votingsyste-production-a0f3.up.railway.app/auth/signin",
     {
@@ -24,10 +24,13 @@ form.addEventListener('submit', async function(e){
       console.log(data);
       if (data.type !== "Success") {
         document.getElementById("error").innerHTML = data.message;
-      }
-      else{
-        localStorage.setItem("token",data.data.accessToken);
-        window.location.href="../../index.html";
+      } else {
+        localStorage.setItem("token", data.data.accessToken);
+        if (data.data.user.Role === "ADMIN") {
+          window.location.href = "../admin/pre-homepage.html";
+        } else {
+          window.location.href = "../../index.html";
+        }
       }
       console.log(data);
     })
