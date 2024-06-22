@@ -76,7 +76,7 @@ async function uplaod(data2) {
   const form_data = new FormData();
   form_data.append("file", data2);
   await fetch(
-    "https://votingsyste-production-a0f3.up.railway.app/upload/file",
+    "https://voting.egyptsunny.com/upload/file",
     {
       method: "POST",
       body: form_data,
@@ -110,7 +110,7 @@ form.addEventListener("submit", async function (e) {
   data.education = e.target.education.value;
 
   await fetch(
-    `https://votingsyste-production-a0f3.up.railway.app/candidate/${localStorage.getItem(
+    `https://voting.egyptsunny.com/candidate/${localStorage.getItem(
       "ip"
     )}`,
     {

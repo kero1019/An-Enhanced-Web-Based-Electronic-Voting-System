@@ -4,7 +4,7 @@ document.getElementById('catch').onclick = async ()=>{
     "code": document.getElementById('get').value
   }
 await fetch(
-  `https://votingsyste-production-a0f3.up.railway.app/auth/verify-email/${localStorage.getItem("secret")}`,
+  `https://voting.egyptsunny.com/auth/verify-email/${localStorage.getItem("secret")}`,
   {
     method: "POST",
     headers: {

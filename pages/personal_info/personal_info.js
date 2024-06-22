@@ -1,7 +1,7 @@
 const parent = document.getElementById("big");
 
 async function getData() {
-  await fetch("https://votingsyste-production-a0f3.up.railway.app/user", {
+  await fetch("https://voting.egyptsunny.com/user", {
     method: "GET",
     headers: {
       "Content-Type": "application/json", // Adjust the content type based on your requirements

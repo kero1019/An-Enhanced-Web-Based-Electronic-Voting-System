@@ -7,7 +7,7 @@ form.addEventListener("submit", async (e) => {
   };
 console.log(data);
   await fetch(
-    `https://votingsyste-production-a0f3.up.railway.app/auth/reset-password/${localStorage.getItem("secret")}`,
+    `https://voting.egyptsunny.com/auth/reset-password/${localStorage.getItem("secret")}`,
     {
       method: "POST",
       headers: {

@@ -1,5 +1,5 @@
 fetch(
-  `https://votingsyste-production-a0f3.up.railway.app/election/${localStorage.getItem(
+  `https://voting.egyptsunny.com/election/${localStorage.getItem(
     "ip"
   )}`,
   {
@@ -70,7 +70,7 @@ fetch(
 async function deleteCandidte(id) {
   console.log(id);
   await fetch(
-    `https://votingsyste-production-a0f3.up.railway.app/candidate/${id}`,
+    `https://voting.egyptsunny.com/candidate/${id}`,
     {
       method: "DELETE",
       headers: {

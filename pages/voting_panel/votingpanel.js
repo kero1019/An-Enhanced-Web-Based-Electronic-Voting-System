@@ -6,7 +6,7 @@ let allSize = 0;
 let alreadyVoted = false;
 async function getData() {
   await fetch(
-    `https://votingsyste-production-a0f3.up.railway.app/election/${localStorage.getItem(
+    `https://voting.egyptsunny.com/election/${localStorage.getItem(
       "ip"
     )}`,
     {
@@ -114,7 +114,7 @@ if (!alreadyVoted) {
         candidateId: voting,
       };
       await fetch(
-        `https://votingsyste-production-a0f3.up.railway.app/election/${localStorage.getItem(
+        `https://voting.egyptsunny.com/election/${localStorage.getItem(
           "ip"
         )}/vote`,
         {

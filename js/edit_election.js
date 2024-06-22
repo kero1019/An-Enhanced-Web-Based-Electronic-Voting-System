@@ -112,7 +112,7 @@ async function submit(e) {
   };
 
   await fetch(
-    `https://votingsyste-production-a0f3.up.railway.app/election/${localStorage.getItem(
+    `https://voting.egyptsunny.com/election/${localStorage.getItem(
       "ip"
     )}`,
     {

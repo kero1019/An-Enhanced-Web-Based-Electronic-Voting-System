@@ -28,7 +28,7 @@ async function uplaod(data) {
   const form_data = new FormData();
   form_data.append("file", data);
   await fetch(
-    "https://votingsyste-production-a0f3.up.railway.app/upload/file",
+    "https://voting.egyptsunny.com/upload/file",
     {
       method: "POST",
       body: form_data,
@@ -47,7 +47,7 @@ async function uplaod(data) {
   // ...
 }
 fetch(
-  `https://votingsyste-production-a0f3.up.railway.app/candidate/${localStorage.getItem(
+  `https://voting.egyptsunny.com/candidate/${localStorage.getItem(
     "candidateId"
   )}`,
   {
@@ -101,7 +101,7 @@ form.addEventListener("submit", (e) => {
 });
 async function edit() {
   await fetch(
-    `https://votingsyste-production-a0f3.up.railway.app/candidate/${localStorage.getItem(
+    `https://voting.egyptsunny.com/candidate/${localStorage.getItem(
       "candidateId"
     )}`,
     {
@@ -135,5 +135,5 @@ async function edit() {
     });
 }
 
-// https://votingsyste-production-a0f3.up.railway.app/api/v1/uploads/69896bd4b-baeb-473d-ad2e-d41b0a62d417.PNG
-// https://votingsyste-production-a0f3.up.railway.app/api/v1/uploads/275538395_1488528374895079_8401138668573508110_ncd0aeb1c-5c50-42cd-92d9-30169f891e9a.jpg
+// https://voting.egyptsunny.com/api/v1/uploads/69896bd4b-baeb-473d-ad2e-d41b0a62d417.PNG
+// https://voting.egyptsunny.com/api/v1/uploads/275538395_1488528374895079_8401138668573508110_ncd0aeb1c-5c50-42cd-92d9-30169f891e9a.jpg

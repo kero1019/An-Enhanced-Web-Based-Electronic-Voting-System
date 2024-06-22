@@ -7,7 +7,7 @@ form.addEventListener("submit", async (e) => {
   };
 console.log(data);
   await fetch(
-    "https://votingsyste-production-a0f3.up.railway.app/general/feedback",
+    "https://voting.egyptsunny.com/general/feedback",
     {
       method: "POST",
       headers: {

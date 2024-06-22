@@ -28,7 +28,7 @@ async function uplaod(data) {
   const form_data = new FormData();
   form_data.append("file", data);
   await fetch(
-    "https://votingsyste-production-a0f3.up.railway.app/upload/file",
+    "https://voting.egyptsunny.com/upload/file",
     {
       method: "POST",
       body: form_data,
@@ -54,7 +54,7 @@ form.addEventListener("submit", async (e) => {
   data2.name = name;
   data2.Mobile = Mobile;
   console.log(data2);
-  await fetch("https://votingsyste-production-a0f3.up.railway.app/user", {
+  await fetch("https://voting.egyptsunny.com/user", {
     method: "PATCH",
     headers: {
       "Content-Type": "application/json", // Adjust the content type based on your requirements
@@ -82,7 +82,7 @@ function back() {
   window.location.href = "personal_info.html";
 }
 
-fetch("https://votingsyste-production-a0f3.up.railway.app/user", {
+fetch("https://voting.egyptsunny.com/user", {
   method: "GET",
   headers: {
     "Content-Type": "application/json", // Adjust the content type based on your requirements

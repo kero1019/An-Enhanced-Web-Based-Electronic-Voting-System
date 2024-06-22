@@ -9,7 +9,7 @@ form.addEventListener("submit", async function (e) {
   };
 
   await fetch(
-    "https://votingsyste-production-a0f3.up.railway.app/auth/signin",
+    "https://voting.egyptsunny.com/auth/signin",
     {
       method: "POST",
       headers: {

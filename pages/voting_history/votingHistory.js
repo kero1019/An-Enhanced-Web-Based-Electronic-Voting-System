@@ -1,6 +1,6 @@
 async function getData() {
   await fetch(
-    `https://votingsyste-production-a0f3.up.railway.app/user/voting`,
+    `https://voting.egyptsunny.com/user/voting`,
     {
       method: "GET",
       headers: {

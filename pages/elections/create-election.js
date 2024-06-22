@@ -85,7 +85,7 @@ form.addEventListener("submit", async function (e) {
     end: date2,
     numberOfCandidates: Number(e.target.numberOfCandidates.value),
   };
-  await fetch(`https://votingsyste-production-a0f3.up.railway.app/election`, {
+  await fetch(`https://voting.egyptsunny.com/election`, {
     method: "POST",
     headers: {
       "Content-Type": "application/json", // Adjust the content type based on your requirements

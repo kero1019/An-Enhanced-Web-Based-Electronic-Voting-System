@@ -1,6 +1,6 @@
 
 // Upcoming
-fetch("https://votingsyste-production-a0f3.up.railway.app/election/upcomming", {
+fetch("https://voting.egyptsunny.com/election/upcomming", {
   method: "GET",
   headers: {
     "Content-Type": "application/json", // Adjust the content type based on your requirements
@@ -64,7 +64,7 @@ fetch("https://votingsyste-production-a0f3.up.railway.app/election/upcomming", {
   async function deleteElection(id) {
     console.log(id);
     await fetch(
-      `https://votingsyste-production-a0f3.up.railway.app/election/${id}`,
+      `https://voting.egyptsunny.com/election/${id}`,
       {
         method: "DELETE",
         headers: {

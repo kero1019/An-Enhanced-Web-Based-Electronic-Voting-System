@@ -216,7 +216,7 @@ form.addEventListener("submit", async (e) => {
   };
 
   await fetch(
-    "https://votingsyste-production-a0f3.up.railway.app/auth/signup",
+    "https://voting.egyptsunny.com/auth/signup",
     {
       method: "POST",
       headers: {
