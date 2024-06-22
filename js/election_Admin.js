@@ -1,5 +1,5 @@
 // Current Elections
-fetch("https://votingsyste-production-a0f3.up.railway.app/election/current", {
+fetch("https://voting.egyptsunny.com", {
   method: "GET",
   headers: {
     "Content-Type": "application/json", // Adjust the content type based on your requirements
