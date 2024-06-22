@@ -105,7 +105,6 @@ form.addEventListener("submit", async function (e) {
         localStorage.setItem("ip", data["data"]["id"]);
         window.location.href = "../voting_panel/voting_panel_Admin.html";
       }
-      // console.log("a7a b2a ");
 
       // Handle the response data
       console.log(data);
