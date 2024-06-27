@@ -136,7 +136,7 @@ function checkNumbers(input) {
 //check both numbers only & exact length
 function checkExactNumbers(input, val) {
   const re = /^[0-9]+$/;
-  if (re.test(input.value.trim())) {
+  if (re.test(input.value)) {
     if (input.value.length !== val) {
       showError(input, `${getFieldName(input)} must be ${val} digits`);
     } else {
