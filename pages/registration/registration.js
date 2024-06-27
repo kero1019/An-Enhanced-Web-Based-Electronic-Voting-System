@@ -208,7 +208,6 @@ form.addEventListener("submit", async (e) => {
     DateOfBirth: date,
     Gender: gender,
     Mobile: phone,
-    IDNumber: ID,
   };
 
   await fetch(
