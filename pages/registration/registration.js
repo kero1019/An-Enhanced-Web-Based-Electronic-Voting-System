@@ -7,7 +7,6 @@ const password2 = document.getElementById("password2");
 
 const date = document.getElementById("date");
 const mobile = document.getElementById("mobile");
-const idNum = document.getElementById("idNum");
 
 let check = 0;
 
@@ -177,7 +176,6 @@ form.addEventListener("submit", function (e) {
   getAge(date);
 
   checkExactNumbers(mobile, 11);
-  checkExactNumbers(idNum, 14);
 
   checkLetters(username);
   let mycheck = document.getElementsByClassName("success");
@@ -203,8 +201,6 @@ form.addEventListener("submit", async (e) => {
   const date = e.target.date.value;
   const gender = e.target.gender.value;
   const phone = e.target.phone.value;
-  const ID = e.target.ID.value;
-  console.log(gender);
   const data = {
     name: name,
     Email: email,
