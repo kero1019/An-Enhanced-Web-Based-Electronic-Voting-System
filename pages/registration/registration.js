@@ -180,8 +180,8 @@ form.addEventListener("submit", function (e) {
   checkLetters(username);
   let mycheck = document.getElementsByClassName("success");
    console.log(mycheck);
-  for (let i = 0; i < 7; i++) {
-    if (mycheck[i].className === "success" && i === 6) {
+  for (let i = 0; i < 6; i++) {
+    if (mycheck[i].className === "success" && i === 5) {
       check = 1;
     } else if (mycheck[i] === "error") {
       check = 0;
