@@ -166,7 +166,6 @@ form.addEventListener("submit", function (e) {
 
   checkExactNumbers(mobile, 11);
 
-  checkLetters(username);
   let mycheck = document.getElementsByClassName("success");
    console.log(mycheck);
   for (let i = 0; i < 6; i++) {
