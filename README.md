@@ -5,7 +5,7 @@ Graduation Project 2023 - Faculty of Information Systems &amp; Computer Science 
 https://votingproject2023.github.io/An-Enhanced-Web-Based-Electronic-Voting-System/
 
 ## Official Website: 
-https://voting.prefectjob.com/
+[https://voting.prefectjob.com/](https://votingproject2023.github.io/An-Enhanced-Web-Based-Electronic-Voting-System/)
 
 ## Color Palette
 
