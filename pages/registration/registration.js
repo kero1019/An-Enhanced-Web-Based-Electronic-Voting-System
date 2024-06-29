@@ -149,17 +149,6 @@ function checkExactNumbers(input, val) {
   }
 }
 
-//check arabic letters only is valid
-function checkLetters(input) {
-  const re = /[\u0600-\u065F\u066A-\u06EF\u06FA-\u06FF]/;
-  if (re.test(input.value.trim())) {
-    showSucces(input);
-  } else if (input.value.trim() === "") {
-    showError(input, "Required");
-  } else {
-    showError(input, "Arabic letters only allowed [أ - ي]");
-  }
-}
 
 //Event Listeners
 form.addEventListener("submit", function (e) {
