@@ -168,8 +168,8 @@ form.addEventListener("submit", function (e) {
 
   let mycheck = document.getElementsByClassName("success");
    console.log(mycheck);
-  for (let i = 0; i < 6; i++) {
-    if (mycheck[i].className === "success" && i === 5) {
+  for (let i = 0; i < 5; i++) {
+    if (mycheck[i].className === "success" && i === 4) {
       check = 1;
     } else if (mycheck[i] === "error") {
       check = 0;
