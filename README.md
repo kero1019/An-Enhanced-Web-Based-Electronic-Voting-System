@@ -7,6 +7,8 @@ The project now has a responsive shared frontend and a working SQLite backend in
 
 Read [RUN_LOCALLY.md](RUN_LOCALLY.md) for Arabic setup instructions, demo accounts, features, tests, and the difference between sample data and saved local records. The hosted links below refer to the original project, not this local runtime.
 
+GitHub Pages runs a browser-only demo because it cannot run the Node.js/SQLite backend. Its data is stored per browser; use the local runtime when you need persistent shared server-side records.
+
 ## Website Preview from Github: 
 https://votingproject2023.github.io/An-Enhanced-Web-Based-Electronic-Voting-System/
 

@@ -4,6 +4,7 @@
   "private": true,
   "type": "module",
   "scripts": {
+    "start:local": "node scripts/start-local.mjs",
     "check": "node scripts/check.mjs",
     "sync:pages": "node scripts/sync-pages.mjs"
   },

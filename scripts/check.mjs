@@ -4,7 +4,7 @@ import { fileURLToPath } from "node:url";
 import { spawnSync } from "node:child_process";
 import assert from "node:assert/strict";
 const root = resolve(dirname(fileURLToPath(import.meta.url)), "..");
-const scripts = ["js/api.js", "js/app.js", "scripts/sync-pages.mjs"];
+const scripts = ["js/api.js", "js/app.js", "js/static-api.js", "scripts/sync-pages.mjs", "scripts/start-local.mjs"];
 for (const script of scripts) {
   const result = spawnSync(
     process.execPath,
