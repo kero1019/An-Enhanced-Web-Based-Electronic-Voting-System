@@ -1,82 +1,17 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Login</title>
-    <!-- Small Icon Beside Title -->
-    <link rel="icon" type="image/x-icon" href="../../imgs/favicon.ico" />
-    <!-- Bootstrap -->
-    <link rel="stylesheet" href="../../css/bootstrap.min.css" />
-    <!-- Font Awesome -->
-    <link rel="stylesheet" href="../../css/all.min.css" />
-    <!-- main_light CSS -->
-    <link rel="stylesheet" href="../../css/main_light.css" />
-    <!-- Google Fonts -->
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=DM+Serif+Display&family=Source+Serif+Pro:wght@300;400;600;700&display=swap"
-      rel="stylesheet"
-    />
-  </head>
-  <body>
-    <!-- Start login -->
-    <div class="login">
-      <div class="container">
-        <img src="../../imgs/laptop_lock.png" alt="Photo" />
-        <form id="data">
-          <h1 class="login-title">Login</h1>
-          <div class="email">
-            <label>E-mail</label>
-            <input
-              type="text"
-              placeholder="Enter E-mail"
-              name="mail"
-              class="w-100"
-            />
-          </div>
-          <div class="password" style="position: relative;">
-            <label>Password</label>
-            <input
-              type="password"
-              id="password"
-              placeholder="Enter Password"
-              name="password"
-              class="w-100"
-            />
-            <p id="togglePassword" style="position: absolute; width: fit-content; top: 33px; left: calc(100% - 27px);">
-              <i
-                class="far fa-eye"
-                style="
-                  cursor: pointer;
-                  color: white;
-                "
-              ></i>
-            </p>
-            <a
-              class="forgotPassword-link d-block pb-2 pt-1 font-src"
-              href="../login/forgot_password.html"
-              >Forgot password?</a
-            >
-          </div>
-          <button class="login-btn py-2" type="submit">Login</button>
-          <p class="pt-2">
-            Not a user?
-            <a class="register-link font-src" href="../registration/registration.html"
-              >Register now</a
-            >
-          </p>
-          <p id="error" style="color: red; font-size:20px; margin: 0; text-transform: capitalize; position: relative;top: -20px;"></p>
-        </form>
-      </div>
-    </div>
-    <!-- End login -->
-    <!-- js files -->
-    <script src="../../js/bootstrap.bundle.min.js"></script>
-    <script src="../../js/all.min.js"></script>
-    <script src="login.js"></script>
-    <script src="../../js/togglepassword.js"></script>
-  </body>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Explore elections, register to vote, and follow election results in the Voting System local demonstration.">
+  <meta name="theme-color" content="#007e80">
+  <title>Login</title>
+  <link rel="icon" href="../../imgs/favicon.ico">
+  <link rel="stylesheet" href="../../css/app.css">
+  <script type="module" src="../../js/app.js"></script>
+</head>
+<body>
+  <div id="app"><main class="main"><div class="loading" role="status">Loading Voting System…</div></main></div>
+  <noscript><p>This application needs JavaScript to register, vote, and display results. Please enable JavaScript and reload.</p></noscript>
+</body>
 </html>

@@ -1,6 +1,12 @@
 # An-Enhanced-Web-Based-Electronic-Voting-System
 Graduation Project 2023 - Faculty of Information Systems &amp; Computer Science - October 6 University
 
+## Current local application
+
+The project now has a responsive shared frontend and a working SQLite backend in the sibling `Voting_System` folder. Start the backend with `npm run start:local`, then open [the local app](http://127.0.0.1:3000).
+
+Read [RUN_LOCALLY.md](RUN_LOCALLY.md) for Arabic setup instructions, demo accounts, features, tests, and the difference between sample data and saved local records. The hosted links below refer to the original project, not this local runtime.
+
 ## Website Preview from Github: 
 https://votingproject2023.github.io/An-Enhanced-Web-Based-Electronic-Voting-System/
 
