@@ -1,5 +1,11 @@
-// Served by Voting_System/local/server.mjs. No fallback to a remote API or browser-only data.
+import { staticApi } from "./static-api.js";
+
+// Localhost uses the persistent SQLite server. GitHub Pages uses the browser-only demo.
+const publishedDemo =
+  location.hostname.endsWith("github.io") ||
+  new URLSearchParams(location.search).has("github-demo");
 export async function api(path, { method = "GET", body } = {}) {
+  if (publishedDemo) return staticApi(path, { method, body });
   let response;
   try {
     response = await fetch(`/api${path}`, {

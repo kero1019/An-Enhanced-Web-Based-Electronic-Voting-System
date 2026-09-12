@@ -126,7 +126,7 @@ function shell(route) {
   app.innerHTML = `<a class="skip" href="#main-content">Skip to content</a>
     ${
       mode
-        ? '<div class="demo-strip"><strong>LOCAL DEMO</strong> Sample elections · Data is saved on this computer · No real election or email delivery</div>'
+        ? `<div class="demo-strip"><strong>${mode === "github-pages-demo" ? "GITHUB PAGES DEMO" : "LOCAL DEMO"}</strong> Sample elections · ${mode === "github-pages-demo" ? "Data is saved in this browser only" : "Data is saved on this computer"} · No real election or email delivery</div>`
         : ""
     }
     <header class="site-header"><div class="nav-wrap">
@@ -204,6 +204,34 @@ function setPage(title, html, version) {
   window.scrollTo(0, 0);
   main.focus({ preventScroll: true });
   return true;
+}
+function downloadResultsCsv(data) {
+  const safeCell = (value) => {
+    const text = String(value ?? "");
+    return /^[=+\-@]/.test(text) ? `'${text}` : text;
+  };
+  const quote = (value) => `"${safeCell(value).replaceAll('"', '""')}"`;
+  const rows = [
+    ["Election", data.election.name],
+    ["Status", data.election.status],
+    [],
+    ["Rank", "Candidate", "Party", "Votes", "Percent"],
+    ...data.candidates.map((candidate) => [
+      candidate.rank,
+      candidate.name,
+      candidate.party,
+      candidate.votes,
+      `${candidate.percent.toFixed(1)}%`,
+    ]),
+  ];
+  const blob = new Blob([rows.map((row) => row.map(quote).join(",")).join("\r\n")], {
+    type: "text/csv;charset=utf-8",
+  });
+  const link = document.createElement("a");
+  link.href = URL.createObjectURL(blob);
+  link.download = `${data.election.id}-results.csv`;
+  link.click();
+  URL.revokeObjectURL(link.href);
 }
 function handleActionError(error, container) {
   if (error.status === 401 && user && location.hash !== "#/login") {
@@ -980,9 +1008,11 @@ async function resultsPage(eid, version) {
     e.name
   )}</h1><p>Voting closed ${formatDateTime(e.end)}.${
     e.demo ? " This election contains sample data." : ""
-  }</p></div><div class="actions"><a class="btn secondary" href="/api/elections/${
-    e.id
-  }/results.csv" download>Download results CSV</a></div></div><div class="result-hero"><div class="result-emblem">${icon(
+  }</p></div><div class="actions">${
+    mode === "github-pages-demo"
+      ? '<button class="btn secondary" type="button" id="download-results">Download results CSV</button>'
+      : `<a class="btn secondary" href="/api/elections/${e.id}/results.csv" download>Download results CSV</a>`
+  }</div></div><div class="result-hero"><div class="result-emblem">${icon(
     "trophy"
   )}</div><div><span class="eyebrow">${
     !leading.length
@@ -1042,6 +1072,9 @@ async function resultsPage(eid, version) {
     e.max_choices === 1 ? "choice" : "choices"
   }. Equal vote counts share the same rank.</p>`;
   if (!setPage("Final results", html, version)) return;
+  document
+    .getElementById("download-results")
+    ?.addEventListener("click", () => downloadResultsCsv(data));
 }
 
 async function historyPage(version) {
@@ -1593,8 +1626,8 @@ async function start() {
         throw error;
       }),
     ]);
-    if (health.mode !== "local-demo")
-      throw new Error("This frontend requires the local voting API.");
+    if (!["local-demo", "github-pages-demo"].includes(health.mode))
+      throw new Error("This frontend requires a voting service.");
     mode = health.mode;
     user = account;
     window.addEventListener("hashchange", render);
